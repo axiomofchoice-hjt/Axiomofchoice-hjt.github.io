@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="./static/img/favicon.ico">
+  <title>
+    Blockchallenge
+  </title>
+</head>
+
+<body>
+  <div id="app">
+  </div>
+</body>
+<script>
+  'use strict'
+  var stageId = 0;
+  var stageOKList = {
+    num: 0n,
+    load() {
+      if (document.cookie.length) {
+        let s = document.cookie.substring(3);
+        for (let i of s) {
+          this.num = this.num * 16n + BigInt("0123456789abcdef".indexOf(i));
+        }
+      }
+    },
+    save() {
+      document.cookie = `ok=${this.num.toString(16)}; Secure; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/;`;
+    },
+    get(id) { return (this.num >> BigInt(id) & 1n) === 1n; },
+    set(id) { if (!this.get(id)) { this.num |= 1n << BigInt(id); this.save(); } },
+    clear() { if (this.num != 0n) { this.num = 0n; this.save(); } }
+  };
+  var stage = null;
+  var stageList = [];
+</script>
+<script src="./static/js/Color.js"></script>
+<script src="./static/js/Tools.js"></script>
+<script src="./static/js/HtmlGen.js"></script>
+<script src="./static/js/StageGen.js"></script>
+<script src="./static/Stages/Stage0.js"></script>
+<script src="./static/Stages/Stage1.js"></script>
+<script src="./static/Stages/Stage2.js"></script>
+<script src="./static/Stages/Stage3.js"></script>
+<script src="./static/Stages/Stage4.js"></script>
+<script src="./static/Stages/Stage5.js"></script>
+<script src="./static/Stages/Stage6.js"></script>
+<script src="./static/Stages/Stage7.js"></script>
+<script src="./static/Stages/Stage8.js"></script>
+<script src="./static/Stages/Stage9.js"></script>
+<script src="./static/Stages/Stage10.js"></script>
+<script src="./static/Stages/Stage11.js"></script>
+<script src="./static/Stages/Stage12.js"></script>
+<script src="./static/Stages/Stage13.js"></script>
+<script src="./static/Stages/Stage14.js"></script>
+<script src="./static/Stages/Stage15.js"></script>
+<script src="./static/Stages/Stage16.js"></script>
+<script src="./static/Stages/Stage17.js"></script>
+<script src="./static/Stages/Stage18.js"></script>
+<script src="./static/Stages/Stage19.js"></script>
+<script src="./static/Stages/Stage20.js"></script>
+<script src="./static/Stages/Stage21.js"></script>
+<script src="./static/Stages/Stage22.js"></script>
+<script src="./static/Stages/Stage23.js"></script>
+<script src="./static/Stages/Stage24.js"></script>
+<script src="./static/Stages/Stage25.js"></script>
+<script src="./static/Stages/Stage26.js"></script>
+<script src="./static/Stages/Stage27.js"></script>
+<script>
+  window.onload = () => {
+    stageId = 0;
+    stageOKList.load();
+    stageList[stageId](stageId);
+  };
+  document.onkeydown = (event) => {
+    // print(event.key);
+    var press = function () {
+      for (let i of arguments) if (event.key === i) return true;
+      return false;
+    };
+    if (press("Backspace", "Escape")) {
+      backEvent();
+    } else if (press("r")) {
+      restartEvent();
+    } else if (press("ArrowRight", "d")) {
+      stage.dirKeyDown(0, 1, 0, [0, 1]);
+    } else if (press("ArrowUp", "w")) {
+      stage.dirKeyDown(-1, 0, 1, [-1, 0]);
+    } else if (press("ArrowLeft", "a")) {
+      stage.dirKeyDown(0, -1, 2, [0, -1]);
+    } else if (press("ArrowDown", "s")) {
+      stage.dirKeyDown(1, 0, 3, [1, 0]);
+    }
+  }
+  function backEvent() {
+    if (stageId === 0) {
+      // window.close();
+      window.open("https://axiomofchoice-hjt.github.io/pages/7819ab/")
+    } else {
+      stageId = 0;
+      stageList[stageId](stageId);
+    }
+  }
+  function restartEvent() {
+    if (stageId === 0) {
+      if (confirm("清除所有记录？")) {
+        stageOKList.clear();
+        stage.update();
+        stage.show();
+      }
+    } else {
+      stageList[stageId](stageId);
+    }
+  }
+  function infoEvent() {
+  }
+</script>
+<style>
+  * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    font-family: "宋体", Arial, Helvetica, sans-serif;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  .block-inner {
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .block-outer {
+    position: absolute;
+  }
+
+  .blocks-inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: 1px solid black;
+  }
+
+  .header-hint {
+    position: absolute;
+    font-size: 30px;
+    top: 20px;
+    left: 0px;
+    padding: 0 20px;
+    width: 1060px;
+  }
+
+  .footer-hint {
+    position: absolute;
+    font-size: 30px;
+    bottom: 15px;
+    left: 0px;
+    padding: 5px 20px;
+    width: 1060px;
+  }
+
+  .buttons-outer {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    height: 0px;
+    width: 70px;
+    margin-top: -35px;
+  }
+
+  .button-inner {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    opacity: 0.25;
+  }
+
+  #app {
+    position: absolute;
+    width: 1100px;
+    height: 650px;
+    left: 50%;
+    top: 50%;
+    margin-left: -551px;
+    margin-top: -326px;
+    border: 1px solid black;
+    background: white;
+    /*
+    resize: both;
+    overflow: auto;
+    */
+  }
+</style>
+
+</html>
