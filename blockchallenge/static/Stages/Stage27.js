@@ -50,6 +50,7 @@ stageList.push(function (id) {
         this.get(i, j).color = grey;
         this.get(i, j).text = "";
       }
+    this.get(this.row - 1, this.col - 1).color = yellow;
     this.get(data.player).color = blue;
     this.get(data.player).text = "" + data.counter;
     if (data.movable(vecAdd(data.player, [0, -1])))
