@@ -2,7 +2,7 @@ stageList.push(function (id) {
   stage = stageGen({
     gridSize: [1, 7],
     // blockSize: "small",
-    message: `第${toChinese(id)}关 对称游戏 请点击方块`,
+    message: `第${toChinese(id)}关 交换游戏 请点击方块`,
     task: [
       [0, 7, equal],
     ],
