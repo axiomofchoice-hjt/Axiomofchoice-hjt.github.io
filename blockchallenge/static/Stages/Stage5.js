@@ -5,7 +5,7 @@ stageList.push(function (id) {
     message: `第${toChinese(id)}关 找零游戏 请点击数字 注：灰色方块的数字仅表示位置`,
     task: [
       [0, 1, equal],
-      [0, 9, lessEqual],
+      [0, 10, lessEqual],
     ],
   });
   stage.init = function () {
