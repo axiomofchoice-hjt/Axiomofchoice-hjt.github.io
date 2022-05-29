@@ -19,26 +19,14 @@ stageList.push(function (id) {
   stage.click = function (x, y, id, v) {
     var data = this.data;
     if (x == 1) return;
-    let flag = true;
-
-    for (let i = 0; i <= id; i++) {
-      if (data.l[i] !== data.l[0] || data.l[i] === 2) {
-        flag = false;
-      }
-    }
-    if (flag) {
-      for (let i = 0; i <= id; i++) {
-        data.l[i] ^= 1;
-      }
-    } else {
-      for (let i = 0; i <= id; i++) {
-        data.l[i] = 2;
-      }
-    }
+    for (let i = 0, j = id; i < j; i++, j--)
+      [data.l[i], data.l[j]] = [data.l[j], data.l[i]];
+    for (let i = 0; i <= id; i++)
+      data.l[i] ^= 1;
   };
   stage.update = function () {
     var data = this.data;
-    var color = [grey, yellow, red];
+    var color = [grey, yellow];
     this.task[0].set(0);
     for (let i = 0; i < 11; i++) {
       this.get(0, i).color = color[data.l[i]];
