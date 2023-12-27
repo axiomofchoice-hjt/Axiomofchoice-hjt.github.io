@@ -27,6 +27,14 @@
             "date_modified": "2022-03-25T14:29:36.000Z"
         },
         {
+            "id": "https://axiomofchoice-hjt.github.io/pages/85c4ed/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/85c4ed/",
+            "title": "集合求并的极致优化",
+            "summary": "本文将从分支、SIMD、并发三个优化角度进行讲解。",
+            "image": "https://axiomofchoice-hjt.github.io/img/85c4ed-godbolt-base.png",
+            "date_modified": "2023-12-23T22:08:56.000Z"
+        },
+        {
             "id": "https://axiomofchoice-hjt.github.io/pages/04ae8d/",
             "url": "https://axiomofchoice-hjt.github.io/pages/04ae8d/",
             "title": "用汇编分析一下各种交换方法的性能",
@@ -56,18 +64,18 @@
             "date_modified": "2023-03-24T19:50:38.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/253550/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/253550/",
-            "title": "Codeforces 1305 题解 (A-G)",
-            "summary": "一次算法训练",
-            "date_modified": "2020-03-04T14:51:00.000Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/pages/e6708e/",
             "url": "https://axiomofchoice-hjt.github.io/pages/e6708e/",
             "title": "ACM 板子",
             "summary": "算法竞赛套路",
             "date_modified": "2021-07-07T01:20:00.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/253550/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/253550/",
+            "title": "Codeforces 1305 题解 (A-G)",
+            "summary": "一次算法训练",
+            "date_modified": "2020-03-04T14:51:00.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/1085fa/",
@@ -113,18 +121,18 @@
             "date_modified": "2022-01-14T17:35:18.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/51f3ee/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/51f3ee/",
-            "title": "排序网络",
-            "summary": "用于排序的电路",
-            "date_modified": "2020-12-30T21:39:00.000Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/pages/73ab29/",
             "url": "https://axiomofchoice-hjt.github.io/pages/73ab29/",
             "title": "扑克牌魔术",
             "summary": "一种奇怪的通讯方式",
             "date_modified": "2021-12-13T17:01:41.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/51f3ee/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/51f3ee/",
+            "title": "排序网络",
+            "summary": "用于排序的电路",
+            "date_modified": "2020-12-30T21:39:00.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/22ee97/",
@@ -216,19 +224,19 @@
             "id": "https://axiomofchoice-hjt.github.io/archives/",
             "url": "https://axiomofchoice-hjt.github.io/archives/",
             "title": "归档",
-            "date_modified": "2023-12-20T12:10:22.441Z"
+            "date_modified": "2023-12-27T13:39:11.164Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/categories/",
             "url": "https://axiomofchoice-hjt.github.io/categories/",
             "title": "分类",
-            "date_modified": "2023-12-20T12:10:22.441Z"
+            "date_modified": "2023-12-27T13:39:11.164Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/",
             "url": "https://axiomofchoice-hjt.github.io/",
             "title": "Home",
-            "date_modified": "2023-12-20T12:10:22.441Z"
+            "date_modified": "2023-12-27T13:39:11.164Z"
         }
     ]
 }
