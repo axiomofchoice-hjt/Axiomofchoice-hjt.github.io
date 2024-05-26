@@ -6,10 +6,18 @@
     "description": "一个退役 ACMer 的个人博客",
     "items": [
         {
+            "id": "https://axiomofchoice-hjt.github.io/pages/85c4ed/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/85c4ed/",
+            "title": "集合求并的极致优化",
+            "summary": "偶然遇到一个问题：给定两个集合，求它们的并集。集合用有序的整数 (uint32) 序列表示。",
+            "image": "https://axiomofchoice-hjt.github.io/img/85c4ed-0.png",
+            "date_modified": "2023-12-23T22:08:56.000Z"
+        },
+        {
             "id": "https://axiomofchoice-hjt.github.io/pages/c1e151/",
             "url": "https://axiomofchoice-hjt.github.io/pages/c1e151/",
             "title": "浮点数误差入门",
-            "summary": "众所周知，浮点数是有一定误差的。经过多次计算，误差会累积。那么我们能不能从理论上分析误差累积的情况呢？",
+            "summary": "当然大多数情况误差都是可控的，只有比较极端的情况才会注意到误差的存在。",
             "date_modified": "2023-12-19T23:05:16.000Z"
         },
         {
@@ -20,26 +28,10 @@
             "date_modified": "2024-03-23T17:20:28.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/85c4ed/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/85c4ed/",
-            "title": "集合求并的极致优化",
-            "summary": "return out_end - out;\n}\n`",
-            "image": "https://axiomofchoice-hjt.github.io/img/85c4ed-0.png",
-            "date_modified": "2023-12-23T22:08:56.000Z"
-        },
-        {
-            "id": "https://axiomofchoice-hjt.github.io/pages/1abfb8/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/1abfb8/",
-            "title": "如何做好 benchmark",
-            "summary": "std::chrono::highresolutionclock::now() 可以获取当前时间，两个时间相减后调用 .count() 就能得到纳秒，除以 1000 就得到微秒。",
-            "image": "https://axiomofchoice-hjt.github.io/img/1abfb8-0.png",
-            "date_modified": "2024-05-02T16:09:42.000Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/pages/f2fc10/",
             "url": "https://axiomofchoice-hjt.github.io/pages/f2fc10/",
             "title": "更自由的 perf 采样实践",
-            "summary": "set(BENCHMARKENABLELIBPFM ON)\nset(BENCHMARKENABLEGTEST_TESTS OFF)\naddsubdirectory(thirdparty/benchmark)\ntargetlinklibraries(${PROJECT_NAME} PRIVATE benchmark::benchmark)\n`",
+            "summary": "int main() {\n    std::string events = \"cycles,instructions,branches,cache-misses\";\n    benchmark::internal::PerfCountersMeasurement pcm(\n        benchmark::StrSplit(events.c_str(), ','));\n    std::vector> perf_result;\n    pcm.Start();\n    {\n        const int N = 1000000;\n        std::vector a(N);\n        std::sort(a.begin(), a.end());\n    }\n    pcm.Stop(perf_result);\n    for (auto i : perf_result) {\n        printf(\"%s: %ld\\n\", i.first.cstr(), (int64t)i.second);\n    }\n}\n`",
             "date_modified": "2024-05-26T02:20:56.000Z"
         },
         {
@@ -48,6 +40,14 @@
             "title": "博客搭建过程记录",
             "summary": "一点点踩坑记录",
             "date_modified": "2022-03-08T18:08:00.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/1abfb8/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/1abfb8/",
+            "title": "如何做好 benchmark",
+            "summary": "上面的代码会有个问题，如果开了 -O2 优化，运行结果可能只有 0.001us。",
+            "image": "https://axiomofchoice-hjt.github.io/img/1abfb8-0.png",
+            "date_modified": "2024-05-02T16:09:42.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/aca146/",
@@ -79,13 +79,6 @@
             "date_modified": "2023-03-24T19:50:38.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/e6708e/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/e6708e/",
-            "title": "ACM 板子",
-            "summary": "算法竞赛套路",
-            "date_modified": "2021-07-07T01:20:00.000Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/pages/253550/",
             "url": "https://axiomofchoice-hjt.github.io/pages/253550/",
             "title": "Codeforces 1305 题解 (A-G)",
@@ -93,11 +86,11 @@
             "date_modified": "2020-03-04T14:51:00.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/1085fa/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/1085fa/",
-            "title": "C++ STL 容器重要概念",
-            "summary": "STL 容器分析",
-            "date_modified": "2020-09-13T00:01:00.000Z"
+            "id": "https://axiomofchoice-hjt.github.io/pages/e6708e/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/e6708e/",
+            "title": "ACM 板子",
+            "summary": "算法竞赛套路",
+            "date_modified": "2021-07-07T01:20:00.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/da7744/",
@@ -105,6 +98,13 @@
             "title": "猫树的简单介绍",
             "summary": "算法竞赛冷门数据结构",
             "date_modified": "2020-03-18T18:36:00.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/1085fa/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/1085fa/",
+            "title": "C++ STL 容器重要概念",
+            "summary": "STL 容器分析",
+            "date_modified": "2020-09-13T00:01:00.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/690153/",
@@ -150,18 +150,18 @@
             "date_modified": "2021-12-13T17:01:41.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/a651e2/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/a651e2/",
-            "title": "随机数生成问题 连续",
-            "summary": "收集一些算法",
-            "date_modified": "2023-01-02T17:21:05.000Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/pages/22ee97/",
             "url": "https://axiomofchoice-hjt.github.io/pages/22ee97/",
             "title": "随机数生成问题 离散",
             "summary": "收集一些算法",
             "date_modified": "2022-11-29T23:51:59.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/a651e2/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/a651e2/",
+            "title": "随机数生成问题 连续",
+            "summary": "收集一些算法",
+            "date_modified": "2023-01-02T17:21:05.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/0fc19d/",
@@ -207,13 +207,6 @@
             "date_modified": "2021-12-08T10:04:43.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/9f1388/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/9f1388/",
-            "title": "大学求职经历",
-            "summary": "找实习/工作的一些感想",
-            "date_modified": "2022-04-13T12:58:03.000Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/pages/451424/",
             "url": "https://axiomofchoice-hjt.github.io/pages/451424/",
             "title": "HDU ACM 从入门到入坟",
@@ -229,6 +222,13 @@
             "date_modified": "2023-12-17T23:15:51.000Z"
         },
         {
+            "id": "https://axiomofchoice-hjt.github.io/pages/9f1388/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/9f1388/",
+            "title": "大学求职经历",
+            "summary": "找实习/工作的一些感想",
+            "date_modified": "2022-04-13T12:58:03.000Z"
+        },
+        {
             "id": "https://axiomofchoice-hjt.github.io/pages/62c303/",
             "url": "https://axiomofchoice-hjt.github.io/pages/62c303/",
             "title": "游戏：blockchallenge",
@@ -236,22 +236,22 @@
             "date_modified": "2021-12-06T16:28:07.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/archives/",
-            "url": "https://axiomofchoice-hjt.github.io/archives/",
-            "title": "归档",
-            "date_modified": "2024-05-25T19:21:20.045Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/categories/",
             "url": "https://axiomofchoice-hjt.github.io/categories/",
             "title": "分类",
-            "date_modified": "2024-05-25T19:21:20.045Z"
+            "date_modified": "2024-05-26T11:50:04.281Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/archives/",
+            "url": "https://axiomofchoice-hjt.github.io/archives/",
+            "title": "归档",
+            "date_modified": "2024-05-26T11:50:04.281Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/",
             "url": "https://axiomofchoice-hjt.github.io/",
             "title": "Home",
-            "date_modified": "2024-05-25T19:21:20.045Z"
+            "date_modified": "2024-05-26T11:50:04.281Z"
         }
     ]
 }

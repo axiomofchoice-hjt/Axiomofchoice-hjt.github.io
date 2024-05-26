@@ -2,18 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://axiomofchoice-hjt.github.io</id>
     <title>Axiomofchoice&apos;s Blog</title>
-    <updated>2024-05-25T19:21:20.052Z</updated>
+    <updated>2024-05-26T11:50:04.286Z</updated>
     <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
     <link rel="alternate" href="https://axiomofchoice-hjt.github.io"/>
     <link rel="self" href="https://axiomofchoice-hjt.github.io/feed.atom"/>
     <subtitle>一个退役 ACMer 的个人博客</subtitle>
+    <entry>
+        <title type="html"><![CDATA[集合求并的极致优化]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/85c4ed/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/85c4ed/">
+        </link>
+        <updated>2023-12-23T22:08:56.000Z</updated>
+        <summary type="html"><![CDATA[偶然遇到一个问题：给定两个集合，求它们的并集。集合用有序的整数 (uint32) 序列表示。]]></summary>
+    </entry>
     <entry>
         <title type="html"><![CDATA[浮点数误差入门]]></title>
         <id>https://axiomofchoice-hjt.github.io/pages/c1e151/</id>
         <link href="https://axiomofchoice-hjt.github.io/pages/c1e151/">
         </link>
         <updated>2023-12-19T23:05:16.000Z</updated>
-        <summary type="html"><![CDATA[众所周知，浮点数是有一定误差的。经过多次计算，误差会累积。那么我们能不能从理论上分析误差累积的情况呢？]]></summary>
+        <summary type="html"><![CDATA[当然大多数情况误差都是可控的，只有比较极端的情况才会注意到误差的存在。]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[xbyak 汇编开发姿势]]></title>
@@ -24,33 +32,27 @@
         <summary type="html"><![CDATA[汇编器我选择了 xbyak 库。xbyak 本身是 JIT 汇编器，但这里我们只把 xbyak 当成静态的汇编器来使用。]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[集合求并的极致优化]]></title>
-        <id>https://axiomofchoice-hjt.github.io/pages/85c4ed/</id>
-        <link href="https://axiomofchoice-hjt.github.io/pages/85c4ed/">
-        </link>
-        <updated>2023-12-23T22:08:56.000Z</updated>
-        <summary type="html"><![CDATA[return out_end - out;
-}
-`]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[如何做好 benchmark]]></title>
-        <id>https://axiomofchoice-hjt.github.io/pages/1abfb8/</id>
-        <link href="https://axiomofchoice-hjt.github.io/pages/1abfb8/">
-        </link>
-        <updated>2024-05-02T16:09:42.000Z</updated>
-        <summary type="html"><![CDATA[std::chrono::highresolutionclock::now() 可以获取当前时间，两个时间相减后调用 .count() 就能得到纳秒，除以 1000 就得到微秒。]]></summary>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[更自由的 perf 采样实践]]></title>
         <id>https://axiomofchoice-hjt.github.io/pages/f2fc10/</id>
         <link href="https://axiomofchoice-hjt.github.io/pages/f2fc10/">
         </link>
         <updated>2024-05-26T02:20:56.000Z</updated>
-        <summary type="html"><![CDATA[set(BENCHMARKENABLELIBPFM ON)
-set(BENCHMARKENABLEGTEST_TESTS OFF)
-addsubdirectory(thirdparty/benchmark)
-targetlinklibraries(${PROJECT_NAME} PRIVATE benchmark::benchmark)
+        <summary type="html"><![CDATA[int main() {
+    std::string events = "cycles,instructions,branches,cache-misses";
+    benchmark::internal::PerfCountersMeasurement pcm(
+        benchmark::StrSplit(events.c_str(), ','));
+    std::vector> perf_result;
+    pcm.Start();
+    {
+        const int N = 1000000;
+        std::vector a(N);
+        std::sort(a.begin(), a.end());
+    }
+    pcm.Stop(perf_result);
+    for (auto i : perf_result) {
+        printf("%s: %ld\n", i.first.cstr(), (int64t)i.second);
+    }
+}
 `]]></summary>
     </entry>
     <entry>
@@ -60,6 +62,14 @@ targetlinklibraries(${PROJECT_NAME} PRIVATE benchmark::benchmark)
         </link>
         <updated>2022-03-08T18:08:00.000Z</updated>
         <summary type="html"><![CDATA[一点点踩坑记录]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[如何做好 benchmark]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/1abfb8/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/1abfb8/">
+        </link>
+        <updated>2024-05-02T16:09:42.000Z</updated>
+        <summary type="html"><![CDATA[上面的代码会有个问题，如果开了 -O2 优化，运行结果可能只有 0.001us。]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[思想实验：让 Python 拥有 C 的性能]]></title>
@@ -94,14 +104,6 @@ targetlinklibraries(${PROJECT_NAME} PRIVATE benchmark::benchmark)
         <summary type="html"><![CDATA[项目指北]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[ACM 板子]]></title>
-        <id>https://axiomofchoice-hjt.github.io/pages/e6708e/</id>
-        <link href="https://axiomofchoice-hjt.github.io/pages/e6708e/">
-        </link>
-        <updated>2021-07-07T01:20:00.000Z</updated>
-        <summary type="html"><![CDATA[算法竞赛套路]]></summary>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[Codeforces 1305 题解 (A-G)]]></title>
         <id>https://axiomofchoice-hjt.github.io/pages/253550/</id>
         <link href="https://axiomofchoice-hjt.github.io/pages/253550/">
@@ -110,12 +112,12 @@ targetlinklibraries(${PROJECT_NAME} PRIVATE benchmark::benchmark)
         <summary type="html"><![CDATA[一次算法训练]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[C++ STL 容器重要概念]]></title>
-        <id>https://axiomofchoice-hjt.github.io/pages/1085fa/</id>
-        <link href="https://axiomofchoice-hjt.github.io/pages/1085fa/">
+        <title type="html"><![CDATA[ACM 板子]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/e6708e/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/e6708e/">
         </link>
-        <updated>2020-09-13T00:01:00.000Z</updated>
-        <summary type="html"><![CDATA[STL 容器分析]]></summary>
+        <updated>2021-07-07T01:20:00.000Z</updated>
+        <summary type="html"><![CDATA[算法竞赛套路]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[猫树的简单介绍]]></title>
@@ -124,6 +126,14 @@ targetlinklibraries(${PROJECT_NAME} PRIVATE benchmark::benchmark)
         </link>
         <updated>2020-03-18T18:36:00.000Z</updated>
         <summary type="html"><![CDATA[算法竞赛冷门数据结构]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C++ STL 容器重要概念]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/1085fa/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/1085fa/">
+        </link>
+        <updated>2020-09-13T00:01:00.000Z</updated>
+        <summary type="html"><![CDATA[STL 容器分析]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[有个表叫杨表]]></title>
@@ -174,19 +184,19 @@ targetlinklibraries(${PROJECT_NAME} PRIVATE benchmark::benchmark)
         <summary type="html"><![CDATA[一种奇怪的通讯方式]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[随机数生成问题 连续]]></title>
-        <id>https://axiomofchoice-hjt.github.io/pages/a651e2/</id>
-        <link href="https://axiomofchoice-hjt.github.io/pages/a651e2/">
-        </link>
-        <updated>2023-01-02T17:21:05.000Z</updated>
-        <summary type="html"><![CDATA[收集一些算法]]></summary>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[随机数生成问题 离散]]></title>
         <id>https://axiomofchoice-hjt.github.io/pages/22ee97/</id>
         <link href="https://axiomofchoice-hjt.github.io/pages/22ee97/">
         </link>
         <updated>2022-11-29T23:51:59.000Z</updated>
+        <summary type="html"><![CDATA[收集一些算法]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[随机数生成问题 连续]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/a651e2/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/a651e2/">
+        </link>
+        <updated>2023-01-02T17:21:05.000Z</updated>
         <summary type="html"><![CDATA[收集一些算法]]></summary>
     </entry>
     <entry>
@@ -238,14 +248,6 @@ targetlinklibraries(${PROJECT_NAME} PRIVATE benchmark::benchmark)
         <summary type="html"><![CDATA[胡言乱语]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[大学求职经历]]></title>
-        <id>https://axiomofchoice-hjt.github.io/pages/9f1388/</id>
-        <link href="https://axiomofchoice-hjt.github.io/pages/9f1388/">
-        </link>
-        <updated>2022-04-13T12:58:03.000Z</updated>
-        <summary type="html"><![CDATA[找实习/工作的一些感想]]></summary>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[HDU ACM 从入门到入坟]]></title>
         <id>https://axiomofchoice-hjt.github.io/pages/451424/</id>
         <link href="https://axiomofchoice-hjt.github.io/pages/451424/">
@@ -262,6 +264,14 @@ targetlinklibraries(${PROJECT_NAME} PRIVATE benchmark::benchmark)
         <summary type="html"><![CDATA[大学回顾]]></summary>
     </entry>
     <entry>
+        <title type="html"><![CDATA[大学求职经历]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/9f1388/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/9f1388/">
+        </link>
+        <updated>2022-04-13T12:58:03.000Z</updated>
+        <summary type="html"><![CDATA[找实习/工作的一些感想]]></summary>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[游戏：blockchallenge]]></title>
         <id>https://axiomofchoice-hjt.github.io/pages/62c303/</id>
         <link href="https://axiomofchoice-hjt.github.io/pages/62c303/">
@@ -270,24 +280,24 @@ targetlinklibraries(${PROJECT_NAME} PRIVATE benchmark::benchmark)
         <summary type="html"><![CDATA[一个解密游戏，规则由玩家发掘，难度较高]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[归档]]></title>
-        <id>https://axiomofchoice-hjt.github.io/archives/</id>
-        <link href="https://axiomofchoice-hjt.github.io/archives/">
-        </link>
-        <updated>2024-05-25T19:21:20.045Z</updated>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[分类]]></title>
         <id>https://axiomofchoice-hjt.github.io/categories/</id>
         <link href="https://axiomofchoice-hjt.github.io/categories/">
         </link>
-        <updated>2024-05-25T19:21:20.045Z</updated>
+        <updated>2024-05-26T11:50:04.281Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[归档]]></title>
+        <id>https://axiomofchoice-hjt.github.io/archives/</id>
+        <link href="https://axiomofchoice-hjt.github.io/archives/">
+        </link>
+        <updated>2024-05-26T11:50:04.281Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Home]]></title>
         <id>https://axiomofchoice-hjt.github.io/</id>
         <link href="https://axiomofchoice-hjt.github.io/">
         </link>
-        <updated>2024-05-25T19:21:20.045Z</updated>
+        <updated>2024-05-26T11:50:04.281Z</updated>
     </entry>
 </feed>
