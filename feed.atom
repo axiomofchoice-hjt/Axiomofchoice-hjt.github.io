@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://axiomofchoice-hjt.github.io</id>
     <title>Axiomofchoice&apos;s Blog</title>
-    <updated>2024-06-01T12:24:37.143Z</updated>
+    <updated>2024-06-01T17:31:01.576Z</updated>
     <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
     <link rel="alternate" href="https://axiomofchoice-hjt.github.io"/>
     <link rel="self" href="https://axiomofchoice-hjt.github.io/feed.atom"/>
@@ -95,14 +95,6 @@
         <summary type="html"><![CDATA[常数额外空间的归并排序]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[如何写C++项目]]></title>
-        <id>https://axiomofchoice-hjt.github.io/pages/dec161/</id>
-        <link href="https://axiomofchoice-hjt.github.io/pages/dec161/">
-        </link>
-        <updated>2023-03-24T19:50:38.000Z</updated>
-        <summary type="html"><![CDATA[项目指北]]></summary>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[ACM 板子]]></title>
         <id>https://axiomofchoice-hjt.github.io/pages/e6708e/</id>
         <link href="https://axiomofchoice-hjt.github.io/pages/e6708e/">
@@ -127,20 +119,28 @@
         <summary type="html"><![CDATA[STL 容器分析]]></summary>
     </entry>
     <entry>
+        <title type="html"><![CDATA[如何写C++项目]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/dec161/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/dec161/">
+        </link>
+        <updated>2023-03-24T19:50:38.000Z</updated>
+        <summary type="html"><![CDATA[项目指北]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[猫树的简单介绍]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/da7744/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/da7744/">
+        </link>
+        <updated>2020-03-18T18:36:00.000Z</updated>
+        <summary type="html"><![CDATA[算法竞赛冷门数据结构]]></summary>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[有个表叫杨表]]></title>
         <id>https://axiomofchoice-hjt.github.io/pages/690153/</id>
         <link href="https://axiomofchoice-hjt.github.io/pages/690153/">
         </link>
         <updated>2021-02-02T15:37:00.000Z</updated>
         <summary type="html"><![CDATA[算法竞赛冷门科技]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[卡常：关于对常量取模的优化]]></title>
-        <id>https://axiomofchoice-hjt.github.io/pages/5d5a89/</id>
-        <link href="https://axiomofchoice-hjt.github.io/pages/5d5a89/">
-        </link>
-        <updated>2021-11-16T02:08:00.000Z</updated>
-        <summary type="html"><![CDATA[极致的常数优化]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[二进制高精度，ACMer 必知必会（不是）的算法]]></title>
@@ -183,28 +183,12 @@
         <summary type="html"><![CDATA[收集一些算法]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[随机数生成问题 连续]]></title>
-        <id>https://axiomofchoice-hjt.github.io/pages/a651e2/</id>
-        <link href="https://axiomofchoice-hjt.github.io/pages/a651e2/">
+        <title type="html"><![CDATA[卡常：关于对常量取模的优化]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/5d5a89/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/5d5a89/">
         </link>
-        <updated>2023-01-02T17:21:05.000Z</updated>
-        <summary type="html"><![CDATA[收集一些算法]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[有没有计算时间复杂度的算法]]></title>
-        <id>https://axiomofchoice-hjt.github.io/pages/0fc19d/</id>
-        <link href="https://axiomofchoice-hjt.github.io/pages/0fc19d/">
-        </link>
-        <updated>2023-10-06T23:54:00.000Z</updated>
-        <summary type="html"><![CDATA[一点证明思路]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[猫树的简单介绍]]></title>
-        <id>https://axiomofchoice-hjt.github.io/pages/da7744/</id>
-        <link href="https://axiomofchoice-hjt.github.io/pages/da7744/">
-        </link>
-        <updated>2020-03-18T18:36:00.000Z</updated>
-        <summary type="html"><![CDATA[算法竞赛冷门数据结构]]></summary>
+        <updated>2021-11-16T02:08:00.000Z</updated>
+        <summary type="html"><![CDATA[极致的常数优化]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[理想的并行排序算法]]></title>
@@ -231,6 +215,14 @@
         <summary type="html"><![CDATA[超现实数科普]]></summary>
     </entry>
     <entry>
+        <title type="html"><![CDATA[关于博主]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/1919bb/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/1919bb/">
+        </link>
+        <updated>2021-12-02T15:22:24.000Z</updated>
+        <summary type="html"><![CDATA[选择公理是谁]]></summary>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[今日瞎想]]></title>
         <id>https://axiomofchoice-hjt.github.io/pages/228fff/</id>
         <link href="https://axiomofchoice-hjt.github.io/pages/228fff/">
@@ -247,20 +239,28 @@
         <summary type="html"><![CDATA[找实习/工作的一些感想]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[HDU ACM 从入门到入坟]]></title>
-        <id>https://axiomofchoice-hjt.github.io/pages/451424/</id>
-        <link href="https://axiomofchoice-hjt.github.io/pages/451424/">
-        </link>
-        <updated>2023-07-25T02:23:03.000Z</updated>
-        <summary type="html"><![CDATA[给 HDU 新生的 ACM 建议]]></summary>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[大学阶段回顾和总结]]></title>
         <id>https://axiomofchoice-hjt.github.io/pages/f7352c/</id>
         <link href="https://axiomofchoice-hjt.github.io/pages/f7352c/">
         </link>
         <updated>2023-12-17T23:15:51.000Z</updated>
         <summary type="html"><![CDATA[大学回顾]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[有没有计算时间复杂度的算法]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/0fc19d/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/0fc19d/">
+        </link>
+        <updated>2023-10-06T23:54:00.000Z</updated>
+        <summary type="html"><![CDATA[一点证明思路]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[随机数生成问题 连续]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/a651e2/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/a651e2/">
+        </link>
+        <updated>2023-01-02T17:21:05.000Z</updated>
+        <summary type="html"><![CDATA[收集一些算法]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[游戏：blockchallenge]]></title>
@@ -271,32 +271,32 @@
         <summary type="html"><![CDATA[一个解密游戏，规则由玩家发掘，难度较高]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[关于博主]]></title>
-        <id>https://axiomofchoice-hjt.github.io/pages/1919bb/</id>
-        <link href="https://axiomofchoice-hjt.github.io/pages/1919bb/">
+        <title type="html"><![CDATA[HDU ACM 从入门到入坟]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/451424/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/451424/">
         </link>
-        <updated>2021-12-02T15:22:24.000Z</updated>
-        <summary type="html"><![CDATA[选择公理是谁]]></summary>
+        <updated>2023-07-25T02:23:03.000Z</updated>
+        <summary type="html"><![CDATA[给 HDU 新生的 ACM 建议]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[归档]]></title>
         <id>https://axiomofchoice-hjt.github.io/archives/</id>
         <link href="https://axiomofchoice-hjt.github.io/archives/">
         </link>
-        <updated>2024-06-01T12:24:37.141Z</updated>
+        <updated>2024-06-01T17:31:01.573Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[分类]]></title>
         <id>https://axiomofchoice-hjt.github.io/categories/</id>
         <link href="https://axiomofchoice-hjt.github.io/categories/">
         </link>
-        <updated>2024-06-01T12:24:37.141Z</updated>
+        <updated>2024-06-01T17:31:01.573Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Home]]></title>
         <id>https://axiomofchoice-hjt.github.io/</id>
         <link href="https://axiomofchoice-hjt.github.io/">
         </link>
-        <updated>2024-06-01T12:24:37.141Z</updated>
+        <updated>2024-06-01T17:31:01.573Z</updated>
     </entry>
 </feed>
