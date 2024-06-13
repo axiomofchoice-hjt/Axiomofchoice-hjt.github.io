@@ -3,7 +3,7 @@
         <title>Axiomofchoice's Blog</title>
         <link>https://axiomofchoice-hjt.github.io</link>
         <description>一个退役 ACMer 的个人博客</description>
-        <lastBuildDate>Sun, 02 Jun 2024 17:22:13 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 13 Jun 2024 14:41:48 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <ns0:link href="https://axiomofchoice-hjt.github.io/feed.atom" rel="self" type="application/rss+xml" />
@@ -15,15 +15,6 @@
             <description>众所周知，浮点数是有一定误差的。经过多次计算，误差会累积。那么我们能不能从理论上分析误差累积的情况呢？</description>
         </item>
         <item>
-            <title>集合求并的极致优化</title>
-            <link>https://axiomofchoice-hjt.github.io/pages/85c4ed/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/85c4ed/</guid>
-            <pubDate>Sat, 23 Dec 2023 22:08:56 GMT</pubDate>
-            <description>本文将从分支、SIMD、并发三个优化角度进行讲解。</description>
-            <enclosure url="https://axiomofchoice-hjt.github.io/img/85c4ed-0.png">
-            </enclosure>
-        </item>
-        <item>
             <title>xbyak 汇编开发姿势</title>
             <link>https://axiomofchoice-hjt.github.io/pages/86fdbe/</link>
             <guid>https://axiomofchoice-hjt.github.io/pages/86fdbe/</guid>
@@ -31,42 +22,42 @@
             <description>汇编器我选择了 xbyak 库。xbyak 本身是 JIT 汇编器，但这里我们只把 xbyak 当成静态的汇编器来使用。</description>
         </item>
         <item>
+            <title>集合求并的极致优化</title>
+            <link>https://axiomofchoice-hjt.github.io/pages/85c4ed/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/85c4ed/</guid>
+            <pubDate>Sat, 23 Dec 2023 22:08:56 GMT</pubDate>
+            <description>return out_end - out;
+}
+`</description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/img/85c4ed-0.png">
+            </enclosure>
+        </item>
+        <item>
             <title>如何做好 benchmark</title>
             <link>https://axiomofchoice-hjt.github.io/pages/1abfb8/</link>
             <guid>https://axiomofchoice-hjt.github.io/pages/1abfb8/</guid>
             <pubDate>Thu, 02 May 2024 16:09:42 GMT</pubDate>
-            <description>}
-    return sum;
-}</description>
+            <description>std::chrono::highresolutionclock::now() 可以获取当前时间，两个时间相减后调用 .count() 就能得到纳秒，除以 1000 就得到微秒。</description>
             <enclosure url="https://axiomofchoice-hjt.github.io/img/1abfb8-0.png">
             </enclosure>
         </item>
         <item>
-            <title>更自由的 perf 采样实践</title>
-            <link>https://axiomofchoice-hjt.github.io/pages/f2fc10/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/f2fc10/</guid>
-            <pubDate>Sun, 26 May 2024 02:20:56 GMT</pubDate>
-            <description>benchmark::StrSplit(events.c_str(), ','));
-    std::vector&gt; perf_result;
-    pcm.Start();
-    {
-        const int N = 1000000;
-        std::vector a(N);
-        std::sort(a.begin(), a.end());
-    }
-    pcm.Stop(perf_result);
-    for (auto i : perf_result) {
-        printf("%s: %ld\n", i.first.cstr(), (int64t)i.second);
-    }
+            <title>测量多线程每个线程的运行时间</title>
+            <link>https://axiomofchoice-hjt.github.io/pages/62c8f3/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/62c8f3/</guid>
+            <pubDate>Thu, 13 Jun 2024 22:06:32 GMT</pubDate>
+            <description>calc();
+    auto duration = clock::now() - start;
+    benchmarkresult[threadid] = duration.count();
 }
 `</description>
         </item>
         <item>
-            <title>博客搭建过程记录</title>
-            <link>https://axiomofchoice-hjt.github.io/pages/5b222d/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/5b222d/</guid>
-            <pubDate>Tue, 08 Mar 2022 18:08:00 GMT</pubDate>
-            <description>一点点踩坑记录</description>
+            <title>思想实验：让 Python 拥有 C 的性能</title>
+            <link>https://axiomofchoice-hjt.github.io/pages/aca146/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/aca146/</guid>
+            <pubDate>Fri, 25 Mar 2022 14:29:36 GMT</pubDate>
+            <description>性能杂谈</description>
         </item>
         <item>
             <title>用汇编分析一下各种交换方法的性能</title>
@@ -78,18 +69,24 @@
             </enclosure>
         </item>
         <item>
+            <title>博客搭建过程记录</title>
+            <link>https://axiomofchoice-hjt.github.io/pages/5b222d/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/5b222d/</guid>
+            <pubDate>Tue, 08 Mar 2022 18:08:00 GMT</pubDate>
+            <description>一点点踩坑记录</description>
+        </item>
+        <item>
+            <title>更自由的 perf 采样实践</title>
+            <link>https://axiomofchoice-hjt.github.io/pages/f2fc10/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/f2fc10/</guid>
+            <pubDate>Sun, 26 May 2024 02:20:56 GMT</pubDate>
+        </item>
+        <item>
             <title>原地归并排序</title>
             <link>https://axiomofchoice-hjt.github.io/pages/2ef606/</link>
             <guid>https://axiomofchoice-hjt.github.io/pages/2ef606/</guid>
             <pubDate>Sun, 29 May 2022 14:34:32 GMT</pubDate>
             <description>常数额外空间的归并排序</description>
-        </item>
-        <item>
-            <title>如何写C++项目</title>
-            <link>https://axiomofchoice-hjt.github.io/pages/dec161/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/dec161/</guid>
-            <pubDate>Fri, 24 Mar 2023 19:50:38 GMT</pubDate>
-            <description>项目指北</description>
         </item>
         <item>
             <title>Codeforces 1305 题解 (A-G)</title>
@@ -99,6 +96,13 @@
             <description>一次算法训练</description>
         </item>
         <item>
+            <title>猫树的简单介绍</title>
+            <link>https://axiomofchoice-hjt.github.io/pages/da7744/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/da7744/</guid>
+            <pubDate>Wed, 18 Mar 2020 18:36:00 GMT</pubDate>
+            <description>算法竞赛冷门数据结构</description>
+        </item>
+        <item>
             <title>C++ STL 容器重要概念</title>
             <link>https://axiomofchoice-hjt.github.io/pages/1085fa/</link>
             <guid>https://axiomofchoice-hjt.github.io/pages/1085fa/</guid>
@@ -106,11 +110,11 @@
             <description>STL 容器分析</description>
         </item>
         <item>
-            <title>猫树的简单介绍</title>
-            <link>https://axiomofchoice-hjt.github.io/pages/da7744/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/da7744/</guid>
-            <pubDate>Wed, 18 Mar 2020 18:36:00 GMT</pubDate>
-            <description>算法竞赛冷门数据结构</description>
+            <title>ACM 板子</title>
+            <link>https://axiomofchoice-hjt.github.io/pages/e6708e/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/e6708e/</guid>
+            <pubDate>Wed, 07 Jul 2021 01:20:00 GMT</pubDate>
+            <description>算法竞赛套路</description>
         </item>
         <item>
             <title>有个表叫杨表</title>
@@ -122,13 +126,6 @@
             </enclosure>
         </item>
         <item>
-            <title>思想实验：让 Python 拥有 C 的性能</title>
-            <link>https://axiomofchoice-hjt.github.io/pages/aca146/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/aca146/</guid>
-            <pubDate>Fri, 25 Mar 2022 14:29:36 GMT</pubDate>
-            <description>性能杂谈</description>
-        </item>
-        <item>
             <title>卡常：关于对常量取模的优化</title>
             <link>https://axiomofchoice-hjt.github.io/pages/5d5a89/</link>
             <guid>https://axiomofchoice-hjt.github.io/pages/5d5a89/</guid>
@@ -136,18 +133,32 @@
             <description>极致的常数优化</description>
         </item>
         <item>
-            <title>ACM 板子</title>
-            <link>https://axiomofchoice-hjt.github.io/pages/e6708e/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/e6708e/</guid>
-            <pubDate>Wed, 07 Jul 2021 01:20:00 GMT</pubDate>
-            <description>算法竞赛套路</description>
-        </item>
-        <item>
             <title>二进制高精度，ACMer 必知必会（不是）的算法</title>
             <link>https://axiomofchoice-hjt.github.io/pages/d8504e/</link>
             <guid>https://axiomofchoice-hjt.github.io/pages/d8504e/</guid>
             <pubDate>Fri, 05 Nov 2021 19:22:00 GMT</pubDate>
             <description>二进制大数</description>
+        </item>
+        <item>
+            <title>如何写C++项目</title>
+            <link>https://axiomofchoice-hjt.github.io/pages/dec161/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/dec161/</guid>
+            <pubDate>Fri, 24 Mar 2023 19:50:38 GMT</pubDate>
+            <description>项目指北</description>
+        </item>
+        <item>
+            <title>球盒模型</title>
+            <link>https://axiomofchoice-hjt.github.io/pages/220100/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/220100/</guid>
+            <pubDate>Fri, 14 Jan 2022 17:35:18 GMT</pubDate>
+            <description>算法竞赛有用科技</description>
+        </item>
+        <item>
+            <title>扑克牌魔术</title>
+            <link>https://axiomofchoice-hjt.github.io/pages/73ab29/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/73ab29/</guid>
+            <pubDate>Mon, 13 Dec 2021 17:01:41 GMT</pubDate>
+            <description>一种奇怪的通讯方式</description>
         </item>
         <item>
             <title>排序网络</title>
@@ -171,25 +182,11 @@
             <description>收集一些算法</description>
         </item>
         <item>
-            <title>扑克牌魔术</title>
-            <link>https://axiomofchoice-hjt.github.io/pages/73ab29/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/73ab29/</guid>
-            <pubDate>Mon, 13 Dec 2021 17:01:41 GMT</pubDate>
-            <description>一种奇怪的通讯方式</description>
-        </item>
-        <item>
-            <title>球盒模型</title>
-            <link>https://axiomofchoice-hjt.github.io/pages/220100/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/220100/</guid>
-            <pubDate>Fri, 14 Jan 2022 17:35:18 GMT</pubDate>
-            <description>算法竞赛有用科技</description>
-        </item>
-        <item>
-            <title>理想的并行排序算法</title>
-            <link>https://axiomofchoice-hjt.github.io/pages/342a8d/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/342a8d/</guid>
-            <pubDate>Sun, 19 Nov 2023 01:09:21 GMT</pubDate>
-            <description>如果某CPU有无限个核心，那么时间复杂度最小的排序算法是怎么样的？</description>
+            <title>有没有计算时间复杂度的算法</title>
+            <link>https://axiomofchoice-hjt.github.io/pages/0fc19d/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/0fc19d/</guid>
+            <pubDate>Fri, 06 Oct 2023 23:54:00 GMT</pubDate>
+            <description>一点证明思路</description>
         </item>
         <item>
             <title>集合的势</title>
@@ -199,11 +196,27 @@
             <description>集合论科普</description>
         </item>
         <item>
+            <title>理想的并行排序算法</title>
+            <link>https://axiomofchoice-hjt.github.io/pages/342a8d/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/342a8d/</guid>
+            <pubDate>Sun, 19 Nov 2023 01:09:21 GMT</pubDate>
+            <description>如果某CPU有无限个核心，那么时间复杂度最小的排序算法是怎么样的？</description>
+        </item>
+        <item>
             <title>不平等博弈的 Q &amp; A</title>
             <link>https://axiomofchoice-hjt.github.io/pages/d6b786/</link>
             <guid>https://axiomofchoice-hjt.github.io/pages/d6b786/</guid>
             <pubDate>Sat, 29 Aug 2020 01:35:00 GMT</pubDate>
             <description>超现实数科普</description>
+        </item>
+        <item>
+            <title>关于博主</title>
+            <link>https://axiomofchoice-hjt.github.io/pages/1919bb/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/1919bb/</guid>
+            <pubDate>Thu, 02 Dec 2021 15:22:24 GMT</pubDate>
+            <description>选择公理是谁</description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/img/1919bb-0.png">
+            </enclosure>
         </item>
         <item>
             <title>今日瞎想</title>
@@ -220,13 +233,11 @@
             <description>找实习/工作的一些感想</description>
         </item>
         <item>
-            <title>HDU ACM 从入门到入坟</title>
-            <link>https://axiomofchoice-hjt.github.io/pages/451424/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/451424/</guid>
-            <pubDate>Tue, 25 Jul 2023 02:23:03 GMT</pubDate>
-            <description>给 HDU 新生的 ACM 建议</description>
-            <enclosure url="https://cdn.xyxsw.site/Axiomofchoice_1.png">
-            </enclosure>
+            <title>游戏：blockchallenge</title>
+            <link>https://axiomofchoice-hjt.github.io/pages/62c303/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/62c303/</guid>
+            <pubDate>Mon, 06 Dec 2021 16:28:07 GMT</pubDate>
+            <description>一个解密游戏，规则由玩家发掘，难度较高</description>
         </item>
         <item>
             <title>大学阶段回顾和总结</title>
@@ -236,33 +247,19 @@
             <description>大学回顾</description>
         </item>
         <item>
-            <title>游戏：blockchallenge</title>
-            <link>https://axiomofchoice-hjt.github.io/pages/62c303/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/62c303/</guid>
-            <pubDate>Mon, 06 Dec 2021 16:28:07 GMT</pubDate>
-            <description>一个解密游戏，规则由玩家发掘，难度较高</description>
+            <title>分类</title>
+            <link>https://axiomofchoice-hjt.github.io/categories/</link>
+            <guid>https://axiomofchoice-hjt.github.io/categories/</guid>
+            <pubDate>Thu, 13 Jun 2024 14:41:48 GMT</pubDate>
         </item>
         <item>
-            <title>关于博主</title>
-            <link>https://axiomofchoice-hjt.github.io/pages/1919bb/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/1919bb/</guid>
-            <pubDate>Thu, 02 Dec 2021 15:22:24 GMT</pubDate>
-            <description>选择公理是谁</description>
-            <enclosure url="https://axiomofchoice-hjt.github.io/img/1919bb-0.png">
+            <title>HDU ACM 从入门到入坟</title>
+            <link>https://axiomofchoice-hjt.github.io/pages/451424/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/451424/</guid>
+            <pubDate>Tue, 25 Jul 2023 02:23:03 GMT</pubDate>
+            <description>给 HDU 新生的 ACM 建议</description>
+            <enclosure url="https://cdn.xyxsw.site/Axiomofchoice_1.png">
             </enclosure>
-        </item>
-        <item>
-            <title>Home</title>
-            <link>https://axiomofchoice-hjt.github.io/</link>
-            <guid>https://axiomofchoice-hjt.github.io/</guid>
-            <pubDate>Sun, 02 Jun 2024 17:22:13 GMT</pubDate>
-        </item>
-        <item>
-            <title>有没有计算时间复杂度的算法</title>
-            <link>https://axiomofchoice-hjt.github.io/pages/0fc19d/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/0fc19d/</guid>
-            <pubDate>Fri, 06 Oct 2023 23:54:00 GMT</pubDate>
-            <description>一点证明思路</description>
         </item>
     </channel>
 </rss>
