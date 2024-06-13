@@ -13,17 +13,10 @@
             "date_modified": "2023-12-19T23:05:16.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/86fdbe/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/86fdbe/",
-            "title": "xbyak 汇编开发姿势",
-            "summary": "汇编器我选择了 xbyak 库。xbyak 本身是 JIT 汇编器，但这里我们只把 xbyak 当成静态的汇编器来使用。",
-            "date_modified": "2024-03-23T17:20:28.000Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/pages/85c4ed/",
             "url": "https://axiomofchoice-hjt.github.io/pages/85c4ed/",
             "title": "集合求并的极致优化",
-            "summary": "return out_end - out;\n}\n`",
+            "summary": "本文将从分支、SIMD、并发三个优化角度进行讲解。",
             "image": "https://axiomofchoice-hjt.github.io/img/85c4ed-0.png",
             "date_modified": "2023-12-23T22:08:56.000Z"
         },
@@ -31,16 +24,23 @@
             "id": "https://axiomofchoice-hjt.github.io/pages/1abfb8/",
             "url": "https://axiomofchoice-hjt.github.io/pages/1abfb8/",
             "title": "如何做好 benchmark",
-            "summary": "std::chrono::highresolutionclock::now() 可以获取当前时间，两个时间相减后调用 .count() 就能得到纳秒，除以 1000 就得到微秒。",
+            "summary": "benchmark：基准测试，一般指对独立模块的性能测试。",
             "image": "https://axiomofchoice-hjt.github.io/img/1abfb8-0.png",
             "date_modified": "2024-05-02T16:09:42.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/62c8f3/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/62c8f3/",
-            "title": "测量多线程每个线程的运行时间",
-            "summary": "calc();\n    auto duration = clock::now() - start;\n    benchmarkresult[threadid] = duration.count();\n}\n`",
-            "date_modified": "2024-06-13T22:06:32.000Z"
+            "id": "https://axiomofchoice-hjt.github.io/pages/f2fc10/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/f2fc10/",
+            "title": "更自由的 perf 采样实践",
+            "summary": "代码这么写：",
+            "date_modified": "2024-05-26T02:20:56.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/5b222d/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/5b222d/",
+            "title": "博客搭建过程记录",
+            "summary": "一点点踩坑记录",
+            "date_modified": "2022-03-08T18:08:00.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/aca146/",
@@ -58,24 +58,25 @@
             "date_modified": "2022-10-03T18:14:04.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/5b222d/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/5b222d/",
-            "title": "博客搭建过程记录",
-            "summary": "一点点踩坑记录",
-            "date_modified": "2022-03-08T18:08:00.000Z"
+            "id": "https://axiomofchoice-hjt.github.io/pages/62c8f3/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/62c8f3/",
+            "title": "测量多线程每个线程的运行时间",
+            "summary": "benchmarkresult[threadid] = duration.count();\n}\n`",
+            "date_modified": "2024-06-13T22:06:32.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/f2fc10/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/f2fc10/",
-            "title": "更自由的 perf 采样实践",
-            "date_modified": "2024-05-26T02:20:56.000Z"
+            "id": "https://axiomofchoice-hjt.github.io/pages/86fdbe/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/86fdbe/",
+            "title": "xbyak 汇编开发姿势",
+            "summary": "众所周知，汇编器只能把汇编翻译为机器码，所以要先写汇编。",
+            "date_modified": "2024-03-23T17:20:28.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/2ef606/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/2ef606/",
-            "title": "原地归并排序",
-            "summary": "常数额外空间的归并排序",
-            "date_modified": "2022-05-29T14:34:32.000Z"
+            "id": "https://axiomofchoice-hjt.github.io/pages/e6708e/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/e6708e/",
+            "title": "ACM 板子",
+            "summary": "算法竞赛套路",
+            "date_modified": "2021-07-07T01:20:00.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/253550/",
@@ -85,25 +86,25 @@
             "date_modified": "2020-03-04T14:51:00.000Z"
         },
         {
+            "id": "https://axiomofchoice-hjt.github.io/pages/2ef606/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/2ef606/",
+            "title": "原地归并排序",
+            "summary": "常数额外空间的归并排序",
+            "date_modified": "2022-05-29T14:34:32.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/dec161/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/dec161/",
+            "title": "如何写C++项目",
+            "summary": "项目指北",
+            "date_modified": "2023-03-24T19:50:38.000Z"
+        },
+        {
             "id": "https://axiomofchoice-hjt.github.io/pages/da7744/",
             "url": "https://axiomofchoice-hjt.github.io/pages/da7744/",
             "title": "猫树的简单介绍",
             "summary": "算法竞赛冷门数据结构",
             "date_modified": "2020-03-18T18:36:00.000Z"
-        },
-        {
-            "id": "https://axiomofchoice-hjt.github.io/pages/1085fa/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/1085fa/",
-            "title": "C++ STL 容器重要概念",
-            "summary": "STL 容器分析",
-            "date_modified": "2020-09-13T00:01:00.000Z"
-        },
-        {
-            "id": "https://axiomofchoice-hjt.github.io/pages/e6708e/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/e6708e/",
-            "title": "ACM 板子",
-            "summary": "算法竞赛套路",
-            "date_modified": "2021-07-07T01:20:00.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/690153/",
@@ -128,11 +129,11 @@
             "date_modified": "2021-11-05T19:22:00.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/dec161/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/dec161/",
-            "title": "如何写C++项目",
-            "summary": "项目指北",
-            "date_modified": "2023-03-24T19:50:38.000Z"
+            "id": "https://axiomofchoice-hjt.github.io/pages/1085fa/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/1085fa/",
+            "title": "C++ STL 容器重要概念",
+            "summary": "STL 容器分析",
+            "date_modified": "2020-09-13T00:01:00.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/220100/",
@@ -142,13 +143,6 @@
             "date_modified": "2022-01-14T17:35:18.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/73ab29/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/73ab29/",
-            "title": "扑克牌魔术",
-            "summary": "一种奇怪的通讯方式",
-            "date_modified": "2021-12-13T17:01:41.000Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/pages/51f3ee/",
             "url": "https://axiomofchoice-hjt.github.io/pages/51f3ee/",
             "title": "排序网络",
@@ -156,11 +150,11 @@
             "date_modified": "2020-12-30T21:39:00.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/22ee97/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/22ee97/",
-            "title": "随机数生成问题 离散",
-            "summary": "收集一些算法",
-            "date_modified": "2022-11-29T23:51:59.000Z"
+            "id": "https://axiomofchoice-hjt.github.io/pages/73ab29/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/73ab29/",
+            "title": "扑克牌魔术",
+            "summary": "一种奇怪的通讯方式",
+            "date_modified": "2021-12-13T17:01:41.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/a651e2/",
@@ -177,13 +171,6 @@
             "date_modified": "2023-10-06T23:54:00.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/552367/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/552367/",
-            "title": "集合的势",
-            "summary": "集合论科普",
-            "date_modified": "2018-02-07T15:35:00.000Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/pages/342a8d/",
             "url": "https://axiomofchoice-hjt.github.io/pages/342a8d/",
             "title": "理想的并行排序算法",
@@ -191,11 +178,25 @@
             "date_modified": "2023-11-19T01:09:21.000Z"
         },
         {
+            "id": "https://axiomofchoice-hjt.github.io/pages/22ee97/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/22ee97/",
+            "title": "随机数生成问题 离散",
+            "summary": "收集一些算法",
+            "date_modified": "2022-11-29T23:51:59.000Z"
+        },
+        {
             "id": "https://axiomofchoice-hjt.github.io/pages/d6b786/",
             "url": "https://axiomofchoice-hjt.github.io/pages/d6b786/",
             "title": "不平等博弈的 Q & A",
             "summary": "超现实数科普",
             "date_modified": "2020-08-29T01:35:00.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/552367/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/552367/",
+            "title": "集合的势",
+            "summary": "集合论科普",
+            "date_modified": "2018-02-07T15:35:00.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/1919bb/",
@@ -213,11 +214,12 @@
             "date_modified": "2021-12-08T10:04:43.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/9f1388/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/9f1388/",
-            "title": "大学求职经历",
-            "summary": "找实习/工作的一些感想",
-            "date_modified": "2022-04-13T12:58:03.000Z"
+            "id": "https://axiomofchoice-hjt.github.io/pages/451424/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/451424/",
+            "title": "HDU ACM 从入门到入坟",
+            "summary": "给 HDU 新生的 ACM 建议",
+            "image": "https://cdn.xyxsw.site/Axiomofchoice_1.png",
+            "date_modified": "2023-07-25T02:23:03.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/62c303/",
@@ -227,37 +229,36 @@
             "date_modified": "2021-12-06T16:28:07.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/f7352c/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/f7352c/",
-            "title": "大学阶段回顾和总结",
-            "summary": "大学回顾",
-            "date_modified": "2023-12-17T23:15:51.000Z"
+            "id": "https://axiomofchoice-hjt.github.io/pages/9f1388/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/9f1388/",
+            "title": "大学求职经历",
+            "summary": "找实习/工作的一些感想",
+            "date_modified": "2022-04-13T12:58:03.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/archives/",
             "url": "https://axiomofchoice-hjt.github.io/archives/",
             "title": "归档",
-            "date_modified": "2024-06-13T14:41:48.945Z"
+            "date_modified": "2024-06-13T15:05:51.642Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/categories/",
             "url": "https://axiomofchoice-hjt.github.io/categories/",
             "title": "分类",
-            "date_modified": "2024-06-13T14:41:48.945Z"
+            "date_modified": "2024-06-13T15:05:51.642Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/",
             "url": "https://axiomofchoice-hjt.github.io/",
             "title": "Home",
-            "date_modified": "2024-06-13T14:41:48.945Z"
+            "date_modified": "2024-06-13T15:05:51.642Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/451424/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/451424/",
-            "title": "HDU ACM 从入门到入坟",
-            "summary": "给 HDU 新生的 ACM 建议",
-            "image": "https://cdn.xyxsw.site/Axiomofchoice_1.png",
-            "date_modified": "2023-07-25T02:23:03.000Z"
+            "id": "https://axiomofchoice-hjt.github.io/pages/f7352c/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/f7352c/",
+            "title": "大学阶段回顾和总结",
+            "summary": "大学回顾",
+            "date_modified": "2023-12-17T23:15:51.000Z"
         }
     ]
 }
