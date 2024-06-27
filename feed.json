@@ -9,14 +9,14 @@
             "id": "https://axiomofchoice-hjt.github.io/pages/c1e151/",
             "url": "https://axiomofchoice-hjt.github.io/pages/c1e151/",
             "title": "浮点数误差入门",
-            "summary": "众所周知，浮点数是有一定误差的。经过多次计算，误差会累积。那么我们能不能从理论上分析误差累积的情况呢？",
+            "summary": "理论的误差估计",
             "date_modified": "2023-12-19T23:05:16.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/85c4ed/",
             "url": "https://axiomofchoice-hjt.github.io/pages/85c4ed/",
             "title": "集合求并的极致优化",
-            "summary": "本文将从分支、SIMD、并发三个优化角度进行讲解。",
+            "summary": "分支、SIMD、并发",
             "image": "https://axiomofchoice-hjt.github.io/img/85c4ed-0.png",
             "date_modified": "2023-12-23T22:08:56.000Z"
         },
@@ -24,7 +24,7 @@
             "id": "https://axiomofchoice-hjt.github.io/pages/1abfb8/",
             "url": "https://axiomofchoice-hjt.github.io/pages/1abfb8/",
             "title": "如何做好 benchmark",
-            "summary": "benchmark：基准测试，一般指对独立模块的性能测试。",
+            "summary": "benchmark 小寄巧",
             "image": "https://axiomofchoice-hjt.github.io/img/1abfb8-0.png",
             "date_modified": "2024-05-02T16:09:42.000Z"
         },
@@ -32,21 +32,28 @@
             "id": "https://axiomofchoice-hjt.github.io/pages/f2fc10/",
             "url": "https://axiomofchoice-hjt.github.io/pages/f2fc10/",
             "title": "更自由的 perf 采样实践",
-            "summary": "代码这么写：",
+            "summary": "在程序中间 perf stat",
             "date_modified": "2024-05-26T02:20:56.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/62c8f3/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/62c8f3/",
+            "title": "测量多线程每个线程的运行时间",
+            "summary": "解决竞争获取系统时间的问题",
+            "date_modified": "2024-06-13T22:06:32.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/86fdbe/",
             "url": "https://axiomofchoice-hjt.github.io/pages/86fdbe/",
             "title": "xbyak 汇编开发姿势",
-            "summary": "一点点链接基础、汇编基础。",
+            "summary": "用 xbyak 库生成静态链接库",
             "date_modified": "2024-03-23T17:20:28.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/22df72/",
             "url": "https://axiomofchoice-hjt.github.io/pages/22df72/",
             "title": "用户态线程同步",
-            "summary": "多等一，可以用来作为单线程转变为多线程的过程，而多等一则相反。",
+            "summary": "无锁同步指北",
             "image": "https://axiomofchoice-hjt.github.io/img/22df72-0.drawio.png",
             "date_modified": "2024-06-15T22:49:01.000Z"
         },
@@ -65,19 +72,19 @@
             "date_modified": "2022-03-25T14:29:36.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/62c8f3/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/62c8f3/",
-            "title": "测量多线程每个线程的运行时间",
-            "summary": "如果我们的测量对象（calc 函数）也是微秒级别的，那就会出现有的线程跑完了，有的线程还没开始的情况。",
-            "date_modified": "2024-06-13T22:06:32.000Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/pages/04ae8d/",
             "url": "https://axiomofchoice-hjt.github.io/pages/04ae8d/",
             "title": "用汇编分析一下各种交换方法的性能",
             "summary": "汇编入门",
             "image": "https://axiomofchoice-hjt.github.io/img/04ae8d-0.jpg",
             "date_modified": "2022-10-03T18:14:04.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/2ef606/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/2ef606/",
+            "title": "原地归并排序",
+            "summary": "常数额外空间的归并排序",
+            "date_modified": "2022-05-29T14:34:32.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/dec161/",
@@ -87,11 +94,11 @@
             "date_modified": "2023-03-24T19:50:38.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/253550/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/253550/",
-            "title": "Codeforces 1305 题解 (A-G)",
-            "summary": "一次算法训练",
-            "date_modified": "2020-03-04T14:51:00.000Z"
+            "id": "https://axiomofchoice-hjt.github.io/pages/51f3ee/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/51f3ee/",
+            "title": "排序网络",
+            "summary": "用于排序的电路",
+            "date_modified": "2020-12-30T21:39:00.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/1085fa/",
@@ -101,17 +108,17 @@
             "date_modified": "2020-09-13T00:01:00.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/da7744/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/da7744/",
-            "title": "猫树的简单介绍",
-            "summary": "算法竞赛冷门数据结构",
-            "date_modified": "2020-03-18T18:36:00.000Z"
+            "id": "https://axiomofchoice-hjt.github.io/pages/e6708e/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/e6708e/",
+            "title": "ACM 板子",
+            "summary": "算法竞赛套路",
+            "date_modified": "2021-07-07T01:20:00.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/690153/",
             "url": "https://axiomofchoice-hjt.github.io/pages/690153/",
             "title": "有个表叫杨表",
-            "summary": "算法竞赛冷门科技",
+            "summary": "《浅谈杨氏矩阵在信息学竞赛中的应用 袁方舟》膜拜有感",
             "image": "https://img2020.cnblogs.com/blog/1860292/202102/1860292-20210205002355077-285377351.png",
             "date_modified": "2021-02-02T15:37:00.000Z"
         },
@@ -130,18 +137,11 @@
             "date_modified": "2021-11-05T19:22:00.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/2ef606/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/2ef606/",
-            "title": "原地归并排序",
-            "summary": "常数额外空间的归并排序",
-            "date_modified": "2022-05-29T14:34:32.000Z"
-        },
-        {
-            "id": "https://axiomofchoice-hjt.github.io/pages/e6708e/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/e6708e/",
-            "title": "ACM 板子",
-            "summary": "算法竞赛套路",
-            "date_modified": "2021-07-07T01:20:00.000Z"
+            "id": "https://axiomofchoice-hjt.github.io/pages/253550/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/253550/",
+            "title": "Codeforces 1305 题解 (A-G)",
+            "summary": "一次算法训练",
+            "date_modified": "2020-03-04T14:51:00.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/220100/",
@@ -151,34 +151,6 @@
             "date_modified": "2022-01-14T17:35:18.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/51f3ee/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/51f3ee/",
-            "title": "排序网络",
-            "summary": "用于排序的电路",
-            "date_modified": "2020-12-30T21:39:00.000Z"
-        },
-        {
-            "id": "https://axiomofchoice-hjt.github.io/pages/73ab29/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/73ab29/",
-            "title": "扑克牌魔术",
-            "summary": "一种奇怪的通讯方式",
-            "date_modified": "2021-12-13T17:01:41.000Z"
-        },
-        {
-            "id": "https://axiomofchoice-hjt.github.io/pages/22ee97/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/22ee97/",
-            "title": "随机数生成问题 离散",
-            "summary": "收集一些算法",
-            "date_modified": "2022-11-29T23:51:59.000Z"
-        },
-        {
-            "id": "https://axiomofchoice-hjt.github.io/pages/0fc19d/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/0fc19d/",
-            "title": "有没有计算时间复杂度的算法",
-            "summary": "一点证明思路",
-            "date_modified": "2023-10-06T23:54:00.000Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/pages/552367/",
             "url": "https://axiomofchoice-hjt.github.io/pages/552367/",
             "title": "集合的势",
@@ -186,11 +158,28 @@
             "date_modified": "2018-02-07T15:35:00.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/a651e2/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/a651e2/",
-            "title": "随机数生成问题 连续",
-            "summary": "收集一些算法",
-            "date_modified": "2023-01-02T17:21:05.000Z"
+            "id": "https://axiomofchoice-hjt.github.io/pages/f18b37/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/f18b37/",
+            "title": "旋转60度后与自身重合的函数",
+            "summary": "简单的数学竞赛题",
+            "image": "https://axiomofchoice-hjt.github.io/img/f18b37-0.png",
+            "date_modified": "2018-12-29T23:16:08.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/e3bbe6/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/e3bbe6/",
+            "title": "初等数学问题的整理（一）",
+            "summary": "整理自《100个著名初等数学问题历史和解》",
+            "image": "https://axiomofchoice-hjt.github.io/img/e3bbe6-0.png",
+            "date_modified": "2019-02-14T16:26:04.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/72b0a9/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/72b0a9/",
+            "title": "初等数学问题的整理（二）",
+            "summary": "整理自《100个著名初等数学问题历史和解》",
+            "image": "https://axiomofchoice-hjt.github.io/img/e3bbe6-0.png",
+            "date_modified": "2019-02-14T16:26:34.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/d6b786/",
@@ -200,11 +189,39 @@
             "date_modified": "2020-08-29T01:35:00.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/228fff/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/228fff/",
-            "title": "今日瞎想",
-            "summary": "胡言乱语",
-            "date_modified": "2021-12-08T10:04:43.000Z"
+            "id": "https://axiomofchoice-hjt.github.io/pages/73ab29/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/73ab29/",
+            "title": "扑克牌魔术",
+            "summary": "一种奇怪的通讯方式",
+            "date_modified": "2021-12-13T17:01:41.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/da7744/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/da7744/",
+            "title": "猫树的简单介绍",
+            "summary": "算法竞赛冷门数据结构",
+            "date_modified": "2020-03-18T18:36:00.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/0fc19d/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/0fc19d/",
+            "title": "有没有计算时间复杂度的算法",
+            "summary": "一点证明思路",
+            "date_modified": "2023-10-06T23:54:00.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/22ee97/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/22ee97/",
+            "title": "随机数生成问题 离散",
+            "summary": "收集一些算法",
+            "date_modified": "2022-11-29T23:51:59.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/342a8d/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/342a8d/",
+            "title": "理想的并行排序算法",
+            "summary": "如果某CPU有无限个核心，那么时间复杂度最小的排序算法是怎么样的？",
+            "date_modified": "2023-11-19T01:09:21.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/1919bb/",
@@ -213,6 +230,20 @@
             "summary": "选择公理是谁",
             "image": "https://axiomofchoice-hjt.github.io/img/1919bb-0.png",
             "date_modified": "2021-12-02T15:22:24.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/228fff/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/228fff/",
+            "title": "今日瞎想",
+            "summary": "胡言乱语",
+            "date_modified": "2021-12-08T10:04:43.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/a651e2/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/a651e2/",
+            "title": "随机数生成问题 连续",
+            "summary": "收集一些算法",
+            "date_modified": "2023-01-02T17:21:05.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/9f1388/",
@@ -237,17 +268,16 @@
             "date_modified": "2021-12-06T16:28:07.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/342a8d/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/342a8d/",
-            "title": "理想的并行排序算法",
-            "summary": "如果某CPU有无限个核心，那么时间复杂度最小的排序算法是怎么样的？",
-            "date_modified": "2023-11-19T01:09:21.000Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/archives/",
             "url": "https://axiomofchoice-hjt.github.io/archives/",
             "title": "归档",
-            "date_modified": "2024-06-15T14:49:54.482Z"
+            "date_modified": "2024-06-27T17:44:19.452Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/categories/",
+            "url": "https://axiomofchoice-hjt.github.io/categories/",
+            "title": "分类",
+            "date_modified": "2024-06-27T17:44:19.452Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/f7352c/",
@@ -257,16 +287,10 @@
             "date_modified": "2023-12-17T23:15:51.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/categories/",
-            "url": "https://axiomofchoice-hjt.github.io/categories/",
-            "title": "分类",
-            "date_modified": "2024-06-15T14:49:54.482Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/",
             "url": "https://axiomofchoice-hjt.github.io/",
             "title": "Home",
-            "date_modified": "2024-06-15T14:49:54.482Z"
+            "date_modified": "2024-06-27T17:44:19.452Z"
         }
     ]
 }
