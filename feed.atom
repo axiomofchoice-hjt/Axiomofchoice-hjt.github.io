@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://axiomofchoice-hjt.github.io</id>
     <title>Axiomofchoice&apos;s Blog</title>
-    <updated>2024-07-05T14:39:35.743Z</updated>
+    <updated>2024-08-17T13:08:45.670Z</updated>
     <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
     <link rel="alternate" href="https://axiomofchoice-hjt.github.io"/>
     <link rel="self" href="https://axiomofchoice-hjt.github.io/feed.atom"/>
@@ -40,14 +40,6 @@
         <summary type="html"><![CDATA[benchmark 小寄巧]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[更自由的 perf 采样实践]]></title>
-        <id>https://axiomofchoice-hjt.github.io/pages/f2fc10/</id>
-        <link href="https://axiomofchoice-hjt.github.io/pages/f2fc10/">
-        </link>
-        <updated>2024-05-26T02:20:56.000Z</updated>
-        <summary type="html"><![CDATA[在程序中间 perf stat]]></summary>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[测量多线程每个线程的运行时间]]></title>
         <id>https://axiomofchoice-hjt.github.io/pages/62c8f3/</id>
         <link href="https://axiomofchoice-hjt.github.io/pages/62c8f3/">
@@ -56,12 +48,20 @@
         <summary type="html"><![CDATA[解决竞争获取系统时间的问题]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[用户态线程同步]]></title>
-        <id>https://axiomofchoice-hjt.github.io/pages/22df72/</id>
-        <link href="https://axiomofchoice-hjt.github.io/pages/22df72/">
+        <title type="html"><![CDATA[更自由的 perf 采样实践]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/f2fc10/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/f2fc10/">
         </link>
-        <updated>2024-06-15T22:49:01.000Z</updated>
-        <summary type="html"><![CDATA[无锁同步指北]]></summary>
+        <updated>2024-05-26T02:20:56.000Z</updated>
+        <summary type="html"><![CDATA[在程序中间 perf stat]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GEMM 接口和扩展]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/d787b3/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/d787b3/">
+        </link>
+        <updated>2024-07-18T00:13:51.000Z</updated>
+        <summary type="html"><![CDATA[BLAS (Basic Linear Algebra Subprograms) 是线性代数接口的规范。]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[排序网络]]></title>
@@ -70,6 +70,14 @@
         </link>
         <updated>2020-12-30T21:39:00.000Z</updated>
         <summary type="html"><![CDATA[用于排序的电路]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[用户态线程同步]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/22df72/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/22df72/">
+        </link>
+        <updated>2024-06-15T22:49:01.000Z</updated>
+        <summary type="html"><![CDATA[无锁同步指北]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[博客搭建过程记录]]></title>
@@ -136,20 +144,20 @@
         <summary type="html"><![CDATA[一点证明思路]]></summary>
     </entry>
     <entry>
+        <title type="html"><![CDATA[理想的并行排序算法]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/342a8d/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/342a8d/">
+        </link>
+        <updated>2023-11-19T01:09:21.000Z</updated>
+        <summary type="html"><![CDATA[如果某CPU有无限个核心，那么时间复杂度最小的排序算法是怎么样的？]]></summary>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Codeforces 1305 题解 (A-G)]]></title>
         <id>https://axiomofchoice-hjt.github.io/pages/253550/</id>
         <link href="https://axiomofchoice-hjt.github.io/pages/253550/">
         </link>
         <updated>2020-03-04T14:51:00.000Z</updated>
         <summary type="html"><![CDATA[一次算法训练]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[猫树的简单介绍]]></title>
-        <id>https://axiomofchoice-hjt.github.io/pages/da7744/</id>
-        <link href="https://axiomofchoice-hjt.github.io/pages/da7744/">
-        </link>
-        <updated>2020-03-18T18:36:00.000Z</updated>
-        <summary type="html"><![CDATA[算法竞赛冷门数据结构]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[不平等博弈的 Q & A]]></title>
@@ -168,22 +176,6 @@
         <summary type="html"><![CDATA[STL 容器分析]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[理想的并行排序算法]]></title>
-        <id>https://axiomofchoice-hjt.github.io/pages/342a8d/</id>
-        <link href="https://axiomofchoice-hjt.github.io/pages/342a8d/">
-        </link>
-        <updated>2023-11-19T01:09:21.000Z</updated>
-        <summary type="html"><![CDATA[如果某CPU有无限个核心，那么时间复杂度最小的排序算法是怎么样的？]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[二进制高精度，ACMer 必知必会（不是）的算法]]></title>
-        <id>https://axiomofchoice-hjt.github.io/pages/d8504e/</id>
-        <link href="https://axiomofchoice-hjt.github.io/pages/d8504e/">
-        </link>
-        <updated>2021-11-05T19:22:00.000Z</updated>
-        <summary type="html"><![CDATA[二进制大数]]></summary>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[有个表叫杨表]]></title>
         <id>https://axiomofchoice-hjt.github.io/pages/690153/</id>
         <link href="https://axiomofchoice-hjt.github.io/pages/690153/">
@@ -192,12 +184,28 @@
         <summary type="html"><![CDATA[《浅谈杨氏矩阵在信息学竞赛中的应用 袁方舟》膜拜有感]]></summary>
     </entry>
     <entry>
+        <title type="html"><![CDATA[猫树的简单介绍]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/da7744/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/da7744/">
+        </link>
+        <updated>2020-03-18T18:36:00.000Z</updated>
+        <summary type="html"><![CDATA[算法竞赛冷门数据结构]]></summary>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[ACM 板子]]></title>
         <id>https://axiomofchoice-hjt.github.io/pages/e6708e/</id>
         <link href="https://axiomofchoice-hjt.github.io/pages/e6708e/">
         </link>
         <updated>2021-07-07T01:20:00.000Z</updated>
         <summary type="html"><![CDATA[算法竞赛套路]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[二进制高精度，ACMer 必知必会（不是）的算法]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/d8504e/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/d8504e/">
+        </link>
+        <updated>2021-11-05T19:22:00.000Z</updated>
+        <summary type="html"><![CDATA[二进制大数]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[卡常：关于对常量取模的优化]]></title>
@@ -214,6 +222,14 @@
         </link>
         <updated>2018-02-07T15:35:00.000Z</updated>
         <summary type="html"><![CDATA[集合论科普]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[球盒模型]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/220100/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/220100/">
+        </link>
+        <updated>2022-01-14T17:35:18.000Z</updated>
+        <summary type="html"><![CDATA[算法竞赛有用科技]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[旋转60度后与自身重合的函数]]></title>
@@ -248,14 +264,6 @@
         <summary type="html"><![CDATA[整理自《100个著名初等数学问题历史和解》]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[翻硬币与旋转棋盘问题]]></title>
-        <id>https://axiomofchoice-hjt.github.io/pages/5c59de/</id>
-        <link href="https://axiomofchoice-hjt.github.io/pages/5c59de/">
-        </link>
-        <updated>2024-07-04T22:15:12.000Z</updated>
-        <summary type="html"><![CDATA[这是很久以前群里讨论过的问题。]]></summary>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[初等数学问题的整理（三）]]></title>
         <id>https://axiomofchoice-hjt.github.io/pages/1b2639/</id>
         <link href="https://axiomofchoice-hjt.github.io/pages/1b2639/">
@@ -264,20 +272,20 @@
         <summary type="html"><![CDATA[整理自《100个著名初等数学问题历史和解》]]></summary>
     </entry>
     <entry>
+        <title type="html"><![CDATA[翻硬币与旋转棋盘问题]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/5c59de/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/5c59de/">
+        </link>
+        <updated>2024-07-04T22:15:12.000Z</updated>
+        <summary type="html"><![CDATA[问你是否有策略必然可以让某一时刻所有硬币正面朝上。]]></summary>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[扑克牌魔术]]></title>
         <id>https://axiomofchoice-hjt.github.io/pages/73ab29/</id>
         <link href="https://axiomofchoice-hjt.github.io/pages/73ab29/">
         </link>
         <updated>2021-12-13T17:01:41.000Z</updated>
         <summary type="html"><![CDATA[一种奇怪的通讯方式]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[球盒模型]]></title>
-        <id>https://axiomofchoice-hjt.github.io/pages/220100/</id>
-        <link href="https://axiomofchoice-hjt.github.io/pages/220100/">
-        </link>
-        <updated>2022-01-14T17:35:18.000Z</updated>
-        <summary type="html"><![CDATA[算法竞赛有用科技]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[关于博主]]></title>
@@ -304,20 +312,20 @@
         <summary type="html"><![CDATA[给 HDU 新生的 ACM 建议]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[大学阶段回顾和总结]]></title>
-        <id>https://axiomofchoice-hjt.github.io/pages/f7352c/</id>
-        <link href="https://axiomofchoice-hjt.github.io/pages/f7352c/">
-        </link>
-        <updated>2023-12-17T23:15:51.000Z</updated>
-        <summary type="html"><![CDATA[大学回顾]]></summary>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[大学求职经历]]></title>
         <id>https://axiomofchoice-hjt.github.io/pages/9f1388/</id>
         <link href="https://axiomofchoice-hjt.github.io/pages/9f1388/">
         </link>
         <updated>2022-04-13T12:58:03.000Z</updated>
         <summary type="html"><![CDATA[找实习/工作的一些感想]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[大学阶段回顾和总结]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/f7352c/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/f7352c/">
+        </link>
+        <updated>2023-12-17T23:15:51.000Z</updated>
+        <summary type="html"><![CDATA[大学回顾]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[游戏：blockchallenge]]></title>
@@ -332,20 +340,20 @@
         <id>https://axiomofchoice-hjt.github.io/archives/</id>
         <link href="https://axiomofchoice-hjt.github.io/archives/">
         </link>
-        <updated>2024-07-05T14:39:35.739Z</updated>
+        <updated>2024-08-17T13:08:45.666Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[分类]]></title>
         <id>https://axiomofchoice-hjt.github.io/categories/</id>
         <link href="https://axiomofchoice-hjt.github.io/categories/">
         </link>
-        <updated>2024-07-05T14:39:35.739Z</updated>
+        <updated>2024-08-17T13:08:45.666Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Home]]></title>
         <id>https://axiomofchoice-hjt.github.io/</id>
         <link href="https://axiomofchoice-hjt.github.io/">
         </link>
-        <updated>2024-07-05T14:39:35.739Z</updated>
+        <updated>2024-08-17T13:08:45.666Z</updated>
     </entry>
 </feed>
