@@ -3,7 +3,7 @@
         <title>Axiomofchoice's Blog</title>
         <link>https://axiomofchoice-hjt.github.io</link>
         <description>一个退役 ACMer 的个人博客</description>
-        <lastBuildDate>Sun, 17 Nov 2024 07:11:50 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 26 Nov 2024 17:29:38 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <ns0:link href="https://axiomofchoice-hjt.github.io/feed.atom" rel="self" type="application/rss+xml" />
@@ -24,22 +24,6 @@
             </enclosure>
         </item>
         <item>
-            <title>xbyak 汇编开发姿势</title>
-            <link>https://axiomofchoice-hjt.github.io/pages/86fdbe/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/86fdbe/</guid>
-            <pubDate>Sat, 23 Mar 2024 17:20:28 GMT</pubDate>
-            <description>用 xbyak 库生成静态链接库</description>
-        </item>
-        <item>
-            <title>如何做好 benchmark</title>
-            <link>https://axiomofchoice-hjt.github.io/pages/1abfb8/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/1abfb8/</guid>
-            <pubDate>Thu, 02 May 2024 16:09:42 GMT</pubDate>
-            <description>benchmark 小寄巧</description>
-            <enclosure url="https://axiomofchoice-hjt.github.io/img/1abfb8-0.png">
-            </enclosure>
-        </item>
-        <item>
             <title>更自由的 perf 采样实践</title>
             <link>https://axiomofchoice-hjt.github.io/pages/f2fc10/</link>
             <guid>https://axiomofchoice-hjt.github.io/pages/f2fc10/</guid>
@@ -47,11 +31,11 @@
             <description>在程序中间 perf stat</description>
         </item>
         <item>
-            <title>测量多线程每个线程的运行时间</title>
-            <link>https://axiomofchoice-hjt.github.io/pages/62c8f3/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/62c8f3/</guid>
-            <pubDate>Thu, 13 Jun 2024 22:06:32 GMT</pubDate>
-            <description>解决竞争获取系统时间的问题</description>
+            <title>xbyak 汇编开发姿势</title>
+            <link>https://axiomofchoice-hjt.github.io/pages/86fdbe/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/86fdbe/</guid>
+            <pubDate>Sat, 23 Mar 2024 17:20:28 GMT</pubDate>
+            <description>用 xbyak 库生成静态链接库</description>
         </item>
         <item>
             <title>用户态线程同步</title>
@@ -63,20 +47,29 @@
             </enclosure>
         </item>
         <item>
-            <title>GEMM 接口</title>
-            <link>https://axiomofchoice-hjt.github.io/pages/d787b3/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/d787b3/</guid>
-            <pubDate>Sat, 17 Aug 2024 21:03:51 GMT</pubDate>
-            <description>BLAS (Basic Linear Algebra Subprograms) 是线性代数接口的规范。</description>
+            <title>如何做好 benchmark</title>
+            <link>https://axiomofchoice-hjt.github.io/pages/1abfb8/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/1abfb8/</guid>
+            <pubDate>Thu, 02 May 2024 16:09:42 GMT</pubDate>
+            <description>benchmark 小寄巧</description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/img/1abfb8-0.png">
+            </enclosure>
         </item>
         <item>
             <title>SME 指令集使用指南</title>
             <link>https://axiomofchoice-hjt.github.io/pages/f78cb0/</link>
             <guid>https://axiomofchoice-hjt.github.io/pages/f78cb0/</guid>
             <pubDate>Mon, 16 Sep 2024 23:04:19 GMT</pubDate>
-            <description>我们知道，SVE 指令集有两个重要的特点，一个是向量长度由平台决定，另一个是用预测寄存器（P 寄存器）来控制每个位置的运算。SME 也是如此。</description>
+            <description>本文假设读者已掌握 SVE 指令集。</description>
             <enclosure url="https://axiomofchoice-hjt.github.io/img/f78cb0-0.drawio.png">
             </enclosure>
+        </item>
+        <item>
+            <title>测量多线程每个线程的运行时间</title>
+            <link>https://axiomofchoice-hjt.github.io/pages/62c8f3/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/62c8f3/</guid>
+            <pubDate>Thu, 13 Jun 2024 22:06:32 GMT</pubDate>
+            <description>解决竞争获取系统时间的问题</description>
         </item>
         <item>
             <title>排序网络</title>
@@ -86,18 +79,25 @@
             <description>用于排序的电路</description>
         </item>
         <item>
-            <title>博客搭建过程记录</title>
-            <link>https://axiomofchoice-hjt.github.io/pages/5b222d/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/5b222d/</guid>
-            <pubDate>Tue, 08 Mar 2022 18:08:00 GMT</pubDate>
-            <description>一点点踩坑记录</description>
-        </item>
-        <item>
             <title>思想实验：让 Python 拥有 C 的性能</title>
             <link>https://axiomofchoice-hjt.github.io/pages/aca146/</link>
             <guid>https://axiomofchoice-hjt.github.io/pages/aca146/</guid>
             <pubDate>Fri, 25 Mar 2022 14:29:36 GMT</pubDate>
             <description>性能杂谈</description>
+        </item>
+        <item>
+            <title>GEMM 接口</title>
+            <link>https://axiomofchoice-hjt.github.io/pages/d787b3/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/d787b3/</guid>
+            <pubDate>Sat, 17 Aug 2024 21:03:51 GMT</pubDate>
+            <description>GEMM（General Matrix to Matrix Multiplication，通用矩阵乘）是 BLAS 的一部分，核心就是将两个矩阵相乘。更准确地，是给定矩阵 $A, B, C$ 和数字 $\alpha, \beta$，计算：</description>
+        </item>
+        <item>
+            <title>博客搭建过程记录</title>
+            <link>https://axiomofchoice-hjt.github.io/pages/5b222d/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/5b222d/</guid>
+            <pubDate>Tue, 08 Mar 2022 18:08:00 GMT</pubDate>
+            <description>一点点踩坑记录</description>
         </item>
         <item>
             <title>原地归并排序</title>
@@ -116,17 +116,17 @@
             </enclosure>
         </item>
         <item>
+            <title>有没有计算时间复杂度的算法</title>
+            <link>https://axiomofchoice-hjt.github.io/pages/0fc19d/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/0fc19d/</guid>
+            <pubDate>Fri, 06 Oct 2023 23:54:00 GMT</pubDate>
+            <description>一点证明思路</description>
+        </item>
+        <item>
             <title>随机数生成问题 离散</title>
             <link>https://axiomofchoice-hjt.github.io/pages/22ee97/</link>
             <guid>https://axiomofchoice-hjt.github.io/pages/22ee97/</guid>
             <pubDate>Tue, 29 Nov 2022 23:51:59 GMT</pubDate>
-            <description>收集一些算法</description>
-        </item>
-        <item>
-            <title>随机数生成问题 连续</title>
-            <link>https://axiomofchoice-hjt.github.io/pages/a651e2/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/a651e2/</guid>
-            <pubDate>Mon, 02 Jan 2023 17:21:05 GMT</pubDate>
             <description>收集一些算法</description>
         </item>
         <item>
@@ -137,11 +137,11 @@
             <description>项目指北</description>
         </item>
         <item>
-            <title>有没有计算时间复杂度的算法</title>
-            <link>https://axiomofchoice-hjt.github.io/pages/0fc19d/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/0fc19d/</guid>
-            <pubDate>Fri, 06 Oct 2023 23:54:00 GMT</pubDate>
-            <description>一点证明思路</description>
+            <title>随机数生成问题 连续</title>
+            <link>https://axiomofchoice-hjt.github.io/pages/a651e2/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/a651e2/</guid>
+            <pubDate>Mon, 02 Jan 2023 17:21:05 GMT</pubDate>
+            <description>收集一些算法</description>
         </item>
         <item>
             <title>理想的并行排序算法</title>
@@ -241,19 +241,19 @@
             </enclosure>
         </item>
         <item>
-            <title>初等数学问题的整理（三）</title>
-            <link>https://axiomofchoice-hjt.github.io/pages/1b2639/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/1b2639/</guid>
-            <pubDate>Sat, 23 Feb 2019 16:59:04 GMT</pubDate>
+            <title>初等数学问题的整理（二）</title>
+            <link>https://axiomofchoice-hjt.github.io/pages/72b0a9/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/72b0a9/</guid>
+            <pubDate>Sat, 23 Feb 2019 16:58:34 GMT</pubDate>
             <description>整理自《100个著名初等数学问题历史和解》</description>
             <enclosure url="https://axiomofchoice-hjt.github.io/img/e3bbe6-0.png">
             </enclosure>
         </item>
         <item>
-            <title>初等数学问题的整理（二）</title>
-            <link>https://axiomofchoice-hjt.github.io/pages/72b0a9/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/72b0a9/</guid>
-            <pubDate>Sat, 23 Feb 2019 16:58:34 GMT</pubDate>
+            <title>初等数学问题的整理（三）</title>
+            <link>https://axiomofchoice-hjt.github.io/pages/1b2639/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/1b2639/</guid>
+            <pubDate>Sat, 23 Feb 2019 16:59:04 GMT</pubDate>
             <description>整理自《100个著名初等数学问题历史和解》</description>
             <enclosure url="https://axiomofchoice-hjt.github.io/img/e3bbe6-0.png">
             </enclosure>
@@ -277,7 +277,6 @@
             <link>https://axiomofchoice-hjt.github.io/pages/5c59de/</link>
             <guid>https://axiomofchoice-hjt.github.io/pages/5c59de/</guid>
             <pubDate>Thu, 04 Jul 2024 22:15:12 GMT</pubDate>
-            <description>问你是否有策略必然可以让某一时刻所有硬币正面朝上。</description>
             <enclosure url="https://axiomofchoice-hjt.github.io/img/5c59de-0.drawio.png">
             </enclosure>
         </item>
@@ -291,13 +290,6 @@
             </enclosure>
         </item>
         <item>
-            <title>今日瞎想</title>
-            <link>https://axiomofchoice-hjt.github.io/pages/228fff/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/228fff/</guid>
-            <pubDate>Wed, 08 Dec 2021 10:04:43 GMT</pubDate>
-            <description>胡言乱语</description>
-        </item>
-        <item>
             <title>关于博主</title>
             <link>https://axiomofchoice-hjt.github.io/pages/1919bb/</link>
             <guid>https://axiomofchoice-hjt.github.io/pages/1919bb/</guid>
@@ -305,6 +297,13 @@
             <description>选择公理是谁</description>
             <enclosure url="https://axiomofchoice-hjt.github.io/img/1919bb-0.png">
             </enclosure>
+        </item>
+        <item>
+            <title>今日瞎想</title>
+            <link>https://axiomofchoice-hjt.github.io/pages/228fff/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/228fff/</guid>
+            <pubDate>Wed, 08 Dec 2021 10:04:43 GMT</pubDate>
+            <description>胡言乱语</description>
         </item>
         <item>
             <title>大学求职经历</title>
@@ -323,6 +322,12 @@
             </enclosure>
         </item>
         <item>
+            <title>分类</title>
+            <link>https://axiomofchoice-hjt.github.io/categories/</link>
+            <guid>https://axiomofchoice-hjt.github.io/categories/</guid>
+            <pubDate>Tue, 26 Nov 2024 17:29:38 GMT</pubDate>
+        </item>
+        <item>
             <title>大学阶段回顾和总结</title>
             <link>https://axiomofchoice-hjt.github.io/pages/f7352c/</link>
             <guid>https://axiomofchoice-hjt.github.io/pages/f7352c/</guid>
@@ -337,12 +342,6 @@
             <description>一个解密游戏，规则由玩家发掘，难度较高</description>
             <enclosure url="https://axiomofchoice-hjt.github.io/img/62c303-L2.drawio.png">
             </enclosure>
-        </item>
-        <item>
-            <title>Home</title>
-            <link>https://axiomofchoice-hjt.github.io/</link>
-            <guid>https://axiomofchoice-hjt.github.io/</guid>
-            <pubDate>Sun, 17 Nov 2024 07:11:50 GMT</pubDate>
         </item>
         </channel>
 </rss>

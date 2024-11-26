@@ -21,21 +21,6 @@
             "date_modified": "2023-12-23T22:08:56.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/86fdbe/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/86fdbe/",
-            "title": "xbyak 汇编开发姿势",
-            "summary": "用 xbyak 库生成静态链接库",
-            "date_modified": "2024-03-23T17:20:28.000Z"
-        },
-        {
-            "id": "https://axiomofchoice-hjt.github.io/pages/1abfb8/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/1abfb8/",
-            "title": "如何做好 benchmark",
-            "summary": "benchmark 小寄巧",
-            "image": "https://axiomofchoice-hjt.github.io/img/1abfb8-0.png",
-            "date_modified": "2024-05-02T16:09:42.000Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/pages/f2fc10/",
             "url": "https://axiomofchoice-hjt.github.io/pages/f2fc10/",
             "title": "更自由的 perf 采样实践",
@@ -43,11 +28,11 @@
             "date_modified": "2024-05-26T02:20:56.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/62c8f3/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/62c8f3/",
-            "title": "测量多线程每个线程的运行时间",
-            "summary": "解决竞争获取系统时间的问题",
-            "date_modified": "2024-06-13T22:06:32.000Z"
+            "id": "https://axiomofchoice-hjt.github.io/pages/86fdbe/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/86fdbe/",
+            "title": "xbyak 汇编开发姿势",
+            "summary": "用 xbyak 库生成静态链接库",
+            "date_modified": "2024-03-23T17:20:28.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/22df72/",
@@ -58,19 +43,27 @@
             "date_modified": "2024-06-15T22:49:01.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/d787b3/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/d787b3/",
-            "title": "GEMM 接口",
-            "summary": "BLAS (Basic Linear Algebra Subprograms) 是线性代数接口的规范。",
-            "date_modified": "2024-08-17T21:03:51.000Z"
+            "id": "https://axiomofchoice-hjt.github.io/pages/1abfb8/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/1abfb8/",
+            "title": "如何做好 benchmark",
+            "summary": "benchmark 小寄巧",
+            "image": "https://axiomofchoice-hjt.github.io/img/1abfb8-0.png",
+            "date_modified": "2024-05-02T16:09:42.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/f78cb0/",
             "url": "https://axiomofchoice-hjt.github.io/pages/f78cb0/",
             "title": "SME 指令集使用指南",
-            "summary": "我们知道，SVE 指令集有两个重要的特点，一个是向量长度由平台决定，另一个是用预测寄存器（P 寄存器）来控制每个位置的运算。SME 也是如此。",
+            "summary": "本文假设读者已掌握 SVE 指令集。",
             "image": "https://axiomofchoice-hjt.github.io/img/f78cb0-0.drawio.png",
             "date_modified": "2024-09-16T23:04:19.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/62c8f3/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/62c8f3/",
+            "title": "测量多线程每个线程的运行时间",
+            "summary": "解决竞争获取系统时间的问题",
+            "date_modified": "2024-06-13T22:06:32.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/51f3ee/",
@@ -80,18 +73,25 @@
             "date_modified": "2020-12-30T21:39:00.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/5b222d/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/5b222d/",
-            "title": "博客搭建过程记录",
-            "summary": "一点点踩坑记录",
-            "date_modified": "2022-03-08T18:08:00.000Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/pages/aca146/",
             "url": "https://axiomofchoice-hjt.github.io/pages/aca146/",
             "title": "思想实验：让 Python 拥有 C 的性能",
             "summary": "性能杂谈",
             "date_modified": "2022-03-25T14:29:36.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/d787b3/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/d787b3/",
+            "title": "GEMM 接口",
+            "summary": "GEMM（General Matrix to Matrix Multiplication，通用矩阵乘）是 BLAS 的一部分，核心就是将两个矩阵相乘。更准确地，是给定矩阵 $A, B, C$ 和数字 $\\alpha, \\beta$，计算：",
+            "date_modified": "2024-08-17T21:03:51.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/5b222d/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/5b222d/",
+            "title": "博客搭建过程记录",
+            "summary": "一点点踩坑记录",
+            "date_modified": "2022-03-08T18:08:00.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/2ef606/",
@@ -109,18 +109,18 @@
             "date_modified": "2022-10-03T18:14:04.000Z"
         },
         {
+            "id": "https://axiomofchoice-hjt.github.io/pages/0fc19d/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/0fc19d/",
+            "title": "有没有计算时间复杂度的算法",
+            "summary": "一点证明思路",
+            "date_modified": "2023-10-06T23:54:00.000Z"
+        },
+        {
             "id": "https://axiomofchoice-hjt.github.io/pages/22ee97/",
             "url": "https://axiomofchoice-hjt.github.io/pages/22ee97/",
             "title": "随机数生成问题 离散",
             "summary": "收集一些算法",
             "date_modified": "2022-11-29T23:51:59.000Z"
-        },
-        {
-            "id": "https://axiomofchoice-hjt.github.io/pages/a651e2/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/a651e2/",
-            "title": "随机数生成问题 连续",
-            "summary": "收集一些算法",
-            "date_modified": "2023-01-02T17:21:05.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/dec161/",
@@ -130,11 +130,11 @@
             "date_modified": "2023-03-24T19:50:38.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/0fc19d/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/0fc19d/",
-            "title": "有没有计算时间复杂度的算法",
-            "summary": "一点证明思路",
-            "date_modified": "2023-10-06T23:54:00.000Z"
+            "id": "https://axiomofchoice-hjt.github.io/pages/a651e2/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/a651e2/",
+            "title": "随机数生成问题 连续",
+            "summary": "收集一些算法",
+            "date_modified": "2023-01-02T17:21:05.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/342a8d/",
@@ -231,20 +231,20 @@
             "date_modified": "2019-02-14T16:26:04.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/1b2639/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/1b2639/",
-            "title": "初等数学问题的整理（三）",
-            "summary": "整理自《100个著名初等数学问题历史和解》",
-            "image": "https://axiomofchoice-hjt.github.io/img/e3bbe6-0.png",
-            "date_modified": "2019-02-23T16:59:04.000Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/pages/72b0a9/",
             "url": "https://axiomofchoice-hjt.github.io/pages/72b0a9/",
             "title": "初等数学问题的整理（二）",
             "summary": "整理自《100个著名初等数学问题历史和解》",
             "image": "https://axiomofchoice-hjt.github.io/img/e3bbe6-0.png",
             "date_modified": "2019-02-23T16:58:34.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/1b2639/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/1b2639/",
+            "title": "初等数学问题的整理（三）",
+            "summary": "整理自《100个著名初等数学问题历史和解》",
+            "image": "https://axiomofchoice-hjt.github.io/img/e3bbe6-0.png",
+            "date_modified": "2019-02-23T16:59:04.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/f5428f/",
@@ -264,7 +264,6 @@
             "id": "https://axiomofchoice-hjt.github.io/pages/5c59de/",
             "url": "https://axiomofchoice-hjt.github.io/pages/5c59de/",
             "title": "翻硬币与旋转棋盘问题",
-            "summary": "问你是否有策略必然可以让某一时刻所有硬币正面朝上。",
             "image": "https://axiomofchoice-hjt.github.io/img/5c59de-0.drawio.png",
             "date_modified": "2024-07-04T22:15:12.000Z"
         },
@@ -277,19 +276,19 @@
             "date_modified": "2024-11-17T15:06:14.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/228fff/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/228fff/",
-            "title": "今日瞎想",
-            "summary": "胡言乱语",
-            "date_modified": "2021-12-08T10:04:43.000Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/pages/1919bb/",
             "url": "https://axiomofchoice-hjt.github.io/pages/1919bb/",
             "title": "关于博主",
             "summary": "选择公理是谁",
             "image": "https://axiomofchoice-hjt.github.io/img/1919bb-0.png",
             "date_modified": "2021-12-02T15:22:24.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/228fff/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/228fff/",
+            "title": "今日瞎想",
+            "summary": "胡言乱语",
+            "date_modified": "2021-12-08T10:04:43.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/9f1388/",
@@ -307,6 +306,18 @@
             "date_modified": "2023-07-25T02:23:03.000Z"
         },
         {
+            "id": "https://axiomofchoice-hjt.github.io/archives/",
+            "url": "https://axiomofchoice-hjt.github.io/archives/",
+            "title": "归档",
+            "date_modified": "2024-11-26T17:29:38.066Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/categories/",
+            "url": "https://axiomofchoice-hjt.github.io/categories/",
+            "title": "分类",
+            "date_modified": "2024-11-26T17:29:38.066Z"
+        },
+        {
             "id": "https://axiomofchoice-hjt.github.io/pages/f7352c/",
             "url": "https://axiomofchoice-hjt.github.io/pages/f7352c/",
             "title": "大学阶段回顾和总结",
@@ -322,22 +333,10 @@
             "date_modified": "2021-12-06T16:28:07.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/categories/",
-            "url": "https://axiomofchoice-hjt.github.io/categories/",
-            "title": "分类",
-            "date_modified": "2024-11-17T07:11:50.725Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/",
             "url": "https://axiomofchoice-hjt.github.io/",
             "title": "Home",
-            "date_modified": "2024-11-17T07:11:50.725Z"
-        },
-        {
-            "id": "https://axiomofchoice-hjt.github.io/archives/",
-            "url": "https://axiomofchoice-hjt.github.io/archives/",
-            "title": "归档",
-            "date_modified": "2024-11-17T07:11:50.725Z"
+            "date_modified": "2024-11-26T17:29:38.066Z"
         }
     ]
 }
