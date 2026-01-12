@@ -3,8 +3,8 @@
     <channel>
         <title>Axiomofchoice&apos;s Blog</title>
         <link>https://axiomofchoice-hjt.github.io</link>
-        <description>一个退役 ACMer 的个人博客</description>
-        <lastBuildDate>Thu, 08 Jan 2026 14:49:35 GMT</lastBuildDate>
+        <description>一个退役败犬的个人博客</description>
+        <lastBuildDate>Mon, 12 Jan 2026 15:24:18 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://axiomofchoice-hjt.github.io/feed.atom" rel="self" type="application/rss+xml"/>
@@ -37,6 +37,29 @@
             <description><![CDATA[性能杂谈]]></description>
         </item>
         <item>
+            <title><![CDATA[用汇编分析一下各种交换方法的性能]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/04ae8d/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/04ae8d/</guid>
+            <pubDate>Mon, 03 Oct 2022 18:14:04 GMT</pubDate>
+            <description><![CDATA[汇编入门]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/img/04ae8d-0.jpg">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[卡常：关于对常量取模的优化]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/5d5a89/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/5d5a89/</guid>
+            <pubDate>Tue, 16 Nov 2021 02:08:00 GMT</pubDate>
+            <description><![CDATA[极致的常数优化]]></description>
+        </item>
+        <item>
+            <title><![CDATA[浮点数误差入门]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/c1e151/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/c1e151/</guid>
+            <pubDate>Tue, 19 Dec 2023 23:05:16 GMT</pubDate>
+            <description><![CDATA[理论的误差估计]]></description>
+        </item>
+        <item>
             <title><![CDATA[集合求并的极致优化]]></title>
             <link>https://axiomofchoice-hjt.github.io/pages/85c4ed/</link>
             <guid>https://axiomofchoice-hjt.github.io/pages/85c4ed/</guid>
@@ -51,13 +74,6 @@
             <guid>https://axiomofchoice-hjt.github.io/pages/86fdbe/</guid>
             <pubDate>Sat, 23 Mar 2024 17:20:28 GMT</pubDate>
             <description><![CDATA[用 xbyak 库生成静态链接库]]></description>
-        </item>
-        <item>
-            <title><![CDATA[浮点数误差入门]]></title>
-            <link>https://axiomofchoice-hjt.github.io/pages/c1e151/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/c1e151/</guid>
-            <pubDate>Tue, 19 Dec 2023 23:05:16 GMT</pubDate>
-            <description><![CDATA[理论的误差估计]]></description>
         </item>
         <item>
             <title><![CDATA[如何做好 benchmark]]></title>
@@ -117,6 +133,27 @@
             <description><![CDATA[BLAS 矩阵乘法接口]]></description>
         </item>
         <item>
+            <title><![CDATA[Codeforces 1305 题解 (A-G)]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/253550/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/253550/</guid>
+            <pubDate>Wed, 04 Mar 2020 14:51:00 GMT</pubDate>
+            <description><![CDATA[一次算法训练]]></description>
+        </item>
+        <item>
+            <title><![CDATA[猫树的简单介绍]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/da7744/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/da7744/</guid>
+            <pubDate>Wed, 18 Mar 2020 18:36:00 GMT</pubDate>
+            <description><![CDATA[算法竞赛冷门数据结构]]></description>
+        </item>
+        <item>
+            <title><![CDATA[不平等博弈的 Q & A]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/d6b786/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/d6b786/</guid>
+            <pubDate>Sat, 29 Aug 2020 01:35:00 GMT</pubDate>
+            <description><![CDATA[超现实数科普]]></description>
+        </item>
+        <item>
             <title><![CDATA[排序网络]]></title>
             <link>https://axiomofchoice-hjt.github.io/pages/51f3ee/</link>
             <guid>https://axiomofchoice-hjt.github.io/pages/51f3ee/</guid>
@@ -124,11 +161,27 @@
             <description><![CDATA[用于排序的电路]]></description>
         </item>
         <item>
-            <title><![CDATA[原地归并排序]]></title>
-            <link>https://axiomofchoice-hjt.github.io/pages/2ef606/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/2ef606/</guid>
-            <pubDate>Sun, 29 May 2022 14:34:32 GMT</pubDate>
-            <description><![CDATA[常数额外空间的归并排序]]></description>
+            <title><![CDATA[ACM 板子]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/e6708e/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/e6708e/</guid>
+            <pubDate>Wed, 07 Jul 2021 01:20:00 GMT</pubDate>
+            <description><![CDATA[算法竞赛套路]]></description>
+        </item>
+        <item>
+            <title><![CDATA[有个表叫杨表]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/690153/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/690153/</guid>
+            <pubDate>Tue, 02 Feb 2021 15:37:00 GMT</pubDate>
+            <description><![CDATA[《浅谈杨氏矩阵在信息学竞赛中的应用 袁方舟》膜拜有感]]></description>
+            <enclosure url="https://img2020.cnblogs.com/blog/1860292/202102/1860292-20210205002355077-285377351.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[二进制高精度，ACMer 必知必会（不是）的算法]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/d8504e/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/d8504e/</guid>
+            <pubDate>Fri, 05 Nov 2021 19:22:00 GMT</pubDate>
+            <description><![CDATA[二进制大数]]></description>
         </item>
         <item>
             <title><![CDATA[随机数生成问题 离散]]></title>
@@ -136,6 +189,13 @@
             <guid>https://axiomofchoice-hjt.github.io/pages/22ee97/</guid>
             <pubDate>Tue, 29 Nov 2022 23:51:59 GMT</pubDate>
             <description><![CDATA[收集一些算法]]></description>
+        </item>
+        <item>
+            <title><![CDATA[原地归并排序]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/2ef606/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/2ef606/</guid>
+            <pubDate>Sun, 29 May 2022 14:34:32 GMT</pubDate>
+            <description><![CDATA[常数额外空间的归并排序]]></description>
         </item>
         <item>
             <title><![CDATA[随机数生成问题 连续]]></title>
@@ -159,11 +219,20 @@
             <description><![CDATA[如果某CPU有无限个核心，那么时间复杂度最小的排序算法是怎么样的？]]></description>
         </item>
         <item>
-            <title><![CDATA[集合的势]]></title>
-            <link>https://axiomofchoice-hjt.github.io/pages/552367/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/552367/</guid>
-            <pubDate>Wed, 07 Feb 2018 15:35:00 GMT</pubDate>
-            <description><![CDATA[集合论科普]]></description>
+            <title><![CDATA[最小椭圆覆盖]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/002fc6/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/002fc6/</guid>
+            <pubDate>Wed, 03 Sep 2025 22:17:50 GMT</pubDate>
+            <description><![CDATA[一个难度超模的保研机试题]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/img/002fc6-0.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[球盒模型]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/220100/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/220100/</guid>
+            <pubDate>Fri, 14 Jan 2022 17:35:18 GMT</pubDate>
+            <description><![CDATA[算法竞赛有用科技]]></description>
         </item>
         <item>
             <title><![CDATA[旋转60度后与自身重合的函数]]></title>
@@ -172,6 +241,22 @@
             <pubDate>Sat, 29 Dec 2018 23:16:08 GMT</pubDate>
             <description><![CDATA[简单的数学竞赛题]]></description>
             <enclosure url="https://axiomofchoice-hjt.github.io/img/f18b37-0.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[集合的势]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/552367/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/552367/</guid>
+            <pubDate>Wed, 07 Feb 2018 15:35:00 GMT</pubDate>
+            <description><![CDATA[集合论科普]]></description>
+        </item>
+        <item>
+            <title><![CDATA[初等数学问题的整理（一）]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/e3bbe6/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/e3bbe6/</guid>
+            <pubDate>Thu, 14 Feb 2019 16:26:04 GMT</pubDate>
+            <description><![CDATA[整理自《100个著名初等数学问题历史和解》]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/img/e3bbe6-0.png">
             </enclosure>
         </item>
         <item>
@@ -200,15 +285,6 @@
             <description><![CDATA[整理自《100个著名初等数学问题历史和解》]]></description>
         </item>
         <item>
-            <title><![CDATA[初等数学问题的整理（一）]]></title>
-            <link>https://axiomofchoice-hjt.github.io/pages/e3bbe6/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/e3bbe6/</guid>
-            <pubDate>Thu, 14 Feb 2019 16:26:04 GMT</pubDate>
-            <description><![CDATA[整理自《100个著名初等数学问题历史和解》]]></description>
-            <enclosure url="https://axiomofchoice-hjt.github.io/img/e3bbe6-0.png">
-            </enclosure>
-        </item>
-        <item>
             <title><![CDATA[扑克牌魔术]]></title>
             <link>https://axiomofchoice-hjt.github.io/pages/73ab29/</link>
             <guid>https://axiomofchoice-hjt.github.io/pages/73ab29/</guid>
@@ -225,15 +301,6 @@
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[用汇编分析一下各种交换方法的性能]]></title>
-            <link>https://axiomofchoice-hjt.github.io/pages/04ae8d/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/04ae8d/</guid>
-            <pubDate>Mon, 03 Oct 2022 18:14:04 GMT</pubDate>
-            <description><![CDATA[汇编入门]]></description>
-            <enclosure url="https://axiomofchoice-hjt.github.io/img/04ae8d-0.jpg">
-            </enclosure>
-        </item>
-        <item>
             <title><![CDATA[巴恩斯利蕨]]></title>
             <link>https://axiomofchoice-hjt.github.io/pages/29b8f6/</link>
             <guid>https://axiomofchoice-hjt.github.io/pages/29b8f6/</guid>
@@ -243,78 +310,13 @@
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[Codeforces 1305 题解 (A-G)]]></title>
-            <link>https://axiomofchoice-hjt.github.io/pages/253550/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/253550/</guid>
-            <pubDate>Wed, 04 Mar 2020 14:51:00 GMT</pubDate>
-            <description><![CDATA[一次算法训练]]></description>
-        </item>
-        <item>
-            <title><![CDATA[猫树的简单介绍]]></title>
-            <link>https://axiomofchoice-hjt.github.io/pages/da7744/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/da7744/</guid>
-            <pubDate>Wed, 18 Mar 2020 18:36:00 GMT</pubDate>
-            <description><![CDATA[算法竞赛冷门数据结构]]></description>
-        </item>
-        <item>
-            <title><![CDATA[不平等博弈的 Q & A]]></title>
-            <link>https://axiomofchoice-hjt.github.io/pages/d6b786/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/d6b786/</guid>
-            <pubDate>Sat, 29 Aug 2020 01:35:00 GMT</pubDate>
-            <description><![CDATA[超现实数科普]]></description>
-        </item>
-        <item>
-            <title><![CDATA[有个表叫杨表]]></title>
-            <link>https://axiomofchoice-hjt.github.io/pages/690153/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/690153/</guid>
-            <pubDate>Tue, 02 Feb 2021 15:37:00 GMT</pubDate>
-            <description><![CDATA[《浅谈杨氏矩阵在信息学竞赛中的应用 袁方舟》膜拜有感]]></description>
-            <enclosure url="https://img2020.cnblogs.com/blog/1860292/202102/1860292-20210205002355077-285377351.png">
+            <title><![CDATA[关于博主]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/1919bb/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/1919bb/</guid>
+            <pubDate>Thu, 02 Dec 2021 15:22:24 GMT</pubDate>
+            <description><![CDATA[选择公理是谁]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/img/1919bb-0.png">
             </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[ACM 板子]]></title>
-            <link>https://axiomofchoice-hjt.github.io/pages/e6708e/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/e6708e/</guid>
-            <pubDate>Wed, 07 Jul 2021 01:20:00 GMT</pubDate>
-            <description><![CDATA[算法竞赛套路]]></description>
-        </item>
-        <item>
-            <title><![CDATA[卡常：关于对常量取模的优化]]></title>
-            <link>https://axiomofchoice-hjt.github.io/pages/5d5a89/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/5d5a89/</guid>
-            <pubDate>Tue, 16 Nov 2021 02:08:00 GMT</pubDate>
-            <description><![CDATA[极致的常数优化]]></description>
-        </item>
-        <item>
-            <title><![CDATA[二进制高精度，ACMer 必知必会（不是）的算法]]></title>
-            <link>https://axiomofchoice-hjt.github.io/pages/d8504e/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/d8504e/</guid>
-            <pubDate>Fri, 05 Nov 2021 19:22:00 GMT</pubDate>
-            <description><![CDATA[二进制大数]]></description>
-        </item>
-        <item>
-            <title><![CDATA[球盒模型]]></title>
-            <link>https://axiomofchoice-hjt.github.io/pages/220100/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/220100/</guid>
-            <pubDate>Fri, 14 Jan 2022 17:35:18 GMT</pubDate>
-            <description><![CDATA[算法竞赛有用科技]]></description>
-        </item>
-        <item>
-            <title><![CDATA[最小椭圆覆盖]]></title>
-            <link>https://axiomofchoice-hjt.github.io/pages/002fc6/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/002fc6/</guid>
-            <pubDate>Wed, 03 Sep 2025 22:17:50 GMT</pubDate>
-            <description><![CDATA[一个难度超模的保研机试题]]></description>
-            <enclosure url="https://axiomofchoice-hjt.github.io/img/002fc6-0.png">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[今日瞎想]]></title>
-            <link>https://axiomofchoice-hjt.github.io/pages/228fff/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/228fff/</guid>
-            <pubDate>Wed, 08 Dec 2021 10:04:43 GMT</pubDate>
-            <description><![CDATA[胡言乱语]]></description>
         </item>
         <item>
             <title><![CDATA[游戏：blockchallenge]]></title>
@@ -326,20 +328,18 @@
             </enclosure>
         </item>
         <item>
+            <title><![CDATA[今日瞎想]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/228fff/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/228fff/</guid>
+            <pubDate>Wed, 08 Dec 2021 10:04:43 GMT</pubDate>
+            <description><![CDATA[胡言乱语]]></description>
+        </item>
+        <item>
             <title><![CDATA[博客搭建过程记录]]></title>
             <link>https://axiomofchoice-hjt.github.io/pages/5b222d/</link>
             <guid>https://axiomofchoice-hjt.github.io/pages/5b222d/</guid>
             <pubDate>Tue, 08 Mar 2022 18:08:00 GMT</pubDate>
             <description><![CDATA[一点点踩坑记录]]></description>
-        </item>
-        <item>
-            <title><![CDATA[关于博主]]></title>
-            <link>https://axiomofchoice-hjt.github.io/pages/1919bb/</link>
-            <guid>https://axiomofchoice-hjt.github.io/pages/1919bb/</guid>
-            <pubDate>Thu, 02 Dec 2021 15:22:24 GMT</pubDate>
-            <description><![CDATA[选择公理是谁]]></description>
-            <enclosure url="https://axiomofchoice-hjt.github.io/img/1919bb-0.png">
-            </enclosure>
         </item>
         <item>
             <title><![CDATA[大学求职经历]]></title>
