@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://axiomofchoice-hjt.github.io</id>
     <title>Axiomofchoice&apos;s Blog</title>
-    <updated>2026-02-14T16:27:11.297Z</updated>
+    <updated>2026-02-22T08:41:48.398Z</updated>
     <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
     <link rel="alternate" href="https://axiomofchoice-hjt.github.io"/>
     <link rel="self" href="https://axiomofchoice-hjt.github.io/feed.atom"/>
@@ -32,20 +32,20 @@
         <summary type="html"><![CDATA[从原理和例子分析 RVO]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[思想实验：让 Python 拥有 C 的性能]]></title>
-        <id>https://axiomofchoice-hjt.github.io/pages/aca146/</id>
-        <link href="https://axiomofchoice-hjt.github.io/pages/aca146/">
-        </link>
-        <updated>2022-03-25T14:29:36.000Z</updated>
-        <summary type="html"><![CDATA[性能杂谈]]></summary>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[用汇编分析一下各种交换方法的性能]]></title>
         <id>https://axiomofchoice-hjt.github.io/pages/04ae8d/</id>
         <link href="https://axiomofchoice-hjt.github.io/pages/04ae8d/">
         </link>
         <updated>2022-10-03T18:14:04.000Z</updated>
         <summary type="html"><![CDATA[汇编入门]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[思想实验：让 Python 拥有 C 的性能]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/aca146/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/aca146/">
+        </link>
+        <updated>2022-03-25T14:29:36.000Z</updated>
+        <summary type="html"><![CDATA[性能杂谈]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[卡常：关于对常量取模的优化]]></title>
@@ -160,20 +160,20 @@
         <summary type="html"><![CDATA[用于排序的电路]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[有个表叫杨表]]></title>
-        <id>https://axiomofchoice-hjt.github.io/pages/690153/</id>
-        <link href="https://axiomofchoice-hjt.github.io/pages/690153/">
-        </link>
-        <updated>2021-02-02T15:37:00.000Z</updated>
-        <summary type="html"><![CDATA[《浅谈杨氏矩阵在信息学竞赛中的应用 袁方舟》膜拜有感]]></summary>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[ACM 板子]]></title>
         <id>https://axiomofchoice-hjt.github.io/pages/e6708e/</id>
         <link href="https://axiomofchoice-hjt.github.io/pages/e6708e/">
         </link>
         <updated>2021-07-07T01:20:00.000Z</updated>
         <summary type="html"><![CDATA[算法竞赛套路]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[有个表叫杨表]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/690153/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/690153/">
+        </link>
+        <updated>2021-02-02T15:37:00.000Z</updated>
+        <summary type="html"><![CDATA[《浅谈杨氏矩阵在信息学竞赛中的应用 袁方舟》膜拜有感]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[二进制高精度，ACMer 必知必会（不是）的算法]]></title>
@@ -304,14 +304,6 @@
         <summary type="html"><![CDATA[一种奇怪的通讯方式]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[翻硬币与旋转棋盘问题]]></title>
-        <id>https://axiomofchoice-hjt.github.io/pages/5c59de/</id>
-        <link href="https://axiomofchoice-hjt.github.io/pages/5c59de/">
-        </link>
-        <updated>2024-07-04T22:15:12.000Z</updated>
-        <summary type="html"><![CDATA[策略问题]]></summary>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[巴恩斯利蕨]]></title>
         <id>https://axiomofchoice-hjt.github.io/pages/29b8f6/</id>
         <link href="https://axiomofchoice-hjt.github.io/pages/29b8f6/">
@@ -328,12 +320,12 @@
         <summary type="html"><![CDATA[选择公理是谁]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[游戏：blockchallenge]]></title>
-        <id>https://axiomofchoice-hjt.github.io/pages/62c303/</id>
-        <link href="https://axiomofchoice-hjt.github.io/pages/62c303/">
+        <title type="html"><![CDATA[翻硬币与旋转棋盘问题]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/5c59de/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/5c59de/">
         </link>
-        <updated>2021-12-06T16:28:07.000Z</updated>
-        <summary type="html"><![CDATA[一个解密游戏，规则由玩家发掘，难度较高]]></summary>
+        <updated>2024-07-04T22:15:12.000Z</updated>
+        <summary type="html"><![CDATA[策略问题]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[今日瞎想]]></title>
@@ -344,20 +336,20 @@
         <summary type="html"><![CDATA[胡言乱语]]></summary>
     </entry>
     <entry>
+        <title type="html"><![CDATA[游戏：blockchallenge]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/62c303/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/62c303/">
+        </link>
+        <updated>2021-12-06T16:28:07.000Z</updated>
+        <summary type="html"><![CDATA[一个解密游戏，规则由玩家发掘，难度较高]]></summary>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[博客搭建过程记录]]></title>
         <id>https://axiomofchoice-hjt.github.io/pages/5b222d/</id>
         <link href="https://axiomofchoice-hjt.github.io/pages/5b222d/">
         </link>
         <updated>2022-03-08T18:08:00.000Z</updated>
         <summary type="html"><![CDATA[一点点踩坑记录]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[大学求职经历]]></title>
-        <id>https://axiomofchoice-hjt.github.io/pages/9f1388/</id>
-        <link href="https://axiomofchoice-hjt.github.io/pages/9f1388/">
-        </link>
-        <updated>2022-04-13T12:58:03.000Z</updated>
-        <summary type="html"><![CDATA[找实习/工作的一些感想]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[HDU ACM 从入门到入坟]]></title>
@@ -374,5 +366,13 @@
         </link>
         <updated>2023-12-17T23:15:51.000Z</updated>
         <summary type="html"><![CDATA[大学回顾]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[大学求职经历]]></title>
+        <id>https://axiomofchoice-hjt.github.io/pages/9f1388/</id>
+        <link href="https://axiomofchoice-hjt.github.io/pages/9f1388/">
+        </link>
+        <updated>2022-04-13T12:58:03.000Z</updated>
+        <summary type="html"><![CDATA[找实习/工作的一些感想]]></summary>
     </entry>
 </feed>
