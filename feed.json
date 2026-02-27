@@ -109,6 +109,13 @@
             "date_modified": "2024-09-16T23:04:19.000Z"
         },
         {
+            "id": "https://axiomofchoice-hjt.github.io/pages/d787b3/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/d787b3/",
+            "title": "BLAS GEMM 接口",
+            "summary": "BLAS 矩阵乘法接口",
+            "date_modified": "2024-08-17T21:03:51.000Z"
+        },
+        {
             "id": "https://axiomofchoice-hjt.github.io/pages/1d919a/",
             "url": "https://axiomofchoice-hjt.github.io/pages/1d919a/",
             "title": "浮点数条件运算的性能分析",
@@ -117,11 +124,11 @@
             "date_modified": "2025-10-06T11:40:29.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/d787b3/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/d787b3/",
-            "title": "BLAS GEMM 接口",
-            "summary": "BLAS 矩阵乘法接口",
-            "date_modified": "2024-08-17T21:03:51.000Z"
+            "id": "https://axiomofchoice-hjt.github.io/pages/5542b5/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/5542b5/",
+            "title": "大模型 MoE 负载均衡踩坑记录",
+            "summary": "这是一篇从 KL 散度“分布均匀性优化”转向峰均比“极值统计建模”的工程复盘。",
+            "date_modified": "2026-02-28T00:18:45.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/da7744/",
@@ -160,13 +167,6 @@
             "date_modified": "2021-07-07T01:20:00.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/d8504e/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/d8504e/",
-            "title": "二进制高精度，ACMer 必知必会（不是）的算法",
-            "summary": "二进制大数",
-            "date_modified": "2021-11-05T19:22:00.000Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/pages/220100/",
             "url": "https://axiomofchoice-hjt.github.io/pages/220100/",
             "title": "球盒模型",
@@ -188,11 +188,18 @@
             "date_modified": "2023-01-02T17:21:05.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/0fc19d/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/0fc19d/",
-            "title": "有没有计算时间复杂度的算法",
-            "summary": "一点证明思路",
-            "date_modified": "2023-10-06T23:54:00.000Z"
+            "id": "https://axiomofchoice-hjt.github.io/pages/d8504e/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/d8504e/",
+            "title": "二进制高精度，ACMer 必知必会（不是）的算法",
+            "summary": "二进制大数",
+            "date_modified": "2021-11-05T19:22:00.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/342a8d/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/342a8d/",
+            "title": "理想的并行排序算法",
+            "summary": "如果某CPU有无限个核心，那么时间复杂度最小的排序算法是怎么样的？",
+            "date_modified": "2023-11-19T01:09:21.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/002fc6/",
@@ -203,11 +210,11 @@
             "date_modified": "2025-09-03T22:17:50.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/342a8d/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/342a8d/",
-            "title": "理想的并行排序算法",
-            "summary": "如果某CPU有无限个核心，那么时间复杂度最小的排序算法是怎么样的？",
-            "date_modified": "2023-11-19T01:09:21.000Z"
+            "id": "https://axiomofchoice-hjt.github.io/pages/552367/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/552367/",
+            "title": "集合的势",
+            "summary": "集合论科普",
+            "date_modified": "2018-02-07T15:35:00.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/1a8ff1/",
@@ -218,19 +225,19 @@
             "date_modified": "2026-02-07T22:34:30.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/552367/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/552367/",
-            "title": "集合的势",
-            "summary": "集合论科普",
-            "date_modified": "2018-02-07T15:35:00.000Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/pages/f18b37/",
             "url": "https://axiomofchoice-hjt.github.io/pages/f18b37/",
             "title": "旋转60度后与自身重合的函数",
             "summary": "简单的数学竞赛题",
             "image": "https://axiomofchoice-hjt.github.io/img/f18b37-0.png",
             "date_modified": "2018-12-29T23:16:08.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/0fc19d/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/0fc19d/",
+            "title": "有没有计算时间复杂度的算法",
+            "summary": "一点证明思路",
+            "date_modified": "2023-10-06T23:54:00.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/e3bbe6/",
@@ -241,12 +248,12 @@
             "date_modified": "2019-02-14T16:26:04.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/72b0a9/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/72b0a9/",
-            "title": "初等数学问题的整理（二）",
+            "id": "https://axiomofchoice-hjt.github.io/pages/1b2639/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/1b2639/",
+            "title": "初等数学问题的整理（三）",
             "summary": "整理自《100个著名初等数学问题历史和解》",
             "image": "https://axiomofchoice-hjt.github.io/img/e3bbe6-0.png",
-            "date_modified": "2019-02-23T16:58:34.000Z"
+            "date_modified": "2019-02-23T16:59:04.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/f5428f/",
@@ -256,12 +263,12 @@
             "date_modified": "2019-06-28T22:36:56.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/1b2639/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/1b2639/",
-            "title": "初等数学问题的整理（三）",
+            "id": "https://axiomofchoice-hjt.github.io/pages/72b0a9/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/72b0a9/",
+            "title": "初等数学问题的整理（二）",
             "summary": "整理自《100个著名初等数学问题历史和解》",
             "image": "https://axiomofchoice-hjt.github.io/img/e3bbe6-0.png",
-            "date_modified": "2019-02-23T16:59:04.000Z"
+            "date_modified": "2019-02-23T16:58:34.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/73ab29/",
@@ -310,13 +317,6 @@
             "date_modified": "2021-12-08T10:04:43.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/5b222d/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/5b222d/",
-            "title": "博客搭建过程记录",
-            "summary": "一点点踩坑记录",
-            "date_modified": "2022-03-08T18:08:00.000Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/pages/9f1388/",
             "url": "https://axiomofchoice-hjt.github.io/pages/9f1388/",
             "title": "大学求职经历",
@@ -337,6 +337,13 @@
             "title": "大学阶段回顾和总结",
             "summary": "大学回顾",
             "date_modified": "2023-12-17T23:15:51.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/5b222d/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/5b222d/",
+            "title": "博客搭建过程记录",
+            "summary": "一点点踩坑记录",
+            "date_modified": "2022-03-08T18:08:00.000Z"
         }
     ]
 }
