@@ -6,6 +6,13 @@
     "description": "一个退役败犬的个人博客",
     "items": [
         {
+            "id": "https://axiomofchoice-hjt.github.io/pages/cef419/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/cef419/",
+            "title": "底层视角的返回值优化",
+            "summary": "从原理和例子分析 RVO",
+            "date_modified": "2026-01-08T22:48:34.000Z"
+        },
+        {
             "id": "https://axiomofchoice-hjt.github.io/pages/dec161/",
             "url": "https://axiomofchoice-hjt.github.io/pages/dec161/",
             "title": "如何写C++项目",
@@ -18,20 +25,6 @@
             "title": "C++为什么没有虚的成员函数模板",
             "summary": "面试题的一些思路",
             "date_modified": "2025-10-05T16:25:53.000Z"
-        },
-        {
-            "id": "https://axiomofchoice-hjt.github.io/pages/cef419/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/cef419/",
-            "title": "底层视角的返回值优化",
-            "summary": "从原理和例子分析 RVO",
-            "date_modified": "2026-01-08T22:48:34.000Z"
-        },
-        {
-            "id": "https://axiomofchoice-hjt.github.io/pages/aca146/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/aca146/",
-            "title": "思想实验：让 Python 拥有 C 的性能",
-            "summary": "性能杂谈",
-            "date_modified": "2022-03-25T14:29:36.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/04ae8d/",
@@ -62,6 +55,13 @@
             "summary": "分支、SIMD、并发",
             "image": "https://axiomofchoice-hjt.github.io/img/85c4ed-0.png",
             "date_modified": "2023-12-23T22:08:56.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/aca146/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/aca146/",
+            "title": "思想实验：让 Python 拥有 C 的性能",
+            "summary": "性能杂谈",
+            "date_modified": "2022-03-25T14:29:36.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/86fdbe/",
@@ -138,18 +138,18 @@
             "date_modified": "2020-03-18T18:36:00.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/51f3ee/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/51f3ee/",
-            "title": "排序网络",
-            "summary": "用于排序的电路",
-            "date_modified": "2020-12-30T21:39:00.000Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/pages/d6b786/",
             "url": "https://axiomofchoice-hjt.github.io/pages/d6b786/",
             "title": "不平等博弈的 Q & A",
             "summary": "超现实数科普",
             "date_modified": "2020-08-29T01:35:00.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/51f3ee/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/51f3ee/",
+            "title": "排序网络",
+            "summary": "用于排序的电路",
+            "date_modified": "2020-12-30T21:39:00.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/690153/",
@@ -227,7 +227,7 @@
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/b86c12/",
             "url": "https://axiomofchoice-hjt.github.io/pages/b86c12/",
-            "title": "数组求和防溢出",
+            "title": "数组求和的溢出问题",
             "summary": "一个面试题，int64 数组求和，题目不保证中间过程不会溢出，只能保证结果不溢出。",
             "date_modified": "2026-03-11T19:46:52.000Z"
         },
@@ -247,20 +247,20 @@
             "date_modified": "2018-12-29T23:16:08.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/72b0a9/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/72b0a9/",
-            "title": "初等数学问题的整理（二）",
-            "summary": "整理自《100个著名初等数学问题历史和解》",
-            "image": "https://axiomofchoice-hjt.github.io/img/e3bbe6-0.png",
-            "date_modified": "2019-02-23T16:58:34.000Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/pages/e3bbe6/",
             "url": "https://axiomofchoice-hjt.github.io/pages/e3bbe6/",
             "title": "初等数学问题的整理（一）",
             "summary": "整理自《100个著名初等数学问题历史和解》",
             "image": "https://axiomofchoice-hjt.github.io/img/e3bbe6-0.png",
             "date_modified": "2019-02-14T16:26:04.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/72b0a9/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/72b0a9/",
+            "title": "初等数学问题的整理（二）",
+            "summary": "整理自《100个著名初等数学问题历史和解》",
+            "image": "https://axiomofchoice-hjt.github.io/img/e3bbe6-0.png",
+            "date_modified": "2019-02-23T16:58:34.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/1b2639/",
