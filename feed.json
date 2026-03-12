@@ -6,13 +6,6 @@
     "description": "一个退役败犬的个人博客",
     "items": [
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/cef419/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/cef419/",
-            "title": "底层视角的返回值优化",
-            "summary": "从原理和例子分析 RVO",
-            "date_modified": "2026-01-08T22:48:34.000Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/pages/dec161/",
             "url": "https://axiomofchoice-hjt.github.io/pages/dec161/",
             "title": "如何写C++项目",
@@ -25,6 +18,20 @@
             "title": "C++为什么没有虚的成员函数模板",
             "summary": "面试题的一些思路",
             "date_modified": "2025-10-05T16:25:53.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/cef419/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/cef419/",
+            "title": "底层视角的返回值优化",
+            "summary": "从原理和例子分析 RVO",
+            "date_modified": "2026-01-08T22:48:34.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/aca146/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/aca146/",
+            "title": "思想实验：让 Python 拥有 C 的性能",
+            "summary": "性能杂谈",
+            "date_modified": "2022-03-25T14:29:36.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/04ae8d/",
@@ -55,13 +62,6 @@
             "summary": "分支、SIMD、并发",
             "image": "https://axiomofchoice-hjt.github.io/img/85c4ed-0.png",
             "date_modified": "2023-12-23T22:08:56.000Z"
-        },
-        {
-            "id": "https://axiomofchoice-hjt.github.io/pages/aca146/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/aca146/",
-            "title": "思想实验：让 Python 拥有 C 的性能",
-            "summary": "性能杂谈",
-            "date_modified": "2022-03-25T14:29:36.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/86fdbe/",
@@ -174,18 +174,18 @@
             "date_modified": "2021-11-05T19:22:00.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/22ee97/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/22ee97/",
-            "title": "随机数生成问题 离散",
-            "summary": "收集一些算法",
-            "date_modified": "2022-11-29T23:51:59.000Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/pages/220100/",
             "url": "https://axiomofchoice-hjt.github.io/pages/220100/",
             "title": "球盒模型",
             "summary": "算法竞赛有用科技",
             "date_modified": "2022-01-14T17:35:18.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/22ee97/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/22ee97/",
+            "title": "随机数生成问题 离散",
+            "summary": "收集一些算法",
+            "date_modified": "2022-11-29T23:51:59.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/a651e2/",
@@ -230,6 +230,13 @@
             "title": "数组求和的溢出问题",
             "summary": "一个面试题，int64 数组求和，题目不保证中间过程不会溢出，只能保证结果不溢出。",
             "date_modified": "2026-03-11T19:46:52.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/ecc5af/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/ecc5af/",
+            "title": "一个 PRAM 并行算法模拟器",
+            "summary": "轻量级的 PRAM 并行算法模拟器 pramsim，基于 C++20 协程实现。支持 EREW / CREW / CRCW 模型，提供直观的并行算法编写体验。代码仅 500 余行，适合学习和扩展。",
+            "date_modified": "2026-03-12T23:55:25.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/552367/",
@@ -278,13 +285,6 @@
             "date_modified": "2019-06-28T22:36:56.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/73ab29/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/73ab29/",
-            "title": "扑克牌魔术",
-            "summary": "一种奇怪的通讯方式",
-            "date_modified": "2021-12-13T17:01:41.000Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/pages/5c59de/",
             "url": "https://axiomofchoice-hjt.github.io/pages/5c59de/",
             "title": "翻硬币与旋转棋盘问题",
@@ -293,12 +293,11 @@
             "date_modified": "2024-07-04T22:15:12.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/29b8f6/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/29b8f6/",
-            "title": "巴恩斯利蕨",
-            "summary": "奇怪的代码",
-            "image": "https://axiomofchoice-hjt.github.io/img/29b8f6-0.png",
-            "date_modified": "2024-11-17T15:06:14.000Z"
+            "id": "https://axiomofchoice-hjt.github.io/pages/73ab29/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/73ab29/",
+            "title": "扑克牌魔术",
+            "summary": "一种奇怪的通讯方式",
+            "date_modified": "2021-12-13T17:01:41.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/1919bb/",
@@ -307,6 +306,14 @@
             "summary": "选择公理是谁",
             "image": "https://axiomofchoice-hjt.github.io/img/1919bb-0.png",
             "date_modified": "2021-12-02T15:22:24.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/29b8f6/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/29b8f6/",
+            "title": "巴恩斯利蕨",
+            "summary": "奇怪的代码",
+            "image": "https://axiomofchoice-hjt.github.io/img/29b8f6-0.png",
+            "date_modified": "2024-11-17T15:06:14.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/62c303/",
