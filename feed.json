@@ -27,13 +27,6 @@
             "date_modified": "2026-01-08T22:48:34.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/aca146/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/aca146/",
-            "title": "思想实验：让 Python 拥有 C 的性能",
-            "summary": "性能杂谈",
-            "date_modified": "2022-03-25T14:29:36.000Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/pages/04ae8d/",
             "url": "https://axiomofchoice-hjt.github.io/pages/04ae8d/",
             "title": "用汇编分析一下各种交换方法的性能",
@@ -62,6 +55,13 @@
             "summary": "分支、SIMD、并发",
             "image": "https://axiomofchoice-hjt.github.io/img/85c4ed-0.png",
             "date_modified": "2023-12-23T22:08:56.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/aca146/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/aca146/",
+            "title": "思想实验：让 Python 拥有 C 的性能",
+            "summary": "性能杂谈",
+            "date_modified": "2022-03-25T14:29:36.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/86fdbe/",
@@ -236,6 +236,7 @@
             "url": "https://axiomofchoice-hjt.github.io/pages/ecc5af/",
             "title": "一个 PRAM 并行算法模拟器",
             "summary": "轻量级的 PRAM 并行算法模拟器 pramsim，基于 C++20 协程实现。支持 EREW / CREW / CRCW 模型，提供直观的并行算法编写体验。代码仅 500 余行，适合学习和扩展。",
+            "image": "https://axiomofchoice-hjt.github.io/img/ecc5af-0.png",
             "date_modified": "2026-03-12T23:55:25.000Z"
         },
         {
@@ -285,14 +286,6 @@
             "date_modified": "2019-06-28T22:36:56.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/5c59de/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/5c59de/",
-            "title": "翻硬币与旋转棋盘问题",
-            "summary": "策略问题",
-            "image": "https://axiomofchoice-hjt.github.io/img/5c59de-0.drawio.png",
-            "date_modified": "2024-07-04T22:15:12.000Z"
-        },
-        {
             "id": "https://axiomofchoice-hjt.github.io/pages/73ab29/",
             "url": "https://axiomofchoice-hjt.github.io/pages/73ab29/",
             "title": "扑克牌魔术",
@@ -300,12 +293,12 @@
             "date_modified": "2021-12-13T17:01:41.000Z"
         },
         {
-            "id": "https://axiomofchoice-hjt.github.io/pages/1919bb/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/1919bb/",
-            "title": "关于博主",
-            "summary": "选择公理是谁",
-            "image": "https://axiomofchoice-hjt.github.io/img/1919bb-0.png",
-            "date_modified": "2021-12-02T15:22:24.000Z"
+            "id": "https://axiomofchoice-hjt.github.io/pages/5c59de/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/5c59de/",
+            "title": "翻硬币与旋转棋盘问题",
+            "summary": "策略问题",
+            "image": "https://axiomofchoice-hjt.github.io/img/5c59de-0.drawio.png",
+            "date_modified": "2024-07-04T22:15:12.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/29b8f6/",
@@ -316,19 +309,20 @@
             "date_modified": "2024-11-17T15:06:14.000Z"
         },
         {
+            "id": "https://axiomofchoice-hjt.github.io/pages/1919bb/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/1919bb/",
+            "title": "关于博主",
+            "summary": "选择公理是谁",
+            "image": "https://axiomofchoice-hjt.github.io/img/1919bb-0.png",
+            "date_modified": "2021-12-02T15:22:24.000Z"
+        },
+        {
             "id": "https://axiomofchoice-hjt.github.io/pages/62c303/",
             "url": "https://axiomofchoice-hjt.github.io/pages/62c303/",
             "title": "游戏：blockchallenge",
             "summary": "一个解密游戏，规则由玩家发掘，难度较高",
             "image": "https://axiomofchoice-hjt.github.io/img/62c303-L2.drawio.png",
             "date_modified": "2021-12-06T16:28:07.000Z"
-        },
-        {
-            "id": "https://axiomofchoice-hjt.github.io/pages/228fff/",
-            "url": "https://axiomofchoice-hjt.github.io/pages/228fff/",
-            "title": "今日瞎想",
-            "summary": "胡言乱语",
-            "date_modified": "2021-12-08T10:04:43.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/5b222d/",
@@ -343,6 +337,13 @@
             "title": "大学求职经历",
             "summary": "找实习/工作的一些感想",
             "date_modified": "2022-04-13T12:58:03.000Z"
+        },
+        {
+            "id": "https://axiomofchoice-hjt.github.io/pages/228fff/",
+            "url": "https://axiomofchoice-hjt.github.io/pages/228fff/",
+            "title": "今日瞎想",
+            "summary": "胡言乱语",
+            "date_modified": "2021-12-08T10:04:43.000Z"
         },
         {
             "id": "https://axiomofchoice-hjt.github.io/pages/451424/",
