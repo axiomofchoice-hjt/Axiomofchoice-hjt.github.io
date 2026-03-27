@@ -1,0 +1,57 @@
+name: Deploy VuePress(vdoing) Blog
+
+on:
+  # 当推送到main或master分支时触发
+  push:
+    branches:
+      - main
+      - master
+  # 允许手动触发工作流
+  workflow_dispatch:
+
+# 设置GITHUB_TOKEN的权限，用于部署到gh-pages分支
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# 只允许同时运行一个部署任务
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. 检出代码
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. 设置Node.js环境
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'  # 可根据项目需求调整版本
+          cache: 'yarn'
+
+      # 3. 安装依赖
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      # 4. 构建项目（设置OpenSSL legacy provider以兼容旧版OpenSSL）
+      - name: Build project
+        run: |
+          export NODE_OPTIONS="--openssl-legacy-provider"
+          yarn build
+        env:
+          NODE_OPTIONS: "--openssl-legacy-provider"
+
+      # 5. 部署到GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/.vuepress/dist  # 构建输出目录
+          publish_branch: gh-pages            # 部署到的分支
+          commit_message: 'deploy: ${{ github.event.head_commit.message || github.event.pull_request.title }}'
