@@ -5,7 +5,7 @@ module.exports = {
   theme: 'vdoing',
   base: "/", // 根路由
   head: [ // 注入到当前页面的 HTML <head> 中的标签
-    ['link', { rel: 'icon', href: '/img/favicon.ico' }], // 增加一个自定义的 favicon(网页标签的图标)
+    ['link', { rel: 'icon', href: '/favicon.ico' }], // 增加一个自定义的 favicon(网页标签的图标)
     // 下面两个是数学公式的样式
     ['link', {
       rel: 'stylesheet',
@@ -48,7 +48,7 @@ module.exports = {
     sidebarDepth: 2, // 侧边栏深度
     sidebarOpen: false, // 默认显示左侧边栏
     pageButton: false, // 翻页按钮
-    logo: '/img/favicon.ico', // 页首图标
+    logo: '/favicon.ico', // 页首图标
     repo: 'axiomofchoice-hjt/blogpages', // 仓库链接
     author: {
       // 文章默认的作者信息，可在md文件中单独配置此信息 String | {name: String, link: String}
@@ -63,7 +63,7 @@ module.exports = {
     },
     blogger: {
       // 博主信息，显示在首页侧边栏
-      avatar: '/img/favicon.ico',
+      avatar: '/favicon.ico',
       name: 'Axiomofchoice',
       slogan: 'C++ / HPC / Algorithm',
     },
