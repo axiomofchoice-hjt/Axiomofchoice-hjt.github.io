@@ -87,6 +87,11 @@ module.exports = {
           link: 'https://github.com/axiomofchoice-hjt',
         },
         {
+          iconClass: 'icon-zhihu',
+          title: '知乎',
+          link: 'https://www.zhihu.com/people/axiomofchoice',
+        },
+        {
           iconClass: 'icon-rss',
           title: 'RSS',
           link: 'https://axiomofchoice-hjt.github.io/rss.xml',
