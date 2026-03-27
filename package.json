@@ -1,0 +1,20 @@
+{
+  "name": "blogpages",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "dependencies": {
+    "async-validator": "^4.2.5",
+    "markdown-it-katex": "^2.0.3",
+    "vuepress": "^1.9.10",
+    "vuepress-plugin-element-ui": "^1.1.0",
+    "vuepress-plugin-feed": "^0.1.9",
+    "vuepress-plugin-one-click-copy": "^1.0.6",
+    "vuepress-theme-vdoing": "^1.12.9",
+    "vuepress-theme-vue": "^1.1.1"
+  }
+}
