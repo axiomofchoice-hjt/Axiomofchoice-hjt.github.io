@@ -49,7 +49,7 @@ module.exports = {
     sidebarOpen: false, // 默认显示左侧边栏
     pageButton: false, // 翻页按钮
     logo: '/favicon.ico', // 页首图标
-    repo: 'axiomofchoice-hjt/blogpages', // 仓库链接
+    repo: 'axiomofchoice-hjt/axiomofchoice-hjt.github.io', // 仓库链接
     author: {
       // 文章默认的作者信息，可在md文件中单独配置此信息 String | {name: String, link: String}
       name: 'Axiomofchoice', // 必需
