@@ -1,0 +1,23 @@
+graph TB
+    um["O(n) 原地归并不稳定"]
+    sp["O(n) 原地稳定划分"]
+    bf["O(n) 原地选择不稳定"]
+    st["替罪羊表"]
+    suq["O(n) 原地稳定去重"]
+
+    sm["O(n) 原地归并稳定"]
+    sup["O(n) 原地稳定反划分"]
+
+    ss["O(n) 原地选择稳定"]
+
+    qs["原地三路稳定快速排序"]
+    scs["原地稳定循环排序"]
+
+    um --> sm
+    sp --> sup
+    sp --> ss
+    sup --> ss
+    bf --> ss
+    sp --> qs
+    ss --> qs
+    sp --> scs
