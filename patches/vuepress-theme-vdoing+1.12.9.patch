@@ -1,0 +1,532 @@
+diff --git a/node_modules/vuepress-theme-vdoing/components/ArchivesPage.vue b/node_modules/vuepress-theme-vdoing/components/ArchivesPage.vue
+index 9ee64be..3f8cbec 100644
+--- a/node_modules/vuepress-theme-vdoing/components/ArchivesPage.vue
++++ b/node_modules/vuepress-theme-vdoing/components/ArchivesPage.vue
+@@ -9,7 +9,7 @@
+         {{ $page.title }}
+       </h1>
+       <div class="count">
+-        总共 <i>{{ $sortPostsByDate.length }}</i> 篇文章
++        {{ archivesCount }}
+       </div>
+       <ul>
+         <template v-for="(item, index) in postsList">
+@@ -21,7 +21,7 @@
+             <h2>
+               {{ year }}
+               <span>
+-                <i>{{ countByYear[year] }}</i> 篇
++                <i>{{ countByYear[year] }}</i> {{ articleUnit }}
+               </span>
+             </h2>
+           </li>
+@@ -58,21 +58,43 @@ export default {
+     }
+   },
+   created() {
+-    this.getPageData()
++    this.initPage()
++  },
++  mounted() {
++    window.addEventListener('scroll', debounce(() => {
++      if (this.postsList.length < this.$sortPostsByDate.length) {
++        const docEl = document.documentElement
++        const docBody = document.body
++        const scrollTop = docEl.scrollTop || docBody.scrollTop;
++        const clientHeight = docEl.clientHeight || docBody.clientHeight;
++        const scrollHeight = docEl.scrollHeight || docBody.scrollHeight;
+ 
+-    // 根据年份计算出文章数
+-    const { $sortPostsByDate, countByYear } = this
+-    for (let i = 0; i < $sortPostsByDate.length; i++) {
+-      const { frontmatter: { date } } = $sortPostsByDate[i];
+-      if (date && type(date) === 'string') {
+-        const year = date.slice(0, 4)
+-        if (!countByYear[year]) {
+-          countByYear[year] = 0
++        if (scrollHeight > clientHeight && scrollTop + clientHeight >= scrollHeight - 250) {
++          this.loadmore()
+         }
+-        countByYear[year] = countByYear[year] + 1
+       }
++
++    }, 200))
++  },
++  watch: {
++    '$localePath'() {
++      this.postsList = []
++      this.countByYear = {}
++      this.currentPage = 1
++      this.initPage()
++    }
++  },
++  computed: {
++    isEn() {
++      return (this.$lang || '').startsWith('en')
++    },
++    archivesCount() {
++      const count = this.$sortPostsByDate.length
++      return this.isEn ? `Total ${count} article${count !== 1 ? 's' : ''}` : `总共 ${count} 篇文章`
++    },
++    articleUnit() {
++      return this.isEn ? 'article(s)' : '篇'
+     }
+-    this.countByYear = countByYear
+   },
+   mounted() {
+     window.addEventListener('scroll', debounce(() => {
+@@ -91,6 +113,24 @@ export default {
+     }, 200))
+   },
+   methods: {
++    initPage() {
++      this.getPageData()
++
++      // 根据年份计算出文章数
++      const { $sortPostsByDate, countByYear } = this
++      for (let i = 0; i < $sortPostsByDate.length; i++) {
++        const { frontmatter: { date } } = $sortPostsByDate[i];
++        if (date && type(date) === 'string') {
++          const year = date.slice(0, 4)
++          if (!countByYear[year]) {
++            countByYear[year] = 0
++          }
++          countByYear[year] = countByYear[year] + 1
++        }
++      }
++
++      this.countByYear = countByYear
++    },
+     getPageData() {
+       const currentPage = this.currentPage
+       const perPage = this.perPage
+diff --git a/node_modules/vuepress-theme-vdoing/components/ArticleInfo.vue b/node_modules/vuepress-theme-vdoing/components/ArticleInfo.vue
+index a7a2a07..979102c 100644
+--- a/node_modules/vuepress-theme-vdoing/components/ArticleInfo.vue
++++ b/node_modules/vuepress-theme-vdoing/components/ArticleInfo.vue
+@@ -4,7 +4,7 @@
+       <!-- 面包屑 -->
+       <ul class="breadcrumbs" v-if="classify1 && classify1 !== '_posts'">
+         <li>
+-          <router-link to="/" class="iconfont icon-home" title="首页" />
++          <router-link :to="$localePath || '/'" class="iconfont icon-home" :title="homeTitle" />
+         </li>
+ 
+         <li v-for="item in classifyList" :key="item">
+@@ -15,8 +15,8 @@
+           <!-- 跳分类页 -->
+           <router-link
+             v-else-if="$themeConfig.category !== false"
+-            :to="`/categories/?category=${encodeURIComponent(item)}`"
+-            title="分类"
++            :to="`${$localePath}categories/?category=${encodeURIComponent(item)}`"
++            :title="categoryTitle"
+             >{{ item }}</router-link
+           >
+           <!-- 没有跳转 -->
+@@ -26,7 +26,7 @@
+ 
+       <!-- 作者&日期 -->
+       <div class="info">
+-        <div class="author iconfont icon-touxiang" title="作者" v-if="author">
++        <div class="author iconfont icon-touxiang" :title="authorTitle" v-if="author">
+           <a
+             :href="author.href || author.link"
+             v-if="
+@@ -34,17 +34,17 @@
+             "
+             target="_blank"
+             class="beLink"
+-            title="作者"
++            :title="authorTitle"
+             >{{ author.name }}</a
+           >
+           <a v-else href="javascript:;">{{ author.name || author }}</a>
+         </div>
+-        <div class="date iconfont icon-riqi" title="创建时间" v-if="date">
++        <div class="date iconfont icon-riqi" :title="dateTitle" v-if="date">
+           <a href="javascript:;">{{ date }}</a>
+         </div>
+         <div
+           class="date iconfont icon-wenjian"
+-          title="分类"
++          :title="categoryTitle"
+           v-if="
+             $themeConfig.category !== false &&
+             !(classify1 && classify1 !== '_posts') &&
+@@ -52,7 +52,7 @@
+           "
+         >
+           <router-link
+-            :to="`/categories/?category=${encodeURIComponent(item)}`"
++            :to="`${$localePath}categories/?category=${encodeURIComponent(item)}`"
+             v-for="(item, index) in categories"
+             :key="index"
+             >{{ item + ' ' }}</router-link
+@@ -75,6 +75,23 @@ export default {
+       categories: []
+     }
+   },
++  computed: {
++    isEn() {
++      return (this.$lang || '').startsWith('en')
++    },
++    homeTitle() {
++      return this.isEn ? 'Home' : '首页'
++    },
++    categoryTitle() {
++      return this.isEn ? 'Category' : '分类'
++    },
++    authorTitle() {
++      return this.isEn ? 'Author' : '作者'
++    },
++    dateTitle() {
++      return this.isEn ? 'Date' : '创建时间'
++    }
++  },
+   created() {
+     this.getPageInfo()
+   },
+@@ -93,12 +110,17 @@ export default {
+       // 分类采用解析文件夹地址名称的方式 (即使关闭分类功能也可以正确跳转目录页)
+       const relativePathArr = relativePath.split('/')
+ 
+-      // const classifyArr = relativePathArr[0].split('.')
++      // 跳过locale目录名（如 en/）
++      const localeDirs = Object.keys(this.$site.locales || {})
++        .filter(p => p !== '/')
++        .map(p => p.replace(/\//g, ''))
+ 
+       relativePathArr.forEach((item, index) => {
+-        const nameArr = item.split('.')
+-
+         if (index !== relativePathArr.length - 1) {
++          if (localeDirs.includes(item)) {
++            return
++          }
++          const nameArr = item.split('.')
+           if (nameArr === 1) {
+             this.classifyList.push(nameArr[0])
+           } else {
+diff --git a/node_modules/vuepress-theme-vdoing/components/CategoriesBar.vue b/node_modules/vuepress-theme-vdoing/components/CategoriesBar.vue
+index b5a1bd5..6687378 100644
+--- a/node_modules/vuepress-theme-vdoing/components/CategoriesBar.vue
++++ b/node_modules/vuepress-theme-vdoing/components/CategoriesBar.vue
+@@ -1,15 +1,15 @@
+ <template>
+   <div class="categories-wrapper card-box">
+     <router-link
+-      to="/categories/"
++      :to="$localePath + 'categories/'"
+       class="title iconfont icon-wenjianjia"
+-      title="全部分类"
+-      >{{ length === 'all' ? '全部分类' : '文章分类' }}</router-link
++      :title="title"
++      >{{ length === 'all' ? catsAll : catsTitle }}</router-link
+     >
+ 
+     <div class="categories">
+       <router-link
+-        :to="`/categories/?category=${encodeURIComponent(item.key)}`"
++        :to="`${$localePath}categories/?category=${encodeURIComponent(item.key)}`"
+         v-for="(item, index) in categories"
+         :key="index"
+         :class="{ active: item.key === category }"
+@@ -18,10 +18,10 @@
+         <span>{{ item.length }}</span>
+       </router-link>
+       <router-link
+-        to="/categories/"
++        :to="$localePath + 'categories/'"
+         v-if="length !== 'all' && length < categoriesData.length"
+         class="more"
+-        >更多 ...</router-link
++        >{{ moreText }}</router-link
+       >
+     </div>
+   </div>
+@@ -44,6 +44,21 @@ export default {
+     }
+   },
+   computed: {
++    isEn() {
++      return (this.$lang || '').startsWith('en')
++    },
++    title() {
++      return this.isEn ? 'All Categories' : '全部分类'
++    },
++    catsAll() {
++      return this.isEn ? 'All Categories' : '全部分类'
++    },
++    catsTitle() {
++      return this.isEn ? 'Categories' : '文章分类'
++    },
++    moreText() {
++      return this.isEn ? 'More ...' : '更多 ...'
++    },
+     categories() {
+       if (this.length === 'all') {
+         return this.categoriesData
+diff --git a/node_modules/vuepress-theme-vdoing/components/Home.vue b/node_modules/vuepress-theme-vdoing/components/Home.vue
+index c22d81b..5b12f05 100644
+--- a/node_modules/vuepress-theme-vdoing/components/Home.vue
++++ b/node_modules/vuepress-theme-vdoing/components/Home.vue
+@@ -287,6 +287,10 @@ export default {
+           this.init()
+         }, 0)
+       }
++    },
++    '$localePath'() {
++      this.total = this.$sortPosts.length
++      this.currentPage = 1
+     }
+   },
+   methods: {
+diff --git a/node_modules/vuepress-theme-vdoing/components/PostList.vue b/node_modules/vuepress-theme-vdoing/components/PostList.vue
+index 6b32f95..96ed509 100644
+--- a/node_modules/vuepress-theme-vdoing/components/PostList.vue
++++ b/node_modules/vuepress-theme-vdoing/components/PostList.vue
+@@ -18,7 +18,7 @@
+           </h2>
+           <div class="article-info">
+             <a
+-              title="作者"
++              :title="authorTitle"
+               class="iconfont icon-touxiang"
+               target="_blank"
+               v-if="item.author && item.author.href"
+@@ -26,34 +26,34 @@
+               >{{ item.author.name ? item.author.name : item.author }}</a
+             >
+             <span
+-              title="作者"
++              :title="authorTitle"
+               class="iconfont icon-touxiang"
+               v-else-if="item.author"
+               >{{ item.author.name ? item.author.name : item.author }}</span
+             >
+ 
+             <span
+-              title="创建时间"
++              :title="dateTitle"
+               class="iconfont icon-riqi"
+               v-if="item.frontmatter.date"
+               >{{ item.frontmatter.date.split(' ')[0] }}</span
+             >
+             <span
+-              title="分类"
++              :title="categoryTitle"
+               class="iconfont icon-wenjian"
+               v-if="
+                 $themeConfig.category !== false && item.frontmatter.categories
+               "
+             >
+               <router-link
+-                :to="`/categories/?category=${encodeURIComponent(c)}`"
++                :to="`${$localePath}categories/?category=${encodeURIComponent(c)}`"
+                 v-for="(c, index) in item.frontmatter.categories"
+                 :key="index"
+                 >{{ c }}</router-link
+               >
+             </span>
+             <span
+-              title="标签"
++              :title="tagTitle"
+               class="iconfont icon-biaoqian tags"
+               v-if="
+                 $themeConfig.tag !== false &&
+@@ -62,7 +62,7 @@
+               "
+             >
+               <router-link
+-                :to="`/tags/?tag=${encodeURIComponent(t)}`"
++                  :to="`${$localePath}tags/?tag=${encodeURIComponent(t)}`"
+                 v-for="(t, index) in item.frontmatter.tags"
+                 :key="index"
+                 >{{ t }}</router-link
+@@ -75,7 +75,7 @@
+           <router-link
+             :to="item.path"
+             class="readmore iconfont icon-jiantou-you"
+-            >阅读全文</router-link
++            >{{ readMoreText }}</router-link
+           >
+         </div>
+       </div>
+@@ -103,6 +103,26 @@ export default {
+       default: 10
+     }
+   },
++  computed: {
++    isEn() {
++      return (this.$lang || '').startsWith('en')
++    },
++    readMoreText() {
++      return this.isEn ? 'Read more' : '阅读全文'
++    },
++    authorTitle() {
++      return this.isEn ? 'Author' : '作者'
++    },
++    dateTitle() {
++      return this.isEn ? 'Date' : '创建时间'
++    },
++    categoryTitle() {
++      return this.isEn ? 'Category' : '分类'
++    },
++    tagTitle() {
++      return this.isEn ? 'Tags' : '标签'
++    }
++  },
+   data() {
+     return {
+       sortPosts: [],
+@@ -135,6 +155,9 @@ export default {
+     },
+     tag() {
+       this.setPosts()
++    },
++    '$localePath'() {
++      this.setPosts()
+     }
+   },
+   methods: {
+diff --git a/node_modules/vuepress-theme-vdoing/components/TagsBar.vue b/node_modules/vuepress-theme-vdoing/components/TagsBar.vue
+index 9f4072d..9a572f5 100644
+--- a/node_modules/vuepress-theme-vdoing/components/TagsBar.vue
++++ b/node_modules/vuepress-theme-vdoing/components/TagsBar.vue
+@@ -1,14 +1,14 @@
+ <template>
+   <div class="tags-wrapper card-box">
+     <router-link
+-      to="/tags/"
++      :to="$localePath + 'tags/'"
+       class="title iconfont icon-biaoqian1"
+-      title="全部标签"
+-    >{{ length === 'all' ? '全部标签' : '热门标签' }}</router-link>
++      :title="title"
++    >{{ length === 'all' ? tagsAll : tagsTitle }}</router-link>
+     <div class="tags">
+       <template v-for="(item, index) in tags">
+         <router-link
+-          :to="`/tags/?tag=${encodeURIComponent(item.key)}`"
++          :to="`${$localePath}tags/?tag=${encodeURIComponent(item.key)}`"
+           :key="index"
+           :style="tagStyleList[index]"
+           :class="{active: item.key === tag}"
+@@ -16,9 +16,9 @@
+         <span :key="index+tags.length" />
+       </template>
+       <router-link
+-        to="/tags/"
++        :to="$localePath + 'tags/'"
+         v-if="length !== 'all' && tagsData.length > length"
+-      >更多...</router-link>
++      >{{ moreText }}</router-link>
+     </div>
+   </div>
+ </template>
+@@ -51,6 +51,21 @@ export default {
+     }
+   },
+   computed: {
++    isEn() {
++      return (this.$lang || '').startsWith('en')
++    },
++    title() {
++      return this.isEn ? 'All Tags' : '全部标签'
++    },
++    tagsAll() {
++      return this.isEn ? 'All Tags' : '全部标签'
++    },
++    tagsTitle() {
++      return this.isEn ? 'Popular Tags' : '热门标签'
++    },
++    moreText() {
++      return this.isEn ? 'More...' : '更多...'
++    },
+     tags () {
+       if (this.length === 'all') {
+         return this.tagsData
+diff --git a/node_modules/vuepress-theme-vdoing/components/UpdateArticle.vue b/node_modules/vuepress-theme-vdoing/components/UpdateArticle.vue
+index ae0270f..238655e 100644
+--- a/node_modules/vuepress-theme-vdoing/components/UpdateArticle.vue
++++ b/node_modules/vuepress-theme-vdoing/components/UpdateArticle.vue
+@@ -1,8 +1,8 @@
+ <template>
+   <div :class="['article-list', { 'no-article-list': isShowArticle }]">
+     <div class="article-title">
+-      <router-link :to="moreArticle || '/archives/'" class="iconfont icon-bi"
+-        >最近更新</router-link
++      <router-link :to="moreArticle || ($localePath + 'archives/')" class="iconfont icon-bi"
++        >{{ recentTitle }}</router-link
+       >
+     </div>
+     <div class="article-wrapper">
+@@ -24,8 +24,8 @@
+       <dl>
+         <dd></dd>
+         <dt>
+-          <router-link :to="moreArticle || '/archives/'" class="more"
+-            >更多文章></router-link
++          <router-link :to="moreArticle || ($localePath + 'archives/')" class="more"
++            >{{ moreArticleText }}></router-link
+           >
+         </dt>
+       </dl>
+@@ -55,6 +55,15 @@ export default {
+     this.currentPath = this.$page.path
+   },
+   computed: {
++    isEn() {
++      return (this.$lang || '').startsWith('en')
++    },
++    recentTitle() {
++      return this.isEn ? 'Recently Updated' : '最近更新'
++    },
++    moreArticleText() {
++      return this.isEn ? 'More Articles' : '更多文章'
++    },
+     topPublishPosts() {
+       return this.$sortPostsByDate ? this.$sortPostsByDate.filter(post => {
+         const { path } = post
+diff --git a/node_modules/vuepress-theme-vdoing/mixins/posts.js b/node_modules/vuepress-theme-vdoing/mixins/posts.js
+index 2dec307..c170318 100644
+--- a/node_modules/vuepress-theme-vdoing/mixins/posts.js
++++ b/node_modules/vuepress-theme-vdoing/mixins/posts.js
+@@ -2,8 +2,12 @@ import { filterPosts, sortPosts, sortPostsByDate, groupPosts, categoriesAndTags
+ 
+ export default {
+   computed: {
+-    $filterPosts () { // 过滤非文章页和首页的文章数据
+-      return filterPosts(this.$site.pages)
++    $filterPosts () { // 过滤非文章页和首页的文章数据（按locale过滤）
++      const localePath = this.$localePath
++      const pages = localePath && localePath !== '/'
++        ? this.$site.pages.filter(p => p.path.startsWith(localePath))
++        : this.$site.pages.filter(p => !p.path.startsWith('/en/'))
++      return filterPosts(pages)
+     },
+     $sortPosts () { // 按置顶和时间排序的文章数据
+       return sortPosts(this.$filterPosts)
+diff --git a/node_modules/vuepress-theme-vdoing/node_utils/getSidebarData.js b/node_modules/vuepress-theme-vdoing/node_utils/getSidebarData.js
+index ab52ffd..88bcf9b 100644
+--- a/node_modules/vuepress-theme-vdoing/node_utils/getSidebarData.js
++++ b/node_modules/vuepress-theme-vdoing/node_utils/getSidebarData.js
+@@ -118,10 +118,16 @@ function mapTocToSidebar(root, collapsable, prefix = '') {
+     if (filename === '.DS_Store') { // 过滤.DS_Store文件
+       return
+     }
++    const isDir = stat.isDirectory()
++    if (isDir && ['assets', 'img', 'images', '@pages'].includes(filename)) { // 过滤资源目录
++      return
++    }
++    if (!isDir && filename === 'index.md') { // 过滤首页
++      return
++    }
+     // let [order, title, type] = filename.split('.');
+ 
+     const fileNameArr = filename.split('.')
+-    const isDir = stat.isDirectory()
+     let order = '', title = '', type = '';
+     if (fileNameArr.length === 2) {
+       order = fileNameArr[0];

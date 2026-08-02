@@ -1,0 +1,25 @@
+{
+    // Customizable markdownlint config
+    "config": {
+        "default": true,
+        // Allow inline HTML (VuePress components, KaTeX)
+        "MD033": false,
+        // Allow first line to not be a heading (homepage and special pages)
+        "MD041": false,
+        // Relax line length (Chinese text, code blocks)
+        "MD013": false,
+        // Allow duplicate headings across sections
+        "MD024": false,
+        // Allow trailing punctuation in headings (Chinese titles)
+        "MD026": false,
+        // Allow multiple top-level headings (MD025)
+        "MD025": false,
+        // Allow mixed emphasis styles (underscore and asterisk)
+        "MD049": false,
+        // Allow emphasis as heading substitute
+        "MD036": false
+    },
+    "ignores": [
+        "docs/@pages/**"
+    ]
+}
