@@ -1,0 +1,23 @@
+{
+  "name": "axiomofchoice.github.io",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "lint": "markdownlint-cli2 \"docs/**/*.md\"",
+    "postinstall": "patch-package"
+  },
+  "dependencies": {
+    "markdown-it-katex": "^2.0.3",
+    "vuepress": "^1.9.10",
+    "vuepress-plugin-feed": "^0.1.9",
+    "vuepress-plugin-one-click-copy": "^1.0.6",
+    "vuepress-theme-vdoing": "^1.12.9"
+  },
+  "devDependencies": {
+    "markdownlint-cli2": "0.17.2",
+    "patch-package": "^8.0.1"
+  }
+}
