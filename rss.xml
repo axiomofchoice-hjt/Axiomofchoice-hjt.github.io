@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Axiomofchoice&apos;s Blog</title>
+        <link>https://axiomofchoice-hjt.github.io</link>
+        <description>一个退役败犬的个人博客</description>
+        <lastBuildDate>Thu, 13 Aug 2026 14:59:00 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
+        <atom:link href="https://axiomofchoice-hjt.github.io/feed.atom" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[在 INT8 硬件上模拟 MXFP4 矩阵乘]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/7f2a8c/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/7f2a8c/</guid>
+            <pubDate>Thu, 13 Aug 2026 15:20:00 GMT</pubDate>
+            <description><![CDATA[把 MXFP4 的 Per-Block 量化改造成 Per-Channel 量化，用查表加右移在只有 INT8 算力的硬件上高效模拟 MXFP4 矩阵乘。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[数组的 O(1) 时间复杂度之所以高效是因为内存连续性吗]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/5da6a9/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/5da6a9/</guid>
+            <pubDate>Sat, 01 Aug 2026 02:32:10 GMT</pubDate>
+            <description><![CDATA[本文从算法理论与计算机组成原理双重视角出发，深入探讨了连续性作为“手段”而非“本质”的底层逻辑，并解析了为何工程实践中可以安全地假设数组访问为常数时间。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[替罪羊表]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/07c6a5/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/07c6a5/</guid>
+            <pubDate>Sat, 25 Jul 2026 19:22:11 GMT</pubDate>
+            <description><![CDATA[一个 1981 年的冷门数据结构，用数组 + 线段树 + 替罪羊机制实现 O(log² n) 插入的有序容器。]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/./assets/07c6a5-0.webp">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[如何用 100 颗相同石头实现最大计数范围]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/118fb5/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/118fb5/</guid>
+            <pubDate>Wed, 08 Jul 2026 22:24:42 GMT</pubDate>
+            <description><![CDATA[知乎上的一个问题 如何用 100 颗相同石头实现最大计数范围？]]></description>
+        </item>
+        <item>
+            <title><![CDATA[O(n) 原地稳定去重]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/1aa983/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/1aa983/</guid>
+            <pubDate>Sat, 04 Jul 2026 00:06:57 GMT</pubDate>
+            <description><![CDATA[本文将 std::unique 升级为真正的 O(n) 原地稳定去重，利用分块策略与旋转技巧，在不占用额外内存的前提下保证相同元素原始顺序。同时剖析了多重集操作（交集、并集）遇到的理论与工程挑战。]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/./assets/1aa983-0.webp">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[原地稳定循环排序和最少移动]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/e2847a/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/e2847a/</guid>
+            <pubDate>Thu, 18 Jun 2026 00:45:19 GMT</pubDate>
+            <description><![CDATA[看了一下之前遗留的论文，有个小算法可以记录一下。这个排序将循环排序 (cycle sort) 改造成了稳定排序，并保持 O(n) 的移动次数。]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/./assets/e2847a-0.webp">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[原地三路快速排序]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/74ae0e/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/74ae0e/</guid>
+            <pubDate>Sun, 07 Jun 2026 13:37:30 GMT</pubDate>
+            <description><![CDATA[从快速排序的经典实现与固有缺陷出发，逐步引入中位数选择、自底向上的块划分，并重点介绍了双哨兵机制，完全消除了调用栈，实现严格 O(1) 额外空间的原地三路快速排序。]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/./assets/74ae0e-0.webp">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[O(n) 原地选择的稳定版本]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/8da648/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/8da648/</guid>
+            <pubDate>Fri, 05 Jun 2026 01:08:42 GMT</pubDate>
+            <description><![CDATA[本文拆解了论文《Sorting multisets stably in minimum space》中的稳定选择算法，在 BFPRT 的基础上，硬扛原地、稳定、O(n) 三重约束。]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/./assets/8da648-0.webp">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[O(n) 原地稳定反划分]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/60450e/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/60450e/</guid>
+            <pubDate>Sat, 23 May 2026 01:48:18 GMT</pubDate>
+            <description><![CDATA[本文详解 O(n) 时间、O(1) 空间的原地稳定反划分算法——稳定划分的逆操作。通过缓冲区提取、块缩小与原地置换，在不破坏相对顺序的前提下，将已划分的数组按任意 0‑1 模式精确重排。]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/./assets/60450e-0.webp">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[O(n) 原地选择的不稳定版本]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/63a6df/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/63a6df/</guid>
+            <pubDate>Sun, 10 May 2026 17:30:55 GMT</pubDate>
+            <description><![CDATA[本文探讨了如何在 O(n) 时间复杂度和严格 O(1) 额外空间的原地限制下解决 top-k 选择问题。基于 1988 年论文 Implicit Selection，文章完整阐述了消除 BFPRT 算法递归栈的核心技术。]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/./assets/63a6df-0.webp">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[O(n) 原地稳定划分]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/0d69d8/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/0d69d8/</guid>
+            <pubDate>Sat, 02 May 2026 00:08:00 GMT</pubDate>
+            <description><![CDATA[本文深入解析 O(n) 原地稳定划分（0‑1 排序）的完整实现方案。通过提取缓冲区、在 Word 和缓冲区内编码目标位置、块同质化与块增长等技巧，将原论文中晦涩的部分简化为常数次分块倍增过程，最终以 200 余行 C++ 代码完整实现。文章兼顾算法思路、实现细节与踩坑记录，适合想要理解并复现该经典算法的读者。]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/./assets/0d69d8-0.webp">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[原地算法系列]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/1b8e07/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/1b8e07/</guid>
+            <pubDate>Sat, 18 Apr 2026 15:41:04 GMT</pubDate>
+            <description><![CDATA[文章从图灵机到 Word RAM 模型，严谨厘清“原地算法”的定义边界；以 BFPRT（中位数的中位数）为例，给出 O(n) 最坏复杂度原地选择算法的完整推导与代码，并探讨递归栈空间与工程取舍。]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/./assets/1b8e07-0.webp">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[O(n) 原地归并的稳定版本]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/326ae9/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/326ae9/</guid>
+            <pubDate>Sun, 12 Apr 2026 17:07:28 GMT</pubDate>
+            <description><![CDATA[在常数空间下实现稳定归并的完整工程化方案：基于分块、唯一值提取与双/单缓冲区设计，将原地归并推进到 $O(n)$ 时间，并进一步支撑稳定的 $O(n\log n)$ 原地归并排序。]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/./assets/326ae9-0.webp">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[O(n) 原地归并的不稳定版本]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/c829b5/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/c829b5/</guid>
+            <pubDate>Wed, 25 Mar 2026 12:55:37 GMT</pubDate>
+            <description><![CDATA[一个线性时间、常数空间的原地归并算法（不稳定版本）。通过分块、选择排序与缓冲区归并，将传统 O(n log n) 的 merge 降到线性复杂度，是原地排序理论中的经典技巧实现。]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/./assets/c829b5-0.webp">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Chunked Pipeline Parallelism]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/34052d/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/34052d/</guid>
+            <pubDate>Sat, 21 Mar 2026 13:34:19 GMT</pubDate>
+            <description><![CDATA[记录一个优雅的超长上下文 prefill 部署思路 Chunked Pipeline Parallelism，能利用多节点的性能，同时避免了多节点的 Attention 通信开销。]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/./assets/34052d-0.webp">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[一个 PRAM 并行算法模拟器]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/ecc5af/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/ecc5af/</guid>
+            <pubDate>Thu, 12 Mar 2026 23:55:25 GMT</pubDate>
+            <description><![CDATA[轻量级的 PRAM 并行算法模拟器 pramsim，基于 C++20 协程实现。支持 EREW / CREW / CRCW 模型，提供直观的并行算法编写体验。代码仅 500 余行，适合学习和扩展。]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/./assets/ecc5af-0.webp">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[数组求和的溢出问题]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/b86c12/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/b86c12/</guid>
+            <pubDate>Wed, 11 Mar 2026 19:46:52 GMT</pubDate>
+            <description><![CDATA[一个面试题，int64 数组求和，题目不保证中间过程不会溢出，只能保证结果不溢出。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[大模型 MoE 负载均衡踩坑记录]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/5542b5/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/5542b5/</guid>
+            <pubDate>Sat, 28 Feb 2026 00:18:45 GMT</pubDate>
+            <description><![CDATA[这是一篇从 KL 散度“分布均匀性优化”转向峰均比“极值统计建模”的工程复盘。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[原地算法的对称性：从 inplace merge 到 stable partition]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/1a8ff1/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/1a8ff1/</guid>
+            <pubDate>Sat, 07 Feb 2026 22:34:30 GMT</pubDate>
+            <description><![CDATA[围绕“原地算法”的结构对称性，从 inplace merge 与 stable partition 两个经典 O(n log n) 算法切入，讨论 rotate 操作在分治中的核心作用，以及快速排序与归并排序在原地稳定算法里的镜像关系。]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/./assets/1a8ff1-0.webp">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[底层视角的返回值优化]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/cef419/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/cef419/</guid>
+            <pubDate>Thu, 08 Jan 2026 22:48:34 GMT</pubDate>
+            <description><![CDATA[从原理和例子分析 RVO]]></description>
+        </item>
+        <item>
+            <title><![CDATA[浮点数条件运算的性能分析]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/1d919a/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/1d919a/</guid>
+            <pubDate>Mon, 06 Oct 2025 11:40:29 GMT</pubDate>
+            <description><![CDATA[性能分析报告]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/./assets/1d919a-0.webp">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[C++为什么没有虚的成员函数模板]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/7f244c/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/7f244c/</guid>
+            <pubDate>Sun, 05 Oct 2025 16:25:53 GMT</pubDate>
+            <description><![CDATA[面试题的一些思路]]></description>
+        </item>
+        <item>
+            <title><![CDATA[败犬のC++专题 宏魔法篇]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/a037bf/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/a037bf/</guid>
+            <pubDate>Thu, 18 Sep 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[参考文章：C语言 宏嵌套的展开规则 - 彷徨而立的文章 - 知乎]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/./assets/a037bf-0.webp">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[最小椭圆覆盖]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/002fc6/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/002fc6/</guid>
+            <pubDate>Wed, 03 Sep 2025 22:17:50 GMT</pubDate>
+            <description><![CDATA[一个难度超模的保研机试题]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/./assets/002fc6-0.webp">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[巴恩斯利蕨]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/29b8f6/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/29b8f6/</guid>
+            <pubDate>Sun, 17 Nov 2024 15:06:14 GMT</pubDate>
+            <description><![CDATA[奇怪的代码]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/./assets/29b8f6-0.webp">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[SME 指令集使用指南]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/f78cb0/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/f78cb0/</guid>
+            <pubDate>Mon, 16 Sep 2024 23:04:19 GMT</pubDate>
+            <description><![CDATA[ARM 矩阵指令集]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/./assets/f78cb0-0.drawio.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[BLAS GEMM 接口]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/d787b3/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/d787b3/</guid>
+            <pubDate>Sat, 17 Aug 2024 21:03:51 GMT</pubDate>
+            <description><![CDATA[BLAS 矩阵乘法接口]]></description>
+        </item>
+        <item>
+            <title><![CDATA[翻硬币与旋转棋盘问题]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/5c59de/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/5c59de/</guid>
+            <pubDate>Thu, 04 Jul 2024 22:15:12 GMT</pubDate>
+            <description><![CDATA[策略问题]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/./assets/5c59de-0.drawio.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[用户态线程同步]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/22df72/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/22df72/</guid>
+            <pubDate>Sat, 15 Jun 2024 22:49:01 GMT</pubDate>
+            <description><![CDATA[无锁同步指北]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/./assets/22df72-0.drawio.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[测量多线程每个线程的运行时间]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/62c8f3/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/62c8f3/</guid>
+            <pubDate>Thu, 13 Jun 2024 22:06:32 GMT</pubDate>
+            <description><![CDATA[解决竞争获取系统时间的问题]]></description>
+        </item>
+        <item>
+            <title><![CDATA[更自由的 perf 采样实践]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/f2fc10/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/f2fc10/</guid>
+            <pubDate>Sun, 26 May 2024 02:20:56 GMT</pubDate>
+            <description><![CDATA[在程序中间 perf stat]]></description>
+        </item>
+        <item>
+            <title><![CDATA[如何做好 benchmark]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/1abfb8/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/1abfb8/</guid>
+            <pubDate>Thu, 02 May 2024 16:09:42 GMT</pubDate>
+            <description><![CDATA[benchmark 小寄巧]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/./assets/1abfb8-0.webp">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[xbyak 汇编开发姿势]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/86fdbe/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/86fdbe/</guid>
+            <pubDate>Sat, 23 Mar 2024 17:20:28 GMT</pubDate>
+            <description><![CDATA[用 xbyak 库生成静态链接库]]></description>
+        </item>
+        <item>
+            <title><![CDATA[集合求并的极致优化]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/85c4ed/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/85c4ed/</guid>
+            <pubDate>Sat, 23 Dec 2023 22:08:56 GMT</pubDate>
+            <description><![CDATA[分支、SIMD、并发]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/./assets/85c4ed-0.webp">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[浮点数误差入门]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/c1e151/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/c1e151/</guid>
+            <pubDate>Tue, 19 Dec 2023 23:05:16 GMT</pubDate>
+            <description><![CDATA[理论的误差估计]]></description>
+        </item>
+        <item>
+            <title><![CDATA[大学阶段回顾和总结]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/f7352c/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/f7352c/</guid>
+            <pubDate>Sun, 17 Dec 2023 23:15:51 GMT</pubDate>
+            <description><![CDATA[大学回顾]]></description>
+        </item>
+        <item>
+            <title><![CDATA[理想的并行排序算法]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/342a8d/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/342a8d/</guid>
+            <pubDate>Sun, 19 Nov 2023 01:09:21 GMT</pubDate>
+            <description><![CDATA[如果某CPU有无限个核心，那么时间复杂度最小的排序算法是怎么样的？]]></description>
+        </item>
+        <item>
+            <title><![CDATA[有没有计算时间复杂度的算法]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/0fc19d/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/0fc19d/</guid>
+            <pubDate>Fri, 06 Oct 2023 23:54:00 GMT</pubDate>
+            <description><![CDATA[一点证明思路]]></description>
+        </item>
+        <item>
+            <title><![CDATA[HDU ACM 从入门到入坟]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/451424/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/451424/</guid>
+            <pubDate>Tue, 25 Jul 2023 02:23:03 GMT</pubDate>
+            <description><![CDATA[给 HDU 新生的 ACM 建议]]></description>
+            <enclosure url="https://cdn.xyxsw.site/Axiomofchoice_1.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[如何写C++项目]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/dec161/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/dec161/</guid>
+            <pubDate>Fri, 24 Mar 2023 19:50:38 GMT</pubDate>
+            <description><![CDATA[项目指北]]></description>
+        </item>
+        <item>
+            <title><![CDATA[随机数生成问题 连续]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/a651e2/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/a651e2/</guid>
+            <pubDate>Mon, 02 Jan 2023 17:21:05 GMT</pubDate>
+            <description><![CDATA[收集一些算法]]></description>
+        </item>
+        <item>
+            <title><![CDATA[随机数生成问题 离散]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/22ee97/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/22ee97/</guid>
+            <pubDate>Tue, 29 Nov 2022 23:51:59 GMT</pubDate>
+            <description><![CDATA[收集一些算法]]></description>
+        </item>
+        <item>
+            <title><![CDATA[用汇编分析一下各种交换方法的性能]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/04ae8d/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/04ae8d/</guid>
+            <pubDate>Mon, 03 Oct 2022 18:14:04 GMT</pubDate>
+            <description><![CDATA[汇编入门]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/./assets/04ae8d-0.webp">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[大学求职经历]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/9f1388/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/9f1388/</guid>
+            <pubDate>Wed, 13 Apr 2022 12:58:03 GMT</pubDate>
+            <description><![CDATA[找实习/工作的一些感想]]></description>
+        </item>
+        <item>
+            <title><![CDATA[思想实验：让 Python 拥有 C 的性能]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/aca146/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/aca146/</guid>
+            <pubDate>Fri, 25 Mar 2022 14:29:36 GMT</pubDate>
+            <description><![CDATA[性能杂谈]]></description>
+        </item>
+        <item>
+            <title><![CDATA[博客搭建过程记录]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/5b222d/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/5b222d/</guid>
+            <pubDate>Tue, 08 Mar 2022 18:08:00 GMT</pubDate>
+            <description><![CDATA[一点点踩坑记录]]></description>
+        </item>
+        <item>
+            <title><![CDATA[球盒模型]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/220100/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/220100/</guid>
+            <pubDate>Fri, 14 Jan 2022 17:35:18 GMT</pubDate>
+            <description><![CDATA[算法竞赛有用科技]]></description>
+        </item>
+        <item>
+            <title><![CDATA[扑克牌魔术]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/73ab29/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/73ab29/</guid>
+            <pubDate>Mon, 13 Dec 2021 17:01:41 GMT</pubDate>
+            <description><![CDATA[一种奇怪的通讯方式]]></description>
+        </item>
+        <item>
+            <title><![CDATA[今日瞎想]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/228fff/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/228fff/</guid>
+            <pubDate>Wed, 08 Dec 2021 10:04:43 GMT</pubDate>
+            <description><![CDATA[胡言乱语]]></description>
+        </item>
+        <item>
+            <title><![CDATA[游戏：blockchallenge]]></title>
+            <link>https://axiomofchoice-hjt.github.io/pages/62c303/</link>
+            <guid>https://axiomofchoice-hjt.github.io/pages/62c303/</guid>
+            <pubDate>Mon, 06 Dec 2021 16:28:07 GMT</pubDate>
+            <description><![CDATA[一个解密游戏，规则由玩家发掘，难度较高]]></description>
+            <enclosure url="https://axiomofchoice-hjt.github.io/./assets/62c303-L2.drawio.png">
+            </enclosure>
+        </item>
+    </channel>
+</rss>
