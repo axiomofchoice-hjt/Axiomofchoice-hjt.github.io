@@ -1,0 +1,40 @@
+graph TD
+    R["<b>counts[1]</b> = 3<br/>τ₀ = 0.25<br/>block 0-3"]:::root
+
+    N2["<b>counts[2]</b> = 1<br/>τ₁ = 0.50<br/>block 0-1"]:::internal
+    N3["<b>counts[3]</b> = 2<br/>τ₁ = 0.50<br/>block 2-3"]:::internal
+
+    L0["<b>counts[4]</b> = 1<br/>τ₂ = 0.75<br/>block 0"]:::leaf
+    L1["<b>counts[5]</b> = 0<br/>τ₂ = 0.75<br/>block 1"]:::leaf
+    L2["<b>counts[6]</b> = 1<br/>τ₂ = 0.75<br/>block 2"]:::leaf
+    L3["<b>counts[7]</b> = 1<br/>τ₂ = 0.75<br/>block 3"]:::leaf
+
+    subgraph table["data_"]
+        T0["[0] = 2"]
+        T1["[1] = <b>2</b>"]
+        T2["[2] = 3"]
+        T3["[3] = 3"]
+        T4["[4] = <b>3</b>"]
+        T5["[5] = 5"]
+        T6["[6] = 5"]
+        T7["[7] = <b>5</b>"]
+    end
+
+    R --> N2
+    R --> N3
+    N2 --> L0
+    N2 --> L1
+    N3 --> L2
+    N3 --> L3
+    L0 -.- T0
+    L0 -.- T1
+    L1 -.- T2
+    L1 -.- T3
+    L2 -.- T4
+    L2 -.- T5
+    L3 -.- T6
+    L3 -.- T7
+
+    classDef root fill:#f96,stroke:#333
+    classDef internal fill:#fc9,stroke:#333
+    classDef leaf fill:#ffc,stroke:#333

@@ -1,0 +1,1130 @@
+/* ============================================================
+   vdoing 风格主题样式
+   主色：#11a8cd（青蓝），卡片化布局，时间线归档，标签胶囊
+   ============================================================ */
+
+/* ---------- 主题变量 ---------- */
+:root {
+  /* vdoing 主色系 */
+  --vp-c-brand-1: #11a8cd;
+  --vp-c-brand-2: #0e93b4;
+  --vp-c-brand-3: #0d7f9c;
+  --vp-c-brand-soft: rgba(17, 168, 205, 0.14);
+
+  --vp-c-bg: #f4f4f4; /* 页面背景 rgb(244,244,244)，vdoing 风格灰底 */
+  --vp-c-bg-alt: #f4f4f4; /* 侧栏背景与页面一致 */
+  --vp-c-bg-elv: #ffffff; /* 弹层（搜索框 / 下拉 / 移动菜单）保持白色 */
+  --vp-c-bg-soft: #ececec; /* 略深的浅灰，用于信息条 / 引用块 / 表格底色 */
+  --vp-c-divider: #e4e7eb;
+  --vp-c-text-1: #2c3e50;
+  --vp-c-text-2: #6b7280;
+  --vp-c-text-3: #9aa3af;
+
+  /* 布局总宽：1520。默认 1440 时卡片最多 824px；1520 让卡片能达到 850px，
+     同时保证在更宽视口下左右留白对称（过大时反而会在中等视口产生不对称留白） */
+  --vp-layout-max-width: 1520px;
+
+  /* 顶部栏高度：默认 64px，用户目测 96px（1.5x 缩放）→ 目标 86px 物理 = 57.33px，
+     取 57px（85.5 物理）。侧栏 top / 目录 sticky 均引用此变量自动跟随 */
+  --vp-nav-height: 57px;
+
+  --vp-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue',
+    Helvetica, Arial, sans-serif;
+  --vp-font-family-mono: 'JetBrains Mono', 'Fira Code', ui-monospace,
+    SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+
+  /* 自定义主题变量 */
+  --vd-radius: 10px;  --vd-radius-sm: 8px;
+  --vd-shadow: 0 2px 12px rgba(30, 60, 90, 0.1);
+  --vd-shadow-hover: 0 6px 20px rgba(17, 168, 205, 0.16);
+  --vd-card-bg: #ffffff;
+}
+
+.dark {
+  --vp-c-brand-1: #3ec9e8;
+  --vp-c-brand-2: #2bb4d6;
+  --vp-c-brand-3: #1aa3c8;
+  --vp-c-brand-soft: rgba(62, 201, 232, 0.16);
+
+  --vp-c-bg: #121417;
+  --vp-c-bg-alt: #17191d;
+  --vp-c-bg-elv: #1b1e23;
+  --vp-c-bg-soft: #1e2127;
+  --vp-c-divider: #2c313a;
+  --vp-c-text-1: #e5eaf0;
+  --vp-c-text-2: #a8b0bc;
+  --vp-c-text-3: #7d8794;
+
+  /* 侧栏背景与页面背景一致（默认走 --vp-c-bg-alt，暗色下与页面不同色） */
+  --vp-sidebar-bg-color: var(--vp-c-bg);
+
+  --vd-card-bg: #1b1e23;
+  --vd-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+  --vd-shadow-hover: 0 6px 20px rgba(62, 201, 232, 0.18);
+}
+
+/* ---------- 全局微调 ---------- */
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+.vp-doc img {
+  /* 文章内图片不需要圆角 */
+  border-radius: 0;
+}
+
+.vp-doc blockquote {
+  border-radius: 0 var(--vd-radius-sm) var(--vd-radius-sm) 0;
+  border-left: 4px solid var(--vp-c-brand-1);
+  color: var(--vp-c-text-2);
+  background: var(--vp-c-bg-soft);
+  padding: 10px 16px;
+}
+
+.vp-doc table {
+  border-radius: var(--vd-radius-sm);
+  overflow: hidden;
+  box-shadow: var(--vd-shadow);
+}
+
+.vp-doc div[class*='language-'] {
+  border-radius: var(--vd-radius);
+  box-shadow: var(--vd-shadow);
+}
+
+/* 首页容器：去掉默认留白 */
+.VPHome {
+  padding: 0 !important;
+}
+
+/* ---------- 文章内容白色大卡片（vdoing 风格：灰底 + 白卡） ---------- */
+.VPDoc .content-container {
+  background: var(--vd-card-bg);
+  border-radius: var(--vd-radius);
+  box-shadow: var(--vd-shadow);
+  padding: 28px 38px 40px;
+}
+
+/* 有右侧栏时：卡宽 850px（用户显示环境约 1.5x 放大，实际显示约 1275px，
+   对应其要求的 1200–1300px），扣除内边距后阅读宽度 786px
+   （!important 用于压过 VitePress scoped 样式的 .VPDoc.has-aside .content-container[data-v-x]） */
+.VPDoc.has-aside .content-container {
+  max-width: 850px !important;
+}
+
+/* 分类 / 归档 / 关于等无右侧栏页面：卡片与文章页同宽 850px
+   （覆盖 VitePress 对无侧栏页面的容器 992px / 内容 752px 限制） */
+.VPDoc:not(.has-sidebar) .container {
+  max-width: 874px !important;
+}
+
+.VPDoc:not(.has-sidebar) .content {
+  max-width: 874px !important;
+}
+
+@media (max-width: 767px) {
+  .VPDoc .content-container {
+    border-radius: var(--vd-radius-sm);
+    padding: 24px 20px 32px;
+  }
+}
+
+/* ---------- 首页 Hero（与 vdoing 一致：纯文字标题 + tagline，背景全宽） ---------- */
+.blog-home {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.bh-hero {
+  position: relative;
+  margin: 0;
+  /* 固定高度：内容由 flex 垂直居中，不再靠 padding 撑高 */
+  height: 450px;
+  padding: 0 24px;
+  text-align: center;
+  overflow: hidden;
+  /* 与原站 vdoing banner 一致：深色底 + 网格纹理平铺（文字需为白色） */
+  background: rgb(40, 40, 45) url('/grid.png');
+  /* 大/小标题在 hero 内垂直居中 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 首页主体容器：回到 1080px 居中（Hero 背景铺满全宽） */
+.bh-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px 48px;
+}
+
+.bh-title {
+  font-size: 48px;
+  font-weight: 600;
+  margin: 0 0 36px;
+  /* 深色 hero 底上必须用白色，不能跟随主题色 */
+  color: #fff;
+  letter-spacing: 1px;
+  /* flex 容器中默认按 max-content 宽度不换行，窄屏会横向溢出视口 */
+  max-width: 100%;
+}
+
+/* 窄屏 hero 标题自适应缩小，避免溢出 */
+@media (max-width: 640px) {
+  .bh-title {
+    font-size: 32px;
+  }
+}
+
+.bh-tagline {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+}
+
+/* ---------- 首页主体：左侧文章列表 + 右侧博主/分类栏 ---------- */
+.bh-body {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 28px;
+  align-items: start;
+  margin-top: 24px;
+}
+
+.bh-aside {
+  position: sticky;
+  top: 88px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 文章列表条目：白色卡片（标题 + 日期/分类/置顶） */
+.hp-item {
+  background: var(--vd-card-bg);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--vd-radius);
+  box-shadow: var(--vd-shadow);
+  /* 上 padding 18px、下 padding 12px：底部略收，视觉上更紧凑 */
+  padding: 18px 22px 12px;
+  margin-bottom: 14px;
+  transition: all 0.25s;
+}
+
+.hp-item:hover {
+  transform: translateY(-3px);
+  border-color: var(--vp-c-brand-1);
+  box-shadow: var(--vd-shadow-hover);
+}
+
+/* 第一行：大字体文章标题 */
+.hp-title {
+  margin: 0 0 10px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.hp-title a {
+  color: var(--vp-c-text-1);
+  transition: color 0.2s;
+}
+
+.hp-title a:hover {
+  color: var(--vp-c-brand-1);
+}
+
+.hp-title .tl-sticky {
+  margin-left: 8px;
+  vertical-align: 2px;
+}
+
+/* 第二行：小字体的日期 / 分类 */
+.hp-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: #000;
+}
+
+.hp-author {
+  color: #000;
+}
+
+.hp-date {
+  font-variant-numeric: tabular-nums;
+}
+
+/* 暗色模式：作者/日期换浅色 */
+.dark .hp-meta,
+.dark .hp-author {
+  color: var(--vp-c-text-1);
+}
+
+.hp-cat {
+  font-size: 12px;
+  padding: 1px 10px;
+  border-radius: 999px;
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  transition: all 0.2s;
+}
+
+.hp-cat:hover {
+  background: var(--vp-c-brand-1);
+  color: #fff;
+}
+
+/* 分页 */
+.hp-pager {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.hp-page-link {
+  min-width: 32px;
+  padding: 6px 12px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vd-card-bg);
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.hp-page-link:hover {
+  color: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
+}
+
+.hp-page-link.active {
+  background: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* 分页省略号：与页码按钮同尺寸对齐，不可点击 */
+.hp-page-ellipsis {
+  min-width: 32px;
+  padding: 6px 2px;
+  text-align: center;
+  font-size: 16px;
+  color: #000;
+  user-select: none;
+}
+
+/* 暗色模式：省略号黑字换浅色 */
+.dark .hp-page-ellipsis {
+  color: var(--vp-c-text-1);
+}
+
+/* 侧栏博主卡片 */
+.hp-blogger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.hp-blogger-avatar {
+  width: 144px;
+  height: 144px;
+  border-radius: 50%;
+  margin-bottom: 4px;
+}
+
+.hp-blogger-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+}
+
+.hp-blogger-slogan {
+  font-size: 13px;
+  color: #000;
+}
+
+/* 暗色模式：slogan 黑字换浅色 */
+.dark .hp-blogger-slogan {
+  color: var(--vp-c-text-1);
+}
+
+.hp-blogger-social {
+  display: flex;
+  /* 与 vdoing 原站一致：5 个图标在卡片内均匀排布、占满整行 */
+  justify-content: space-between;
+  width: 100%;
+  /* 22px + 父容器 gap 8px = slogan 与社交图标间距 30px */
+  margin-top: 22px;
+}
+
+.hp-blogger-social a {
+  display: inline-flex;
+  color: var(--vp-c-text-2);
+  transition: color 0.2s;
+}
+
+.hp-blogger-social a:hover {
+  color: var(--vp-c-brand-1);
+}
+
+/* 窄屏：单列，侧栏置于列表下方 */
+@media (max-width: 900px) {
+  .bh-body {
+    grid-template-columns: 1fr;
+  }
+  .bh-aside {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .bh-aside .ba-card {
+    flex: 1 1 240px;
+  }
+}
+
+/* ---------- 文章时间线（首页 / 时间线 / 分类 / 标签共用） ---------- */
+.post-timeline {
+  margin-top: 4px;
+}
+
+.tl-year {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+  /* 底部间距：年份标题与第一篇文章拉开（!important 压过 VitePress 的 h3 margin） */
+  margin: 28px 0 16px !important;
+}
+
+.tl-year::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--vp-c-divider);
+}
+
+.tl-year .tl-count {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--vp-c-text-3);
+}
+
+.tl-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* 压过 VitePress 默认 .vp-doc ul 的 padding-left 1.25rem 与 margin 16px 0
+     （特异性更高），否则月份之间会出现大间隔 */
+  padding-left: 0 !important;
+  margin: 0 !important;
+}
+
+/* 压过 VitePress 默认 .vp-doc li + li 的 margin-top 8px：
+   否则月内行距 47px、跨月 39px 不均匀 */
+.tl-list li + li {
+  margin-top: 0 !important;
+}
+
+.tl-item {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 6px 0;
+  flex-wrap: wrap;
+}
+
+.tl-date {
+  font-size: 12px;
+  color: #000;
+  font-variant-numeric: tabular-nums;
+  min-width: 44px;
+}
+
+/* 暗色模式：时间线日期换浅色 */
+.dark .tl-date {
+  color: var(--vp-c-text-1);
+}
+
+/* 文章标题链接：黑色无下划线，悬浮变品牌蓝（始终无下划线）。
+   用双类提高特异性，压过 VitePress 默认的 .vp-doc a 链接样式 */
+.post-timeline .tl-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.post-timeline .tl-title:hover {
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+}
+
+.tl-cat,
+.tl-tag {
+  font-size: 12px;
+  padding: 1px 10px;
+  border-radius: 999px;
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  white-space: nowrap;
+}
+
+.tl-tag {
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-2);
+}
+
+.tl-sticky {
+  font-size: 11px;
+  padding: 1px 8px;
+  border-radius: 4px;
+  background: #f56c6c;
+  color: #fff;
+}
+
+/* ---------- 分类页 ---------- */
+.cat-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.cat-list {
+  position: sticky;
+  top: 88px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cat-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: var(--vd-radius-sm);
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vd-card-bg);
+  box-shadow: var(--vd-shadow);
+  /* 压过 .vp-doc a 的默认下划线 */
+  text-decoration: none !important;
+  /* 压过 .vp-doc a 的 transition: color .25s（颜色渐变会与背景/字重的瞬时
+     变化不同步）；点击切换时三项必须瞬时同时发生 */
+  transition: none !important;
+  cursor: pointer;
+  font-size: 16px;
+  /* 压过 .vp-doc a 的品牌蓝，保持纯黑文字（与首页侧栏分类卡片一致） */
+  color: #000 !important;
+}
+
+/* 暗色模式：分类名黑字换浅色 */
+.dark .cat-item {
+  color: var(--vp-c-text-1) !important;
+}
+
+.cat-item:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateX(3px);
+}
+
+.cat-item.active {
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1) !important;
+}
+
+.cat-item .cat-count {
+  margin-left: auto;
+  font-size: 12px;
+  color: #000;
+  padding: 1px 9px;
+}
+
+/* 暗色模式：文章数黑字换浅色 */
+.dark .cat-item .cat-count {
+  color: var(--vp-c-text-1);
+}
+
+.cat-detail-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+  margin: 0 0 4px;
+}
+
+.cat-detail-desc {
+  font-size: 13px;
+  color: #000;
+  margin: 0 0 16px;
+}
+
+/* 暗色模式：统计行黑字换浅色 */
+.dark .cat-detail-desc {
+  color: var(--vp-c-text-1);
+}
+
+/* 归档页顶部统计行与年份标题贴得更近（需压过 .vp-doc p 的 16px 上下边距） */
+.timeline-page .timeline-desc {
+  margin-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+  .cat-layout {
+    grid-template-columns: 1fr;
+  }
+  .cat-list {
+    position: static;
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+  .cat-item {
+    white-space: nowrap;
+  }
+}
+
+/* ---------- 文章页头部：面包屑 + 大标题 ---------- */
+.vd-crumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 13px;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.vd-crumb-link {
+  color: #000;
+  transition: color 0.2s;
+}
+
+.vd-crumb-link:hover {
+  color: var(--vp-c-brand-1);
+}
+
+/* 面包屑首页：home 图标（原站 vdoing iconfont icon-home 字形） */
+.vd-crumb-home {
+  display: inline-flex;
+  align-items: center;
+  color: #000;
+  transition: color 0.2s;
+}
+
+.vd-crumb-home:hover {
+  color: var(--vp-c-brand-1);
+}
+
+.vd-crumb-sep {
+  color: #000;
+}
+
+/* 暗色模式：面包屑黑字换浅色 */
+.dark .vd-crumb,
+.dark .vd-crumb-link,
+.dark .vd-crumb-home,
+.dark .vd-crumb-sep {
+  color: var(--vp-c-text-1);
+}
+
+.vd-post-title {
+  font-size: 30px;
+  line-height: 1.4;
+  font-weight: 700;
+  margin: 0 0 18px;
+  color: var(--vp-c-text-1);
+  letter-spacing: 0.5px;
+}
+
+/* ---------- 文章页元信息 ---------- */
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  font-size: 13px;
+  color: #000;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border-radius: var(--vd-radius-sm);
+  background: var(--vp-c-bg-soft);
+}
+
+/* 暗色模式：元信息黑字换浅色 */
+.dark .article-meta {
+  color: var(--vp-c-text-1);
+}
+
+.article-meta .am-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.article-meta .am-cat,
+.article-meta .am-tag {
+  font-size: 12px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+}
+
+.article-meta .am-tag {
+  background: var(--vp-c-bg-elv);
+  border: 1px solid var(--vp-c-divider);
+  color: var(--vp-c-text-2);
+}
+
+.article-meta .am-tag:hover {
+  color: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
+}
+
+/* ---------- 上一篇 / 下一篇 ---------- */
+.doc-prevnext {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 36px;
+  border-top: 1px solid var(--vp-c-divider);
+  padding-top: 28px;
+}
+
+.pn-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 18px;
+  border-radius: var(--vd-radius);
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vd-card-bg);
+  box-shadow: var(--vd-shadow);
+  transition: all 0.25s;
+}
+
+.pn-card:hover {
+  border-color: var(--vp-c-brand-1);
+  box-shadow: var(--vd-shadow-hover);
+  transform: translateY(-2px);
+}
+
+.pn-card.next {
+  text-align: right;
+}
+
+.pn-label {
+  font-size: 12px;
+  color: #000;
+}
+
+.pn-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+
+.pn-date {
+  font-size: 12px;
+  color: #000;
+}
+
+/* 暗色模式：翻页卡片文字换浅色 */
+.dark .pn-label,
+.dark .pn-title,
+.dark .pn-date {
+  color: var(--vp-c-text-1);
+}
+
+@media (max-width: 640px) {
+  .doc-prevnext {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 文章页（has-sidebar）也显示页脚：压过 VitePress 的 .VPFooter.has-sidebar{display:none}，
+   与主页同一组件、格式完全一致 */
+.VPFooter.has-sidebar {
+  display: block !important;
+}
+
+/* ---------- 侧边栏卡片（首页右侧博主/分类栏用；文章页右侧仅保留目录） ---------- */
+.ba-card {
+  padding: 14px 16px;
+  border-radius: var(--vd-radius-sm);
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vd-card-bg);
+  box-shadow: var(--vd-shadow);
+}
+
+.ba-card h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: var(--vp-c-text-1);
+  /* 无蓝色竖线；保留左内边距让标题文字保持靠右位置 */
+  padding-left: 8px;
+}
+
+.ba-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ba-card li {
+  margin: 0;
+}
+
+.ba-card li a {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #000;
+  transition: all 0.2s;
+}
+
+/* 暗色模式：纯黑分类名不可见，换回浅色文字 */
+.dark .ba-card li a {
+  color: var(--vp-c-text-1);
+}
+
+.ba-card li a:hover {
+  color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+}
+
+.ba-card li a span {
+  font-size: 12px;
+  color: var(--vp-c-text-3);
+}
+
+/* 分类名与数量数字分开着色：均为纯黑（浅色），暗色模式换浅色 */
+.ba-card li a .ba-cat-name,
+.ba-card li a .ba-cat-count {
+  font-size: 14px;
+  color: #000;
+}
+
+.dark .ba-card li a .ba-cat-name,
+.dark .ba-card li a .ba-cat-count {
+  color: var(--vp-c-text-1);
+}
+
+/* ---------- 导航栏微调 ---------- */
+.VPNavBar {
+  background: color-mix(in srgb, var(--vp-c-bg) 82%, transparent);
+  backdrop-filter: blur(8px);
+}
+
+/* 导航栏文字改纯黑（浅色）；暗色模式换回浅色文字 */
+.VPNavBarTitle .title,
+.VPNavBarMenuLink,
+.VPNavBarMenuGroup .button .text {
+  color: #000 !important;
+}
+/* 与原站一致：导航链接字号 16px（原站继承 body 字号，无加粗） */
+.VPNavBarMenuLink,
+.VPNavBarMenuGroup .button .text {
+  font-size: 16px !important;
+}
+.dark .VPNavBarTitle .title,
+.dark .VPNavBarMenuLink,
+.dark .VPNavBarMenuGroup .button .text {
+  color: var(--vp-c-text-1) !important;
+}
+/* 导航栏链接 hover / 当前页（active）高亮保持品牌蓝 */
+.VPNavBarMenuLink:hover,
+.VPNavBarMenuLink.active {
+  color: var(--vp-c-brand-1) !important;
+}
+
+/* 页脚顶部不要分隔线（覆盖 VitePress 默认 border-top） */
+.VPFooter {
+  border-top: none !important;
+}
+
+/* 隐藏内置的上一篇/下一篇 footer（由 doc-after 插槽中的自定义组件替代，按时间排序更符合博客习惯） */
+.VPDocFooter {
+  display: none;
+}
+
+/* ---------- 左侧文章导航：默认收起 + 按钮切换（vdoing 风格） ---------- */
+/* 切换按钮：位于顶部导航栏站点标题右侧（标题行内插槽），
+   不占导航内容区空间，不影响搜索/链接/卡片排布。
+   按钮用 absolute 挂在标题链接右缘：让标题 <a> 的可点击范围收窄到
+   logo+文字（按钮及其左侧间隙不再属于链接，点击不会跳转主页） */
+.VPNavBarTitle .title {
+  position: relative !important;
+}
+
+/* 与原站 vdoing 一致：logo 2.2rem(35px)，标题 1.3rem(21px) */
+.VPNavBarTitle .VPImage {
+  width: 36px !important;
+  height: 36px !important;
+}
+.VPNavBarTitle .title {
+  font-size: 21px !important;
+}
+
+.vd-sidebar-toggle {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  /* 高于后置的透明搜索容器（.VPNavBarSearch 覆盖标题右侧区域），否则点击被拦截 */
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--vp-c-divider);
+  background: transparent;
+  color: var(--vp-c-text-2);
+  cursor: pointer;
+  /* 只过渡颜色类属性：transition 若包含 visibility，页面切换时按钮
+     （非文章页 visibility:hidden）会延迟 ~0.2s 才隐藏，出现"消失又闪现" */
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+}
+
+.vd-sidebar-toggle:hover {
+  color: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-bg-soft);
+}
+
+/* 非文章页：按钮隐藏但保留占位，使搜索/链接位置与文章页一致 */
+.Layout:not(.vd-is-post) .vd-sidebar-toggle {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@media (max-width: 959px) {
+  /* 移动端使用 VitePress 自带抽屉，隐藏此按钮 */
+  .vd-sidebar-toggle {
+    display: none;
+  }
+
+  /* 移动端标题过长会把导航内容撑出视口（title flex-shrink:0）：
+     允许收缩并省略号截断，保证汉堡按钮不溢出 */
+  .VPNavBar .title {
+    flex-shrink: 1 !important;
+    min-width: 0;
+  }
+  .VPNavBarTitle .title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+/* ---------- 目录(TOC)与左侧文章导航：同断点（≥960）一起显示/收起 ----------
+   VitePress 默认：目录 ≥1280 才显示、侧栏 ≥960 就显示，两者断点不同步，
+   放大页面时会出现"目录先收起、导航后收起"。
+   这里统一为 ≥960 一起显示、<960 一起收起（与移动端切换点一致） */
+@media (min-width: 960px) {
+  /* 导航栏统一布局：文章页（has-sidebar）不再用侧栏偏移的绝对定位标题与
+     内容区，改为与非文章页一致（容器居中、标题在流内、搜索/链接右对齐） */
+  .VPNavBar .wrapper {
+    padding: 0 32px !important;
+  }
+
+  .VPNavBar .container {
+    max-width: calc(var(--vp-layout-max-width) - 64px) !important;
+  }
+
+  .VPNavBar .wrapper > .container > .title {
+    position: static !important;
+    padding: 0 !important;
+    width: auto !important;
+  }
+
+  .VPNavBar .content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* 搜索框靠右：搜索容器 flex:1 吸收中间空间但按钮默认左对齐，
+     改为右对齐使搜索按钮紧贴导航链接（首页）左侧，中间留 12px 间距 */
+  .VPNavBarSearch {
+    justify-content: flex-end !important;
+    padding-right: 12px !important;
+  }
+
+  /* 文章卡片到顶部栏的间距（用户目测 21px → 33px，1.5x 缩放下 = 22px CSS）：
+     导航 57px + VPDoc 顶部内边距 22px = 79px（归档/分类/关于同样处理，保持一致） */
+  .VPDoc {
+    padding-top: 22px !important;
+  }
+
+  /* 导航底部分隔线：文章页（有侧栏）默认从侧栏右侧才开始画线，标题区只有
+     标题自身的一段短边框，下边框断裂不连续；统一为整行连续（与非文章页一致） */
+  .VPNavBar.has-sidebar .divider {
+    padding-left: 0 !important;
+  }
+
+  .VPNavBar.has-sidebar .VPNavBarTitle .title {
+    border-bottom-color: transparent !important;
+  }
+
+  /* 内容区统一居中逻辑：文章页（有侧栏）的内容区 = 左侧侧栏预留位(272px)
+     + 居中留白 + 右侧目录栏(256px)。左右 padding 差固定为 256px
+     （= 目录栏宽），使卡片在所有页面上都精确居中于视口。
+     max() 兜底：视口 < 布局上限时居中留白为负，左侧仍保留 272px 侧栏位 */
+  .VPContent.has-sidebar {
+    padding-left: max(272px, calc((100vw - var(--vp-layout-max-width)) / 2 + 272px)) !important;
+    padding-right: max(16px, calc((100vw - var(--vp-layout-max-width)) / 2 + 16px)) !important;
+  }
+
+  /* 目录栏提前到 960 显示（与侧栏同断点）；容器变 flex，卡片保持居中 */
+  .VPDoc .container {
+    display: flex !important;
+    justify-content: center;
+  }
+
+  .VPDoc .aside {
+    display: block !important;
+    padding-left: 4px !important;
+  }
+
+  /* 侧栏：从顶部栏下方开始（滚动条不再跑到半透明顶部栏背面）；
+     默认收起，点按钮展开；滚动条隐藏（与右侧目录一致，滚动功能保留） */
+  .VPSidebar {
+    /* !important：压过 VitePress 自带 transition（它不含 visibility，会导致
+       收起时 visibility 立即生效、渐变被遮住） */
+    transition: left 0.3s ease, transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease !important;
+    top: var(--vp-nav-height) !important;
+    padding-top: 32px !important;
+    padding-right: 0 !important;
+    scrollbar-width: none;
+  }
+
+  .VPSidebar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* VitePress 把分组宽度硬编码为 272-64px，覆盖为撑满侧栏，
+     使导航文字右缘与侧栏右缘对齐 */
+  .VPSidebar .group {
+    width: 100% !important;
+  }
+
+  /* 侧栏左边界与顶部标题左缘对齐（标题左缘 = 布局居中边距）：
+     左 = max(32px, (100vw - 布局宽 + 64px)/2)；宽度固定 256px，
+     使右缘保持在原位置（不与文章卡片重叠）；文字从边界 +16px 开始 */
+  .VPSidebar {
+    left: max(32px, calc((100vw - var(--vp-layout-max-width) + 64px) / 2)) !important;
+    width: 256px !important;
+    padding-left: 16px !important;
+  }
+
+  .VPSidebar .curtain {
+    display: none !important;
+  }
+
+  /* 收起状态：渐变消失（opacity 淡出）后 visibility:hidden + pointer-events:none
+     确保完全不可见、不可点击；同时定位到屏幕外（-300px）兜底 */
+  .vd-collapsed .VPSidebar {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    left: -300px !important;
+  }
+
+  /* 目录与侧栏都直接可见时，隐藏底部工具条，避免重复入口 */
+  .VPLocalNav {
+    display: none !important;
+  }
+}
+
+/* 内容区左右内边距对称：32px → 12px（左右都吃掉一点，卡片保持居中） */
+.VPDoc .content {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
+/* 暗色模式：分页按钮黑字换浅色 */
+.dark .hp-page-link {
+  color: var(--vp-c-text-1);
+}
+
+/* 搜索按钮文字/图标改纯黑（浅色）；暗色保持浅色 */
+.DocSearch-Button,
+.DocSearch-Button-Placeholder,
+.DocSearch-Button .vp-icon {
+  color: #000 !important;
+}
+.dark .DocSearch-Button,
+.dark .DocSearch-Button-Placeholder,
+.dark .DocSearch-Button .vp-icon {
+  color: var(--vp-c-text-1) !important;
+}
+
+/* 文章页右侧目录改纯黑（浅色）；暗色保持浅色 */
+.VPDocAsideOutline .outline-title,
+.VPDocAsideOutline .outline-link {
+  color: #000 !important;
+}
+.dark .VPDocAsideOutline .outline-title,
+.dark .VPDocAsideOutline .outline-link {
+  color: var(--vp-c-text-1) !important;
+}
+/* 目录当前项（active）保持品牌蓝高亮 */
+.VPDocAsideOutline .outline-link.active {
+  color: var(--vp-c-brand-1) !important;
+}
+
+/* 文章页左侧侧栏目录改纯黑（浅色）；暗色保持浅色 */
+.VPSidebar .VPSidebarItem .text,
+.VPSidebar .VPSidebarItem .link {
+  color: #000 !important;
+}
+.dark .VPSidebar .VPSidebarItem .text,
+.dark .VPSidebar .VPSidebarItem .link {
+  color: var(--vp-c-text-1) !important;
+}
+/* 当前文章高亮保持品牌蓝（含内层文字 span，压过上面的黑色规则） */
+.VPSidebar .link.active,
+.VPSidebar .is-active > .item .link,
+.VPSidebar .link.active .text,
+.VPSidebar .is-active > .item .link .text {
+  color: var(--vp-c-brand-1) !important;
+}
+
+/* 分类下拉菜单：VitePress 的 normalize 会剥掉 query（?c=），导致分类页时
+   所有 /categories.html?c=* 链接都被判为 active 整栏高亮。
+   禁用下拉内的 active 高亮，仅 hover 变品牌蓝；文字纯黑与导航一致 */
+.VPNavBarMenuGroup .VPMenuLink .link,
+.VPNavBarMenuGroup .VPMenuLink .link.active {
+  color: #000 !important;
+}
+.dark .VPNavBarMenuGroup .VPMenuLink .link,
+.dark .VPNavBarMenuGroup .VPMenuLink .link.active {
+  color: var(--vp-c-text-1) !important;
+}
+.VPNavBarMenuGroup .VPMenuLink .link:hover {
+  color: var(--vp-c-brand-1) !important;
+}

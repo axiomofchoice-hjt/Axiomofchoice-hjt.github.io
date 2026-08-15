@@ -1,0 +1,10 @@
+node_modules
+.npm-cache
+docs/.vitepress/dist
+docs/.vitepress/cache
+docs/.vitepress/.temp
+.DS_Store
+*.log
+
+# DSH harness 备份目录（勿提交）
+dsh-profile-backup/

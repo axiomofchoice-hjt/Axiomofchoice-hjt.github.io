@@ -1,0 +1,22 @@
+{
+  "name": "vdoing-blog",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A vuepress-vdoing style blog built with VitePress",
+  "scripts": {
+    "dev": "TZ=Asia/Shanghai vitepress dev docs --port 5173",
+    "build": "TZ=Asia/Shanghai vitepress build docs",
+    "typecheck": "vue-tsc --noEmit",
+    "preview": "TZ=Asia/Shanghai vitepress preview docs --port 4173"
+  },
+  "devDependencies": {
+    "@mdit/plugin-katex": "^1.1.0",
+    "@types/node": "^26.2.0",
+    "katex": "^0.18.4",
+    "typescript": "5.8",
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.13",
+    "vue-tsc": "^3.3.9"
+  }
+}
