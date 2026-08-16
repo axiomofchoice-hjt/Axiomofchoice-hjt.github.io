@@ -427,7 +427,7 @@ export default defineConfig({
 
   async buildEnd(siteConfig) {
     // 生成三种订阅格式（rss.xml / feed.atom / feed.json）
-    // 首页 RSS 图标链接指向 /rss.xml，文章链接为 /pages/xxxxxx/ permalink
+    // 首页 RSS 图标链接指向 /feed.atom，文章链接为 /pages/xxxxxx/ permalink
     const posts = scanRssPosts()
     const xml = buildRssXml(posts)
     const atom = buildAtomXml(posts)
