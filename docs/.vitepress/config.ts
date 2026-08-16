@@ -200,7 +200,7 @@ function buildNav(): DefaultTheme.NavItem[] {
   ]
 }
 
-// ---- RSS 生成：构建时扫描 posts 输出 rss.xml（首页 RSS 图标指向 /rss.xml） ----
+// ---- Feed 生成：构建时扫描 posts 输出 rss.xml / feed.atom / feed.json ----
 
 const SITE_URL = 'https://axiomofchoice-hjt.github.io'
 
@@ -290,6 +290,61 @@ ${items}
 `
 }
 
+/** Atom 时间与 RSS 保持同一套“字面值 + Z”策略：frontmatter 的北京时间原样输出为 UTC */
+function formatAtomDate(dateStr: string): string {
+  const m = dateStr.trim().match(/^(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})(?::(\d{2}))?/)
+  if (!m) return new Date(dateStr).toISOString() // 兜底：非常规格式退化为标准转换
+  const [, y, mo, d, h, mi, s = '00'] = m
+  return `${y}-${mo}-${d}T${h}:${mi}:${s}.000Z`
+}
+
+/** 生成 Atom 1.0 feed（feed.atom） */
+function buildAtomXml(posts: RssPost[]): string {
+  const entries = posts
+    .slice(0, 50)
+    .map(
+      (p) => `  <entry>
+    <title type="html"><![CDATA[${p.title}]]></title>
+    <id>${escXml(p.url)}</id>
+    <link href="${escXml(p.url)}">
+    </link>
+    <updated>${formatAtomDate(p.dateStr)}</updated>
+    <summary type="html"><![CDATA[${p.description}]]></summary>
+  </entry>`,
+    )
+    .join('\n')
+  return `<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>${SITE_URL}</id>
+  <title>Axiomofchoice&apos;s Blog</title>
+  <updated>${new Date().toISOString()}</updated>
+  <link rel="alternate" href="${SITE_URL}/"/>
+  <link rel="self" href="${SITE_URL}/feed.atom"/>
+  <subtitle>一个退役败犬的个人博客 (C++ / HPC / Algorithm)</subtitle>
+${entries}
+</feed>
+`
+}
+
+/** 生成 JSON Feed v1（feed.json） */
+function buildJsonFeed(posts: RssPost[]): string {
+  const feed = {
+    version: 'https://jsonfeed.org/version/1',
+    title: "Axiomofchoice's Blog",
+    home_page_url: SITE_URL,
+    feed_url: `${SITE_URL}/feed.json`,
+    description: '一个退役败犬的个人博客 (C++ / HPC / Algorithm)',
+    items: posts.slice(0, 50).map((p) => ({
+      id: p.url,
+      url: p.url,
+      title: p.title,
+      summary: p.description,
+      date_modified: formatAtomDate(p.dateStr),
+    })),
+  }
+  return JSON.stringify(feed, null, 4)
+}
+
 // ---- 站点配置 ----
 
 export default defineConfig({
@@ -310,8 +365,10 @@ export default defineConfig({
     ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' }],
     ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
     ['meta', { name: 'theme-color', content: '#11a8cd' }],
-    // RSS 自动发现（与原站一致：head 里声明 alternate，订阅器/浏览器可发现）
+    // Feed 自动发现（与原站一致：head 里声明 alternate，订阅器/浏览器可发现）
     ['link', { rel: 'alternate', type: 'application/rss+xml', href: '/rss.xml', title: "Axiomofchoice's Blog RSS Feed" }],
+    ['link', { rel: 'alternate', type: 'application/atom+xml', href: '/feed.atom', title: "Axiomofchoice's Blog Atom Feed" }],
+    ['link', { rel: 'alternate', type: 'application/json', href: '/feed.json', title: "Axiomofchoice's Blog JSON Feed" }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: "Axiomofchoice's Blog" }],
     ['meta', { property: 'og:description', content: '一个退役败犬的个人博客 (C++ / HPC / Algorithm)' }],
@@ -369,10 +426,16 @@ export default defineConfig({
   },
 
   async buildEnd(siteConfig) {
-    // 生成 RSS（首页 RSS 图标链接指向 /rss.xml，文章链接为 /pages/xxxxxx/ permalink）
-    const xml = buildRssXml(scanRssPosts())
+    // 生成三种订阅格式（rss.xml / feed.atom / feed.json）
+    // 首页 RSS 图标链接指向 /rss.xml，文章链接为 /pages/xxxxxx/ permalink
+    const posts = scanRssPosts()
+    const xml = buildRssXml(posts)
+    const atom = buildAtomXml(posts)
+    const json = buildJsonFeed(posts)
     fs.mkdirSync(siteConfig.outDir, { recursive: true })
     fs.writeFileSync(path.join(siteConfig.outDir, 'rss.xml'), xml)
+    fs.writeFileSync(path.join(siteConfig.outDir, 'feed.atom'), atom)
+    fs.writeFileSync(path.join(siteConfig.outDir, 'feed.json'), json)
 
     // 生成 sitemap.xml + robots.txt（固定页 + 全部 RSS 文章，零依赖；
     // feed:false 的文章与原站一致：不进 RSS，也不进 sitemap）
@@ -381,7 +444,7 @@ export default defineConfig({
       { url: `${SITE_URL}/archives`, lastmod: '' },
       { url: `${SITE_URL}/categories.html`, lastmod: '' },
       { url: `${SITE_URL}/pages/1919bb/`, lastmod: '' },
-      ...scanRssPosts().map((p) => ({ url: p.url, lastmod: p.dateStr.slice(0, 10) })),
+      ...posts.map((p) => ({ url: p.url, lastmod: p.dateStr.slice(0, 10) })),
     ]
     const urlset = pages
       .map(
@@ -402,14 +465,13 @@ export default defineConfig({
 
   // 社交分享标签跟随页面内容：og:title / og:description 用文章 frontmatter，
   // 取代全局静态的站点名（否则每篇文章分享出去都是同一个标题）
-  async transformHead({ pageData, head }) {
+  async transformHead({ pageData }) {
     const title = pageData.title || "Axiomofchoice's Blog"
     const desc =
       pageData.description || '一个退役败犬的个人博客 (C++ / HPC / Algorithm)'
+    // 这里只返回要覆盖/新增的 og meta 即可；VitePress 会自动合并原有 head，
+    // 避免把整个 head 再返回一遍导致 link/script 标签重复。
     return [
-      ...head.filter(
-        (h) => h[1]?.property !== 'og:title' && h[1]?.property !== 'og:description',
-      ),
       ['meta', { property: 'og:title', content: title }],
       ['meta', { property: 'og:description', content: desc }],
     ]
