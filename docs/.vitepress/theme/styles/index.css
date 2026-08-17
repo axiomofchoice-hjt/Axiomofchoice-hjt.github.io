@@ -472,9 +472,13 @@ body {
   /* 与首页文章卡片标题一致：优先使用带中等字重的黑体，并加细描边过渡 */
   font-family: "Source Han Sans SC", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   -webkit-text-stroke: 0.35px currentColor;
-  color: var(--vp-c-text-1);
+  color: #000;
   text-decoration: none;
   transition: color 0.2s;
+}
+
+.dark .post-timeline .tl-title {
+  color: var(--vp-c-text-1);
 }
 
 .post-timeline .tl-title:hover {
