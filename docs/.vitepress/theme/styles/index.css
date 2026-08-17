@@ -223,8 +223,12 @@ body {
 .hp-title {
   margin: 0 0 10px;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.5;
+  /* 优先使用带中等字重的黑体；中文字体普遍缺少 600 字重，
+     直接用 500 在部分系统会偏细，因此再加一点细描边过渡 */
+  font-family: "Source Han Sans SC", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  -webkit-text-stroke: 0.35px currentColor;
 }
 
 .hp-title a {
@@ -463,7 +467,11 @@ body {
    用双类提高特异性，压过 VitePress 默认的 .vp-doc a 链接样式 */
 .post-timeline .tl-title {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
+  line-height: 1.5;
+  /* 与首页文章卡片标题一致：优先使用带中等字重的黑体，并加细描边过渡 */
+  font-family: "Source Han Sans SC", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  -webkit-text-stroke: 0.35px currentColor;
   color: var(--vp-c-text-1);
   text-decoration: none;
   transition: color 0.2s;
