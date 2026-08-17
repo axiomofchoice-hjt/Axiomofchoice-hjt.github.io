@@ -382,6 +382,15 @@ export default defineConfig({
     search: {
       provider: 'local',
       options: {
+        // VitePress 本地搜索默认只索引正文中的标题/内容，不包含 frontmatter 的页面标题。
+        // 这里在索引用的 HTML 前补一个 h1，让文章标题也能被搜索到。
+        _render: async (src, env, md) => {
+          const html = md.render(src, env)
+          if (env.frontmatter?.search === false) return ''
+          const title = env.frontmatter?.title
+          if (!title) return html
+          return `<h1 id="page-title">${escXml(String(title))}<a class="header-anchor" href="#page-title" aria-hidden="true">#</a></h1>${html}`
+        },
         translations: {
           button: { buttonText: '搜索文章', buttonAriaLabel: '搜索文章' },
           modal: {
