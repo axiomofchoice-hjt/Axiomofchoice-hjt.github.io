@@ -49,7 +49,7 @@ description: 围绕“原地算法”的结构对称性，从 inplace merge 与 
 
 我们来看一个例子，初始数组 `[2, 5, 6, 7, 12, 19], [1, 4, 6, 7, 8, 11, 13, 14, 14, 18]`，如何旋转和递归已经放进图里了：
 
-![img](./assets/1a8ff1-0.drawio.png)
+![img](./assets/1a8ff1-0.drawio.svg)
 
 ***
 
